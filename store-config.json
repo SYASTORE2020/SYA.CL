@@ -93,7 +93,7 @@
         "Mbappe|L": 5,
         "Mbappe|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1761,5 +1761,5 @@
       "active": true
     }
   ],
-  "_v": 1779243087056
+  "_v": 1779243099582
 }
