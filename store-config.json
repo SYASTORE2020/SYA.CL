@@ -1757,9 +1757,9 @@
         "Aranguiz|L": 5,
         "Aranguiz|XL": 3
       },
-      "featured": false,
+      "featured": true,
       "active": true
     }
   ],
-  "_v": 1779243099582
+  "_v": 1779243114282
 }
