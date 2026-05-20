@@ -1287,11 +1287,14 @@
       "id": "moza0bitpydt0",
       "name": "Citrato de Magnesio 90 Caps.",
       "cat": "Productos Naturales",
-      "desc": "",
-      "price": 12990,
-      "origPrice": 15990,
+      "desc": "Es un suplemento de magnesio con alta biodisponibilidad, o sea que el cuerpo lo absorbe bien. Se usa principalmente para:\n 1.  Corregir déficit de magnesio: Ayuda con calambres musculares, fatiga y cansancio.\n 2.  Efecto laxante suave: El magnesio atrae agua al intestino, por eso también se usa para aliviar el estreñimiento ocasional.\n 3.  Apoyo a nervios y músculos: Participa en más de 300 reacciones enzimáticas relacionadas con energía, función muscular y sistema nervioso.",
+      "price": 8990,
+      "origPrice": 12990,
       "stock": 20,
       "weight": 0.17,
+      "gcat": "5765",
+      "gender": "unisex",
+      "color": "",
       "img": "https://i.postimg.cc/7YKGXQjH/IMG-20240323-WA0055-Photoroom.jpg",
       "images": [
         "https://i.postimg.cc/7YKGXQjH/IMG-20240323-WA0055-Photoroom.jpg",
@@ -1750,5 +1753,5 @@
       "active": true
     }
   ],
-  "_v": 1779318620415
+  "_v": 1779319187953
 }
