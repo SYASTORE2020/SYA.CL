@@ -34,6 +34,107 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpeod69mcl4go",
+      "name": "Camiseta Universidad de Chile- Local 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "•  Base: Azul Rey Intenso, el color Histotico de la U.\n •  Detalles: Rojo en las 3 tiras sobre los hombros y en los bordes de las     mangas. Cuello redondo azul.\n •  Dorsal y nombre:  •  \"Aranguiz\" y el \"20\" en blanco.\n                                    •  \"Vargas\" y el \"11\" en blanco.",
+      "price": 19990,
+      "origPrice": 24990,
+      "stock": 68,
+      "weight": 0.29,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "Azul electrico con Rayas",
+      "img": "https://i.postimg.cc/9MR7Kt58/Whats-App-Image-2026-05-06-at-10-38-47.jpg",
+      "images": [
+        "https://i.postimg.cc/9MR7Kt58/Whats-App-Image-2026-05-06-at-10-38-47.jpg",
+        "https://i.postimg.cc/V6rCpBQ7/Whats-App-Image-2026-05-06-at-10-44-41.jpg",
+        "https://i.postimg.cc/MTMQNb29/Whats-App-Image-2026-05-06-at-11-17-56.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Jugador",
+          "options": [
+            {
+              "label": "Aranguiz",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Vargas",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "10",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "12",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "14",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "16",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Aranguiz|10": 2,
+        "Aranguiz|12": 2,
+        "Vargas|10": 5,
+        "Vargas|12": 5,
+        "Aranguiz|14": 2,
+        "Vargas|14": 5,
+        "Aranguiz|16": 2,
+        "Vargas|16": 5,
+        "Aranguiz|S": 5,
+        "Aranguiz|M": 5,
+        "Aranguiz|L": 5,
+        "Aranguiz|XL": 5,
+        "Vargas|S": 5,
+        "Vargas|M": 5,
+        "Vargas|L": 5,
+        "Vargas|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mp8pup9xvj3zm",
       "name": "Camiseta Seleccion Francia - Titular 2026",
       "cat": "Camisetas de Futbol",
@@ -1649,5 +1750,5 @@
       "active": true
     }
   ],
-  "_v": 1779318072406
+  "_v": 1779318620415
 }
