@@ -1657,6 +1657,9 @@
       "origPrice": 24990,
       "stock": 84,
       "weight": 0.35,
+      "gcat": "212",
+      "gender": "unisex",
+      "color": "",
       "img": "https://i.postimg.cc/wv6Jsvqv/Camiseta-U-chile-Editada-1.jpg",
       "images": [
         "https://i.postimg.cc/wv6Jsvqv/Camiseta-U-chile-Editada-1.jpg",
@@ -1755,5 +1758,5 @@
       "active": true
     }
   ],
-  "_v": 1779152493162
+  "_v": 1779242017332
 }
