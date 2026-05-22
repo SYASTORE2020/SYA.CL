@@ -1821,7 +1821,7 @@ function openModal(id){
           ${[1,2,3,4,5].map(n=>`<button class="star-btn" id="star_${p.id}_${n}"
             onmouseover="hoverStars('${p.id}',${n})"
             onmouseout="resetStars('${p.id}')"
-            onclick="rateProduct('${p.id}',${n})">★</button>`).join('')}
+            onclick="event.stopPropagation();rateProduct('${p.id}',${n})">★</button>`).join('')}
         </div>
        </div>`;
 
