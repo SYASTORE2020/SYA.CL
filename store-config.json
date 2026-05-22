@@ -666,15 +666,18 @@
       "id": "mp2xnr5xso6tu",
       "name": "Camiseta Seleccion Portugal- Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
+      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n  \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
       "weight": 0.29,
-      "img": "https://i.postimg.cc/bYHpWnjc/Camiseta-3.jpg",
+      "gcat": "5697",
+      "gender": "male",
+      "color": "",
+      "img": "https://i.postimg.cc/cLRV54vF/Camiseta10-p.jpg",
       "images": [
-        "https://i.postimg.cc/bYHpWnjc/Camiseta-3.jpg",
-        "https://i.postimg.cc/mZNBJ9Gx/Camiseta4.jpg"
+        "https://i.postimg.cc/cLRV54vF/Camiseta10-p.jpg",
+        "https://i.postimg.cc/bwxKFNZL/Camiseta10p1.jpg"
       ],
       "variants": [
         {
@@ -683,7 +686,7 @@
             {
               "label": "Ronaldo 7",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/bwxKFNZL/Camiseta10p1.jpg"
             }
           ]
         },
@@ -1790,5 +1793,5 @@
       "active": true
     }
   ],
-  "_v": 1779470729182
+  "_v": 1779471357897
 }
