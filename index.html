@@ -1590,11 +1590,15 @@ function saveReviews(pid, rv){ localStorage.setItem(`st_reviews_${pid}`, JSON.st
 async function syncFirebaseRatings(){
   const data = await fbGet('/ratings');
   if(!data) return;
-  const cache = {};
+  const cache = getRatings(); // partir de datos locales, no de objeto vacío
   for(const [pid, entries] of Object.entries(data)){
-    const vals = Object.values(entries||{});
+    const vals = Object.values(entries||{}).filter(v=>v&&v.stars);
     if(!vals.length) continue;
-    cache[pid] = { count: vals.length, total: vals.reduce((s,e)=>s+(e.stars||0),0) };
+    const fbData = { count: vals.length, total: vals.reduce((s,e)=>s+(e.stars||0),0) };
+    // Firebase tiene más reseñas que el local → usar Firebase
+    if(!cache[pid] || fbData.count >= cache[pid].count){
+      cache[pid] = fbData;
+    }
   }
   saveRatings(cache);
 }
@@ -1629,6 +1633,10 @@ async function rateProduct(productId, stars){
   const el = document.getElementById('ratingSection_'+productId);
   if(el) el.innerHTML = `<div class="rating-thanks">✓ ¡Gracias! Calificaste con ${stars} ⭐</div><div class="stars-display">${starsHTML(avg)} <span class="rating-count">(${ratings[productId].count} reseña${ratings[productId].count!==1?'s':''})</span></div>`;
 
+  // Actualizar rating del card específico en la grilla sin re-renderizar todo
+  const cardRatingEl = document.querySelector(`[data-rating-id="${productId}"]`);
+  if(cardRatingEl) cardRatingEl.innerHTML = `${starsHTML(avg)}<span class="rating-count">(${ratings[productId].count})</span>`;
+
   // Marcar que las grillas necesitan actualizarse al cerrar el modal
   window._gridNeedsRefresh = true;
 }
@@ -1659,8 +1667,8 @@ function renderGrid(id, prods){
     const r = ratings[p.id];
     const avg = r ? r.total/r.count : 0;
     const ratingHtml = r
-      ? `<div class="stars-display">${starsHTML(avg)}<span class="rating-count">(${r.count})</span></div>`
-      : `<div class="stars-display"><span class="rating-count" style="font-size:11px;">Sin reseñas aún</span></div>`;
+      ? `<div class="stars-display" data-rating-id="${p.id}">${starsHTML(avg)}<span class="rating-count">(${r.count})</span></div>`
+      : `<div class="stars-display" data-rating-id="${p.id}"><span class="rating-count" style="font-size:11px;">Sin reseñas aún</span></div>`;
     const sinStock = p.stock <= 0;
     return `<div class="product-card" onclick="${sinStock ? '' : `openModal('${p.id}')`}" style="${sinStock ? 'opacity:.65;cursor:default;' : ''}">
       <div class="product-img-wrap">
