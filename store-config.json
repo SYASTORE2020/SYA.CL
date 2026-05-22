@@ -422,10 +422,13 @@
       "origPrice": 12990,
       "stock": 25,
       "weight": 0.29,
-      "img": "https://i.postimg.cc/nLtHcMwM/Los-bumkers.jpg",
+      "gcat": "",
+      "gender": "",
+      "color": "",
+      "img": "https://i.postimg.cc/9XsKmqTv/Chat-GPT-Image-22-may-2026-01-22-10-p-m.png",
       "images": [
-        "https://i.postimg.cc/nLtHcMwM/Los-bumkers.jpg",
-        "https://i.postimg.cc/3wHKJWbk/Los-Bunkers1.jpg"
+        "https://i.postimg.cc/9XsKmqTv/Chat-GPT-Image-22-may-2026-01-22-10-p-m.png",
+        "https://i.postimg.cc/SQH3Sz8H/Chat-GPT-Image-22-may-2026-01-22-16-p-m.png"
       ],
       "variants": [
         {
@@ -1787,5 +1790,5 @@
       "active": true
     }
   ],
-  "_v": 1779470655304
+  "_v": 1779470729182
 }
