@@ -924,13 +924,18 @@
       "id": "mp1un0hw0ozwf",
       "name": "Camiseta Seleccion Colombia- Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "•  Base: Amarillo vibrante, el color que identifica a la seleccion en todo el mundo.\n •  Detalles: Trama Froral en tonos amarillos por toda la camiseta, inspirada en la biodiversidad colombiana.\nCuello en V con linea azul. Mangas con puños en azul y detalles rojos en los hombros con los colores de la bandera.",
+      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n•  Base: Amarillo vibrante, el color que identifica a la seleccion en todo el mundo.\n •  Detalles: Trama Froral en tonos amarillos por toda la camiseta, inspirada en la biodiversidad colombiana.\nCuello en V con linea azul. Mangas con puños en azul y detalles rojos en los hombros con los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
       "weight": 0.35,
-      "img": "https://i.postimg.cc/j5DhwqgZ/Camiseta-C1.jpg",
+      "gcat": "5697",
+      "gender": "male",
+      "color": "",
+      "img": "https://i.postimg.cc/d3dpKWxw/camiseta10-8.jpg",
       "images": [
+        "https://i.postimg.cc/d3dpKWxw/camiseta10-8.jpg",
+        "https://i.postimg.cc/NFTSwNzv/camiseta10-7.jpg",
         "https://i.postimg.cc/j5DhwqgZ/Camiseta-C1.jpg",
         "https://i.postimg.cc/DZScJfj5/Camiseta-C.jpg"
       ],
@@ -941,7 +946,7 @@
             {
               "label": "James 10",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/NFTSwNzv/camiseta10-7.jpg"
             }
           ]
         },
@@ -1767,5 +1772,5 @@
       "active": true
     }
   ],
-  "_v": 1779467739931
+  "_v": 1779468276568
 }
