@@ -840,13 +840,18 @@
       "id": "mp21tr21h1fqb",
       "name": "Camiseta Seleccion Alemania - Titular 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "•  Base: Blanco clasico, base historica de la Seleccion.\n •  Detalles: el pecho tiene grafica en V con los colores de la bandera: negro, rojo y amarillo. Diseño iconico que cruza el pecho.\nCuello en V con borde rojo y negro. Puños en negro con remate rojo.",
+      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n •  Base: Blanco clasico, base historica de la Seleccion.\n •  Detalles: el pecho tiene grafica en V con los colores de la bandera: negro, rojo y amarillo. Diseño iconico que cruza el pecho.\nCuello en V con borde rojo y negro. Puños en negro con remate rojo.",
       "price": 24990,
       "origPrice": 0,
       "stock": 20,
       "weight": 0.29,
-      "img": "https://i.postimg.cc/bwDqzrt0/Camiseta.jpg",
+      "gcat": "5697",
+      "gender": "male",
+      "color": "",
+      "img": "https://i.postimg.cc/MHMtQdk4/Camiseta10-11.jpg",
       "images": [
+        "https://i.postimg.cc/MHMtQdk4/Camiseta10-11.jpg",
+        "https://i.postimg.cc/MHC5bVxY/Camiseta10-12.jpg",
         "https://i.postimg.cc/bwDqzrt0/Camiseta.jpg",
         "https://i.postimg.cc/K8kmZjMr/Camiseta-A.jpg"
       ],
@@ -857,7 +862,7 @@
             {
               "label": "Musiala",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/MHC5bVxY/Camiseta10-12.jpg"
             }
           ]
         },
@@ -1772,5 +1777,5 @@
       "active": true
     }
   ],
-  "_v": 1779468276568
+  "_v": 1779469044447
 }
