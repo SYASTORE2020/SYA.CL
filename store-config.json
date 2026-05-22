@@ -1,7 +1,7 @@
 {
   "storeName": "SyA Store",
   "storeSlogan": "Los mejores productos al mejor precio",
-  "announcement": "🚚 Despacho a todo Chile · Rapido y seguro",
+  "announcement": "🚚 Despacho a todo Chile · Rapido y seguro · Pago contra entrega en Santiago",
   "whatsappNumber": "56991065770",
   "mpWebhookUrl": "https://verdant-tapioca-41d95c.netlify.app/.netlify/functions/mp-crear-preferencia",
   "currency": "CLP",
@@ -1753,5 +1753,5 @@
       "active": true
     }
   ],
-  "_v": 1779319187953
+  "_v": 1779418065521
 }
