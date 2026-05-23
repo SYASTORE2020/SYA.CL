@@ -2,7 +2,7 @@
   "storeName": "SyA Store",
   "storeSlogan": "Los mejores productos al mejor precio",
   "announcement": "🚚 Despacho a todo Chile · Rapido y seguro · Pago contra entrega en Santiago",
-  "whatsappNumber": "56991065770",
+  "whatsappNumber": "56995180865",
   "mpWebhookUrl": "https://verdant-tapioca-41d95c.netlify.app/.netlify/functions/mp-crear-preferencia",
   "currency": "CLP",
   "firebaseUrl": "https://sya-store-39770-default-rtdb.firebaseio.com",
@@ -138,7 +138,7 @@
       "id": "mp8pup9xvj3zm",
       "name": "Camiseta Seleccion Francia - Titular 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
+      "desc": "•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 20,
@@ -146,12 +146,8 @@
       "gcat": "5697",
       "gender": "male",
       "color": "Azul electrico con Rayas",
-      "img": "https://i.postimg.cc/0QgH0Tnq/Camiseta10-13.jpg",
+      "img": "https://i.postimg.cc/RV2hbY5D/Whats-App-Image-2026-05-16-at-2-43-54-PM.jpg",
       "images": [
-        "https://i.postimg.cc/0QgH0Tnq/Camiseta10-13.jpg",
-        "https://i.postimg.cc/k4rhv0sm/Camiseta10-14.jpg",
-        "https://i.postimg.cc/nLnJGQhc/Camiseta10-10.jpg",
-        "https://i.postimg.cc/GpbCxsm3/Camiseta10-9.jpg",
         "https://i.postimg.cc/RV2hbY5D/Whats-App-Image-2026-05-16-at-2-43-54-PM.jpg",
         "https://i.postimg.cc/pX3r1Sb1/Whats-App-Image-2026-05-16-at-2-43-54-PM1.jpg"
       ],
@@ -162,7 +158,7 @@
             {
               "label": "Mbappe",
               "stock": 0,
-              "img": "https://i.postimg.cc/k4rhv0sm/Camiseta10-14.jpg"
+              "img": ""
             }
           ]
         },
@@ -422,13 +418,10 @@
       "origPrice": 12990,
       "stock": 25,
       "weight": 0.29,
-      "gcat": "",
-      "gender": "",
-      "color": "",
-      "img": "https://i.postimg.cc/9XsKmqTv/Chat-GPT-Image-22-may-2026-01-22-10-p-m.png",
+      "img": "https://i.postimg.cc/nLtHcMwM/Los-bumkers.jpg",
       "images": [
-        "https://i.postimg.cc/9XsKmqTv/Chat-GPT-Image-22-may-2026-01-22-10-p-m.png",
-        "https://i.postimg.cc/SQH3Sz8H/Chat-GPT-Image-22-may-2026-01-22-16-p-m.png"
+        "https://i.postimg.cc/nLtHcMwM/Los-bumkers.jpg",
+        "https://i.postimg.cc/3wHKJWbk/Los-Bunkers1.jpg"
       ],
       "variants": [
         {
@@ -666,18 +659,15 @@
       "id": "mp2xnr5xso6tu",
       "name": "Camiseta Seleccion Portugal- Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n  \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
+      "desc": "•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
       "weight": 0.29,
-      "gcat": "5697",
-      "gender": "male",
-      "color": "",
-      "img": "https://i.postimg.cc/cLRV54vF/Camiseta10-p.jpg",
+      "img": "https://i.postimg.cc/bYHpWnjc/Camiseta-3.jpg",
       "images": [
-        "https://i.postimg.cc/cLRV54vF/Camiseta10-p.jpg",
-        "https://i.postimg.cc/bwxKFNZL/Camiseta10p1.jpg"
+        "https://i.postimg.cc/bYHpWnjc/Camiseta-3.jpg",
+        "https://i.postimg.cc/mZNBJ9Gx/Camiseta4.jpg"
       ],
       "variants": [
         {
@@ -686,7 +676,7 @@
             {
               "label": "Ronaldo 7",
               "stock": 0,
-              "img": "https://i.postimg.cc/bwxKFNZL/Camiseta10p1.jpg"
+              "img": ""
             }
           ]
         },
@@ -753,19 +743,13 @@
       "id": "mp21z64wg6nx1",
       "name": "Camiseta Seleccion Inglaterra - Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n •  Base: Blanco puro, el clasico de \"Los Tres Leones\"\n •  Detalles: Cuello en V azul marino con doble linea roja y blanca. Puños de las mangas en el mismo diseño, estilo retro-moderno.",
+      "desc": "•  Base: Blanco puro, el clasico de \"Los Tres Leones\"\n •  Detalles: Cuello en V azul marino con doble linea roja y blanca. Puños de las mangas en el mismo diseño, estilo retro-moderno.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
       "weight": 0.45,
-      "gcat": "5697",
-      "gender": "male",
-      "color": "",
-      "img": "https://i.postimg.cc/G2QV3MFs/Camiseta10-15.jpg",
+      "img": "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
       "images": [
-        "https://i.postimg.cc/G2QV3MFs/Camiseta10-15.jpg",
-        "https://i.postimg.cc/d1BpQW2C/Camiseta10-16.jpg",
-        "https://i.postimg.cc/SNzdDTnt/camiseta10-15.jpg",
         "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
         "https://i.postimg.cc/YqBP4SZj/Camiseta1.jpg"
       ],
@@ -776,12 +760,12 @@
             {
               "label": "Kane",
               "stock": 0,
-              "img": "https://i.postimg.cc/d1BpQW2C/Camiseta10-16.jpg"
+              "img": ""
             },
             {
               "label": "Palmer",
               "stock": 0,
-              "img": "https://i.postimg.cc/SNzdDTnt/camiseta10-15.jpg"
+              "img": ""
             }
           ]
         },
@@ -856,18 +840,13 @@
       "id": "mp21tr21h1fqb",
       "name": "Camiseta Seleccion Alemania - Titular 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n •  Base: Blanco clasico, base historica de la Seleccion.\n •  Detalles: el pecho tiene grafica en V con los colores de la bandera: negro, rojo y amarillo. Diseño iconico que cruza el pecho.\nCuello en V con borde rojo y negro. Puños en negro con remate rojo.",
+      "desc": "•  Base: Blanco clasico, base historica de la Seleccion.\n •  Detalles: el pecho tiene grafica en V con los colores de la bandera: negro, rojo y amarillo. Diseño iconico que cruza el pecho.\nCuello en V con borde rojo y negro. Puños en negro con remate rojo.",
       "price": 24990,
       "origPrice": 0,
       "stock": 20,
       "weight": 0.29,
-      "gcat": "5697",
-      "gender": "male",
-      "color": "",
-      "img": "https://i.postimg.cc/MHMtQdk4/Camiseta10-11.jpg",
+      "img": "https://i.postimg.cc/bwDqzrt0/Camiseta.jpg",
       "images": [
-        "https://i.postimg.cc/MHMtQdk4/Camiseta10-11.jpg",
-        "https://i.postimg.cc/MHC5bVxY/Camiseta10-12.jpg",
         "https://i.postimg.cc/bwDqzrt0/Camiseta.jpg",
         "https://i.postimg.cc/K8kmZjMr/Camiseta-A.jpg"
       ],
@@ -878,7 +857,7 @@
             {
               "label": "Musiala",
               "stock": 0,
-              "img": "https://i.postimg.cc/MHC5bVxY/Camiseta10-12.jpg"
+              "img": ""
             }
           ]
         },
@@ -945,18 +924,13 @@
       "id": "mp1un0hw0ozwf",
       "name": "Camiseta Seleccion Colombia- Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n•  Base: Amarillo vibrante, el color que identifica a la seleccion en todo el mundo.\n •  Detalles: Trama Froral en tonos amarillos por toda la camiseta, inspirada en la biodiversidad colombiana.\nCuello en V con linea azul. Mangas con puños en azul y detalles rojos en los hombros con los colores de la bandera.",
+      "desc": "•  Base: Amarillo vibrante, el color que identifica a la seleccion en todo el mundo.\n •  Detalles: Trama Froral en tonos amarillos por toda la camiseta, inspirada en la biodiversidad colombiana.\nCuello en V con linea azul. Mangas con puños en azul y detalles rojos en los hombros con los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
       "weight": 0.35,
-      "gcat": "5697",
-      "gender": "male",
-      "color": "",
-      "img": "https://i.postimg.cc/d3dpKWxw/camiseta10-8.jpg",
+      "img": "https://i.postimg.cc/j5DhwqgZ/Camiseta-C1.jpg",
       "images": [
-        "https://i.postimg.cc/d3dpKWxw/camiseta10-8.jpg",
-        "https://i.postimg.cc/NFTSwNzv/camiseta10-7.jpg",
         "https://i.postimg.cc/j5DhwqgZ/Camiseta-C1.jpg",
         "https://i.postimg.cc/DZScJfj5/Camiseta-C.jpg"
       ],
@@ -967,7 +941,7 @@
             {
               "label": "James 10",
               "stock": 0,
-              "img": "https://i.postimg.cc/NFTSwNzv/camiseta10-7.jpg"
+              "img": ""
             }
           ]
         },
@@ -1034,22 +1008,15 @@
       "id": "mp1tot73bv22o",
       "name": "Camiseta Seleccion Brazil -Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n\n•  Base: Amarillo Clasic, el color historico de Brasil\n •  Detalles: Cuello y Mangas rematados en verde oscuro, mismo tono del triangulo en el cuello en V. Costados con paneles laterales en turquesa/verde agua que estilizan la figura y dan un toque moderno.",
+      "desc": "•  Base: Amarillo Clasic, el color historico de Brasil\n •  Detalles: Cuello y Mangas rematados en verde oscuro, mismo tono del triangulo en el cuello en V. Costados con paneles laterales en turquesa/verde agua que estilizan la figura y dan un toque moderno.",
       "price": 24990,
       "origPrice": 0,
       "stock": 80,
       "weight": 0.35,
-      "gcat": "5697",
-      "gender": "male",
-      "color": "Amarillo",
-      "img": "https://i.postimg.cc/qqH5JsKG/Camiseta10-5.jpg",
+      "img": "https://i.postimg.cc/kX62t6vT/Camiseta-B.jpg",
       "images": [
-        "https://i.postimg.cc/qqH5JsKG/Camiseta10-5.jpg",
-        "https://i.postimg.cc/Jnf9ywfG/Camiseta10-6.jpg",
-        "https://i.postimg.cc/W1VqGhmN/Camiseta11.jpg",
-        "https://i.postimg.cc/W3FBbpHM/Camiseta-10-3.jpg",
-        "https://i.postimg.cc/90Hnmd9t/Camiseta10-4.jpg",
-        "https://i.postimg.cc/kX62t6vT/Camiseta-B.jpg"
+        "https://i.postimg.cc/kX62t6vT/Camiseta-B.jpg",
+        "https://i.postimg.cc/kX62t6vf/Camiseta-B.jpg"
       ],
       "variants": [
         {
@@ -1058,12 +1025,12 @@
             {
               "label": "Neymar 10",
               "stock": 0,
-              "img": "https://i.postimg.cc/Jnf9ywfG/Camiseta10-6.jpg"
+              "img": ""
             },
             {
               "label": "Raphinha 11",
               "stock": 0,
-              "img": "https://i.postimg.cc/W1VqGhmN/Camiseta11.jpg"
+              "img": ""
             }
           ]
         },
@@ -1138,20 +1105,13 @@
       "id": "mp1sapvnoxyma",
       "name": "Camiseta Seleccion Argentina - Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n\n•  Base: Clasicas franjas verticales albiceleste. Blanco como base y celeste con efecto degradado.\n •  Detalles: Cuello en V con doble linea celeste y negra. Puños en negro con detalle celeste. Franjas celeste con degradado. \nHombros: Tres lineas negras sobre blanco.",
+      "desc": "•  Base: Clasicas franjas verticales albiceleste. Blanco como base y celeste con efecto degradado.\n •  Detalles: Cuello en V con doble linea celeste y negra. Puños en negro con detalle celeste. Franjas celeste con degradado. \nHombros: Tres lineas negras sobre blanco.",
       "price": 24990,
       "origPrice": 0,
       "stock": 45,
       "weight": 0.35,
-      "gcat": "5697",
-      "gender": "male",
-      "color": "",
-      "img": "https://i.postimg.cc/5NMHwX1w/Chat-GPT-Image-22-may-2026-12-06-28-p-m.png",
+      "img": "https://i.postimg.cc/6Q752DKs/Camiseta-Argentina1.jpg",
       "images": [
-        "https://i.postimg.cc/5NMHwX1w/Chat-GPT-Image-22-may-2026-12-06-28-p-m.png",
-        "https://i.postimg.cc/7YskqRBC/camiseta10.jpg",
-        "https://i.postimg.cc/wB54jy6W/camiseta10-1.jpg",
-        "https://i.postimg.cc/Bv57nLqY/camiseta10-2.jpg",
         "https://i.postimg.cc/6Q752DKs/Camiseta-Argentina1.jpg",
         "https://i.postimg.cc/9MZm1Zzx/Camiseta-Argentina.jpg"
       ],
@@ -1793,5 +1753,5 @@
       "active": true
     }
   ],
-  "_v": 1779471357897
+  "_v": 1779504151350
 }
