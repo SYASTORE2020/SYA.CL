@@ -484,13 +484,13 @@
       "id": "mp37smz9jww33",
       "name": "Camiseta Manchester United Retro - Local 2008",
       "cat": "Camisetas de Futbol",
-      "desc": "•  Base: Color Rojo clasico de Old Trafford, con textura sutil a rayas verticales en la tela.\n •  Detalles: Cuello Redondo simple en rojo, estilo minimalista de la epoca.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Color Rojo clasico de Old Trafford, con textura sutil a rayas verticales en la tela.\n •  Detalles: Cuello Redondo simple en rojo, estilo minimalista de la epoca.",
       "price": 19990,
       "origPrice": 24990,
       "stock": 20,
       "weight": 0.29,
-      "gcat": "",
-      "gender": "",
+      "gcat": "5697",
+      "gender": "male",
       "color": "",
       "img": "https://i.postimg.cc/L8VCRZYt/camiseta22.jpg",
       "images": [
@@ -1791,5 +1791,5 @@
       "active": true
     }
   ],
-  "_v": 1779556549089
+  "_v": 1779556805654
 }
