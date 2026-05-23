@@ -1141,7 +1141,7 @@
       "id": "mp1sapvnoxyma",
       "name": "Camiseta Seleccion Argentina - Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n\n•  Base: Clasicas franjas verticales albiceleste. Blanco como base y celeste con efecto degradado.\n •  Detalles: Cuello en V con doble linea celeste y negra. Puños en negro con detalle celeste. Franjas celeste con degradado. \nHombros: Tres lineas negras sobre blanco.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Clasicas franjas verticales albiceleste. Blanco como base y celeste con efecto degradado.\n •  Detalles: Cuello en V con doble linea celeste y negra. Puños en negro con detalle celeste. Franjas celeste con degradado. \nHombros: Tres lineas negras sobre blanco.",
       "price": 24990,
       "origPrice": 0,
       "stock": 45,
@@ -1154,9 +1154,7 @@
         "https://i.postimg.cc/5NMHwX1w/Chat-GPT-Image-22-may-2026-12-06-28-p-m.png",
         "https://i.postimg.cc/7YskqRBC/camiseta10.jpg",
         "https://i.postimg.cc/wB54jy6W/camiseta10-1.jpg",
-        "https://i.postimg.cc/Bv57nLqY/camiseta10-2.jpg",
-        "https://i.postimg.cc/6Q752DKs/Camiseta-Argentina1.jpg",
-        "https://i.postimg.cc/9MZm1Zzx/Camiseta-Argentina.jpg"
+        "https://i.postimg.cc/Bv57nLqY/camiseta10-2.jpg"
       ],
       "variants": [
         {
@@ -1796,5 +1794,5 @@
       "active": true
     }
   ],
-  "_v": 1779551475832
+  "_v": 1779553088605
 }
