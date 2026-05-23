@@ -131,7 +131,7 @@
         "Vargas|L": 5,
         "Vargas|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1753,5 +1753,5 @@
       "active": true
     }
   ],
-  "_v": 1779504175595
+  "_v": 1779505084354
 }
