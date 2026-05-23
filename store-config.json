@@ -604,6 +604,9 @@
       "origPrice": 0,
       "stock": 20,
       "weight": 0.29,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/4xCdTgFc/Camiseta6.jpg",
       "images": [
         "https://i.postimg.cc/4xCdTgFc/Camiseta6.jpg",
@@ -652,7 +655,7 @@
         "Mbappe|L": 5,
         "Mbappe|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1774,5 +1777,5 @@
       "active": true
     }
   ],
-  "_v": 1779505184698
+  "_v": 1779505223167
 }
