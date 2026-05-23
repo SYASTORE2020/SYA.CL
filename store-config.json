@@ -748,6 +748,9 @@
       "origPrice": 0,
       "stock": 40,
       "weight": 0.45,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
       "images": [
         "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
@@ -833,7 +836,7 @@
         "Kane|16": 0,
         "Palmer|16": 0
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1753,5 +1756,5 @@
       "active": true
     }
   ],
-  "_v": 1779505092943
+  "_v": 1779505104916
 }
