@@ -669,7 +669,7 @@
       "id": "mp2xnr5xso6tu",
       "name": "Camiseta Seleccion Portugal- Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n  \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n  \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
@@ -1796,5 +1796,5 @@
       "active": true
     }
   ],
-  "_v": 1779550083700
+  "_v": 1779551475832
 }
