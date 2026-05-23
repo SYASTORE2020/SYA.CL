@@ -756,7 +756,7 @@
       "id": "mp21z64wg6nx1",
       "name": "Camiseta Seleccion Inglaterra - Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n •  Base: Blanco puro, el clasico de \"Los Tres Leones\"\n •  Detalles: Cuello en V azul marino con doble linea roja y blanca. Puños de las mangas en el mismo diseño, estilo retro-moderno.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n •  Base: Blanco puro, el clasico de \"Los Tres Leones\"\n •  Detalles: Cuello en V azul marino con doble linea roja y blanca. Puños de las mangas en el mismo diseño, estilo retro-moderno.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
@@ -768,9 +768,7 @@
       "images": [
         "https://i.postimg.cc/G2QV3MFs/Camiseta10-15.jpg",
         "https://i.postimg.cc/d1BpQW2C/Camiseta10-16.jpg",
-        "https://i.postimg.cc/SNzdDTnt/camiseta10-15.jpg",
-        "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
-        "https://i.postimg.cc/YqBP4SZj/Camiseta1.jpg"
+        "https://i.postimg.cc/SNzdDTnt/camiseta10-15.jpg"
       ],
       "variants": [
         {
@@ -1789,5 +1787,5 @@
       "active": true
     }
   ],
-  "_v": 1779553215076
+  "_v": 1779553246586
 }
