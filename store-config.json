@@ -547,7 +547,7 @@
       "id": "mp37b274smwr6",
       "name": "Camiseta AC Milan Retro - KAKA 2006/07",
       "cat": "Camisetas de Futbol",
-      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n \n •  Base: Clasicas franjas verticales rojas y negras, la identidad del Rossonero. \n •  Detalles: Nombre y numero del juagdor en dorado, en honor a la temporada donde fue Balon de Oro y campeon de Champions.\nEl cuello tipo polo en rojo y negro, detalle retro, lineas finas en hombros y costuras que le dan un toque elegante.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n ¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n •  Base: Clasicas franjas verticales rojas y negras, la identidad del Rossonero. \n •  Detalles: Nombre y numero del juagdor en dorado, en honor a la temporada donde fue Balon de Oro y campeon de Champions.\nEl cuello tipo polo en rojo y negro, detalle retro, lineas finas en hombros y costuras que le dan un toque elegante.",
       "price": 19990,
       "origPrice": 24990,
       "stock": 20,
@@ -1791,5 +1791,5 @@
       "active": true
     }
   ],
-  "_v": 1779556805654
+  "_v": 1779556824309
 }
