@@ -138,7 +138,7 @@
       "id": "mp8pup9xvj3zm",
       "name": "Camiseta Seleccion Francia - Titular 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "Camiseta Alternativa - ¨Diseño identico al Original con todos sus detalles¨\n\nCamiseta Alternativa. Incluye todos los detalles del diseño original: estampa localizada en frente y espalda, colores fieles. \n \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
       "price": 24990,
       "origPrice": 0,
       "stock": 20,
@@ -151,9 +151,7 @@
         "https://i.postimg.cc/0QgH0Tnq/Camiseta10-13.jpg",
         "https://i.postimg.cc/k4rhv0sm/Camiseta10-14.jpg",
         "https://i.postimg.cc/nLnJGQhc/Camiseta10-10.jpg",
-        "https://i.postimg.cc/GpbCxsm3/Camiseta10-9.jpg",
-        "https://i.postimg.cc/RV2hbY5D/Whats-App-Image-2026-05-16-at-2-43-54-PM.jpg",
-        "https://i.postimg.cc/pX3r1Sb1/Whats-App-Image-2026-05-16-at-2-43-54-PM1.jpg"
+        "https://i.postimg.cc/GpbCxsm3/Camiseta10-9.jpg"
       ],
       "variants": [
         {
@@ -1790,5 +1788,5 @@
       "active": true
     }
   ],
-  "_v": 1779553296921
+  "_v": 1779554613254
 }
