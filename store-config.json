@@ -1022,6 +1022,9 @@
       "origPrice": 0,
       "stock": 80,
       "weight": 0.35,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/kX62t6vT/Camiseta-B.jpg",
       "images": [
         "https://i.postimg.cc/kX62t6vT/Camiseta-B.jpg",
@@ -1107,7 +1110,7 @@
         "Neymar 10|XL": 5,
         "Raphinha 11|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1762,5 +1765,5 @@
       "active": true
     }
   ],
-  "_v": 1779505125136
+  "_v": 1779505133935
 }
