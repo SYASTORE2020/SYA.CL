@@ -1122,6 +1122,9 @@
       "origPrice": 0,
       "stock": 45,
       "weight": 0.35,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/6Q752DKs/Camiseta-Argentina1.jpg",
       "images": [
         "https://i.postimg.cc/6Q752DKs/Camiseta-Argentina1.jpg",
@@ -1195,7 +1198,7 @@
         "Messi 10|L": 5,
         "Messi 10|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1765,5 +1768,5 @@
       "active": true
     }
   ],
-  "_v": 1779505133935
+  "_v": 1779505142018
 }
