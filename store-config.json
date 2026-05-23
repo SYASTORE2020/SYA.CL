@@ -848,6 +848,9 @@
       "origPrice": 0,
       "stock": 20,
       "weight": 0.29,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/bwDqzrt0/Camiseta.jpg",
       "images": [
         "https://i.postimg.cc/bwDqzrt0/Camiseta.jpg",
@@ -920,7 +923,7 @@
         "Musiala|L": 5,
         "Musiala|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1756,5 +1759,5 @@
       "active": true
     }
   ],
-  "_v": 1779505104916
+  "_v": 1779505115427
 }
