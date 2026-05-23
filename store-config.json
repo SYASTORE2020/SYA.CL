@@ -935,6 +935,9 @@
       "origPrice": 0,
       "stock": 40,
       "weight": 0.35,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/j5DhwqgZ/Camiseta-C1.jpg",
       "images": [
         "https://i.postimg.cc/j5DhwqgZ/Camiseta-C1.jpg",
@@ -1007,7 +1010,7 @@
         "James 10|L": 5,
         "James 10|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1759,5 +1762,5 @@
       "active": true
     }
   ],
-  "_v": 1779505115427
+  "_v": 1779505125136
 }
