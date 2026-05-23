@@ -1608,6 +1608,9 @@
       "origPrice": 24990,
       "stock": 28,
       "weight": 0.35,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/7ZHfVcvn/Polera-Entrenamiento-Colo-Colo.jpg",
       "images": [
         "https://i.postimg.cc/7ZHfVcvn/Polera-Entrenamiento-Colo-Colo.jpg",
@@ -1680,7 +1683,7 @@
         "SIN JUGADOR|L": 5,
         "SIN JUGADOR|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1768,5 +1771,5 @@
       "active": true
     }
   ],
-  "_v": 1779505142018
+  "_v": 1779505165578
 }
