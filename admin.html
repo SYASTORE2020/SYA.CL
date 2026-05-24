@@ -1990,10 +1990,10 @@ const HERO_DEFAULTS = {
 
 function renderBanners(){
   const S = getSettings();
-  // heroConfig: desde localStorage (último valor guardado)
+  // Leer desde st_hero — la misma clave que usa saveHeroConfig
   let _savedHero = {};
-  try{ _savedHero = JSON.parse(localStorage.getItem('st_hero_preview')||'{}'); }catch(e){}
-  const hc = Object.assign({}, HERO_DEFAULTS, S.heroConfig||{}, _savedHero);
+  try{ _savedHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
+  const hc = Object.assign({}, HERO_DEFAULTS, _savedHero);
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : HERO_DEFAULTS.feats;
   const isImg = hc.bgType==='image';
 
@@ -2194,7 +2194,10 @@ async function saveHeroConfig(){
     const saveBtn = document.querySelector('[onclick="saveHeroConfig()"]');
     if(saveBtn){ saveBtn.textContent='⏳ Guardando...'; saveBtn.disabled=true; }
 
-    // Escribir directo a hero.json — archivo independiente, sin merges
+    // 1. Guardar en localStorage inmediatamente (para que el form pre-rellene correctamente)
+    localStorage.setItem('st_hero', JSON.stringify(heroConfig));
+
+    // 2. Subir a GitHub hero.json (para sincronizar con otros dispositivos)
     const ok = await pushToGitHub(
       'hero.json',
       JSON.stringify(heroConfig, null, 2),
@@ -2206,7 +2209,7 @@ async function saveHeroConfig(){
     if(ok){
       showToast('✓ Portada guardada y sincronizada ☁️','ok');
     } else {
-      showToast('⚠ Error al subir a GitHub — verifica el token en Configuración');
+      showToast('⚠ Guardado local OK — sin conexión a GitHub (verifica el token)');
     }
   } catch(err) {
     showToast('❌ Error: ' + err.message);

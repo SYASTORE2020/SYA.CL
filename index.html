@@ -2513,20 +2513,23 @@ function renderHeroV2(S){
 }
 
 
-// ── FETCH HERO CONFIG — archivo independiente hero.json ──
+// ── FETCH HERO CONFIG — usa GitHub API (sin caché CDN) ──
 async function fetchHeroConfig(){
-  const RAW = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main`;
+  const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/hero.json`;
   try {
-    const r = await fetch(`${RAW}/hero.json?_=${Date.now()}`);
+    // GitHub API no tiene caché CDN — siempre devuelve la versión más reciente
+    const r = await fetch(API_URL, {
+      headers: { 'Accept': 'application/vnd.github.v3.raw' }
+    });
     if(r.ok){
       const hc = await r.json();
-      if(hc && typeof hc === 'object'){
+      if(hc && typeof hc === 'object' && Object.keys(hc).length > 0){
         localStorage.setItem('st_hero', JSON.stringify(hc));
         return hc;
       }
     }
   } catch(e){}
-  // Fallback: leer desde localStorage
+  // Fallback: leer desde localStorage (puede tener datos del admin si mismo dispositivo)
   try{ return JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){ return {}; }
 }
 
