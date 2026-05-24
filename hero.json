@@ -1,11 +1,11 @@
 {
   "bgType": "color",
-  "bgColor": "#ae9332",
+  "bgColor": "#7c797b",
   "bgImg": "",
   "bgOverlay": 40,
   "title": "¡Lo estabas buscando!",
   "titleAccent": "acá está, al mejor precio",
-  "subtitle": "",
+  "subtitle": "Futbol, rock, y más",
   "feats": [
     {
       "icon": "🔒",
@@ -31,5 +31,5 @@
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
   "socialProof": "+500 clientes satisfechos en Chile",
-  "_saved": 1779649066246
+  "_saved": 1779651436989
 }
