@@ -1989,7 +1989,10 @@ const HERO_DEFAULTS = {
 
 function renderBanners(){
   const S = getSettings();
-  const hc = Object.assign({}, HERO_DEFAULTS, S.heroConfig||{});
+  // Leer desde st_hero (clave propia) para mostrar valores actuales en el formulario
+  let _stHero = {};
+  try{ _stHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
+  const hc = Object.assign({}, HERO_DEFAULTS, S.heroConfig||{}, _stHero);
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : HERO_DEFAULTS.feats;
   const isImg = hc.bgType==='image';
 
@@ -2167,7 +2170,7 @@ function saveHeroConfig(){
     sub: document.getElementById(`h_feat${i}_sub`).value.trim()
   }));
 
-  S.heroConfig = {
+  const heroConfig = {
     bgType: isImg?'image':'color',
     bgColor: document.getElementById('h_bgcolor').value,
     bgImg: isImg?bgImg:'',
@@ -2181,6 +2184,11 @@ function saveHeroConfig(){
     socialProof: document.getElementById('h_socialproof').value.trim()
   };
 
+  // Guardar en clave propia st_hero (aislada de st_settings)
+  localStorage.setItem('st_hero', JSON.stringify(heroConfig));
+
+  // También guardar en S.heroConfig y sincronizar con GitHub
+  S.heroConfig = heroConfig;
   saveSettingsObj(S);
   showToast('✓ Portada guardada y sincronizada ☁️','ok');
 }

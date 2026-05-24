@@ -1336,11 +1336,11 @@ async function fetchCloud(){
     const S = getSettings();
     if(mediaData.logoImg !== undefined) S.logoImg = mediaData.logoImg;
     if(mediaData.banners !== undefined) S.banners = mediaData.banners;
-    // heroConfig: aplicar desde GitHub solo si tiene contenido real
-    if(mediaData.heroConfig && Object.keys(mediaData.heroConfig).length > 0){
-      S.heroConfig = mediaData.heroConfig;
-    }
     localStorage.setItem('st_settings', JSON.stringify(S));
+    // heroConfig: clave propia st_hero — nunca toca st_settings
+    if(mediaData.heroConfig && Object.keys(mediaData.heroConfig).length > 0){
+      localStorage.setItem('st_hero', JSON.stringify(mediaData.heroConfig));
+    }
   }
   // Nota: el HTML fresco está garantizado por los meta Cache-Control del <head>
   // No se necesita redirect — eso causaba 22+ segundos de carga en móvil.
@@ -2239,6 +2239,9 @@ function renderHeroV2(S){
     {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
     {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
   ];
+  // Leer heroConfig desde su clave propia (st_hero), sin interferencia de st_settings
+  let _hcRaw = {};
+  try{ _hcRaw = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
   const hc = Object.assign({
     bgType:'color', bgColor:'#0B1120', bgImg:'', bgOverlay:40,
     title:'Todo lo que buscas,', titleAccent:'al mejor precio',
@@ -2246,7 +2249,7 @@ function renderHeroV2(S){
     feats: FEAT_DEF,
     ctaPrimary:'Ver productos →', ctaSecondary:'Ver categorías',
     socialProof:'+500 clientes satisfechos en Chile'
-  }, S.heroConfig||{});
+  }, _hcRaw);
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
 
   // ── Fondo del hero ──
