@@ -353,7 +353,7 @@
       <div class="nav-item" onclick="showTab('products',this)"><span class="nav-icon">📦</span> Productos</div>
       <div class="nav-item" onclick="showTab('orders',this)"><span class="nav-icon">🧾</span> Pedidos</div>
       <div class="nav-group-label">Tienda</div>
-      <div class="nav-item" onclick="showTab('banners',this)"><span class="nav-icon">🖼️</span> Banners</div>
+      <div class="nav-item" onclick="showTab('banners',this)"><span class="nav-icon">🖼️</span> Portada / Hero</div>
       <div class="nav-item" onclick="showTab('settings',this)"><span class="nav-icon">⚙️</span> Configuración</div>
     </nav>
     <div class="sidebar-bottom">
@@ -995,7 +995,7 @@ async function syncToCloud(){
     bannerInterval:S.bannerInterval||8, adminPassword:S.adminPassword, products:prods,
     _v: now
   };
-  const media = { logoImg:S.logoImg||'', banners:S.banners||[], _v:now };
+  const media = { logoImg:S.logoImg||'', banners:S.banners||[], heroConfig:S.heroConfig||{}, _v:now };
 
   // Un solo commit atómico con ambos archivos
   return await pushBothToGitHub(
@@ -1060,7 +1060,7 @@ document.getElementById('loginPwd').addEventListener('keydown',e=>{ if(e.key==='
 //  TABS
 // ════════════════════════════════════════════
 
-const TAB_TITLES = { dashboard:'Dashboard', products:'Productos', orders:'Pedidos', banners:'Banners', settings:'Configuración' };
+const TAB_TITLES = { dashboard:'Dashboard', products:'Productos', orders:'Pedidos', banners:'Portada / Hero', settings:'Configuración' };
 
 function goTab(name){
   const navEl = document.querySelector(`.nav-item[onclick*="'${name}'"]`);
@@ -1075,9 +1075,8 @@ function showTab(name, el){
   document.getElementById('pageTitle').textContent = TAB_TITLES[name]||name;
 
   const addBtn = document.getElementById('addBtn');
-  addBtn.style.display = ['products','banners'].includes(name) ? 'inline-flex' : 'none';
+  addBtn.style.display = ['products'].includes(name) ? 'inline-flex' : 'none';
   if(name==='products') addBtn.textContent='+ Producto';
-  if(name==='banners') addBtn.textContent='+ Banner';
 
   if(name==='dashboard') renderDashboard();
   if(name==='products') renderProducts();
@@ -1971,209 +1970,225 @@ function printLabel(){
 }
 
 // ════════════════════════════════════════════
-//  BANNERS
+//  PORTADA / HERO V2
 // ════════════════════════════════════════════
+
+const HERO_DEFAULTS = {
+  bgType:'color', bgColor:'#0B1120', bgImg:'', bgOverlay:40,
+  title:'Todo lo que buscas,', titleAccent:'al mejor precio',
+  subtitle:'Moda, fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro.',
+  feats:[
+    {icon:'🔒',title:'Pago 100% seguro con MercadoPago',sub:'Tu dinero protegido en todo momento'},
+    {icon:'🚚',title:'Envíos a todo Chile',sub:'Consulta el precio de tu envío antes de comprar'},
+    {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
+    {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
+  ],
+  ctaPrimary:'Ver productos →', ctaSecondary:'Ver categorías',
+  socialProof:'+500 clientes satisfechos en Chile'
+};
 
 function renderBanners(){
   const S = getSettings();
-  const banners = S.banners||[];
-  const interval = S.bannerInterval||8;
-  document.getElementById('bannerList').innerHTML=`
-    <div style="background:white;border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px;margin-bottom:16px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-      <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;">⏱️ Velocidad de rotación</div>
-      <div style="display:flex;align-items:center;gap:10px;flex:1;">
-        <input type="range" min="3" max="20" step="1" value="${interval}" id="bannerIntervalSlider"
-          oninput="document.getElementById('bannerIntervalVal').textContent=this.value+'s'"
-          style="flex:1;accent-color:var(--accent);">
-        <span id="bannerIntervalVal" style="font-weight:700;min-width:36px;">${interval}s</span>
+  const hc = Object.assign({}, HERO_DEFAULTS, S.heroConfig||{});
+  const feats = (hc.feats && hc.feats.length===4) ? hc.feats : HERO_DEFAULTS.feats;
+  const isImg = hc.bgType==='image';
+
+  document.getElementById('bannerList').innerHTML = `
+    <p style="font-size:13px;color:var(--muted);margin-bottom:20px;line-height:1.6;">
+      Personaliza el aspecto de la portada principal de tu tienda. Todos los cambios se sincronizan con la nube automáticamente.
+    </p>
+
+    <!-- ── FONDO ── -->
+    <div class="settings-section">
+      <div class="settings-section-title">🖼️ Fondo del hero</div>
+      <div style="display:flex;gap:20px;margin-bottom:14px;">
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px;">
+          <input type="radio" name="hero_bgtype" id="hbg_color" value="color" ${!isImg?'checked':''} onchange="toggleHeroBg()"> Color sólido
+        </label>
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:14px;">
+          <input type="radio" name="hero_bgtype" id="hbg_image" value="image" ${isImg?'checked':''} onchange="toggleHeroBg()"> Imagen de fondo
+        </label>
       </div>
-      <button class="btn btn-save" style="padding:8px 16px;" onclick="saveBannerInterval()">Guardar</button>
-      <small style="width:100%;color:var(--muted);font-size:12px;">Mínimo 3 segundos · Máximo 20 segundos · Actual: ${interval}s por banner</small>
-    </div>
-    <div style="display:flex;justify-content:flex-end;margin-bottom:12px;">
-      <button class="btn btn-save" onclick="openBannerModal()">+ Agregar banner</button>
-    </div>
-    ${banners.length ? banners.map((b,i)=>`
-      <div class="banner-item">
-        <div class="banner-preview" style="${b.img?`background:url('${b.img}') center/cover no-repeat`:`background:${b.bg||'#111'}`};">${b.img?'':b.tag||'BANNER'}</div>
-        <div class="banner-info">
-          <div class="banner-title-text">${b.title}</div>
-          <div class="banner-subtitle-text">${b.img?`🖼️ Con imagen${b.imgW?` (${b.imgW}×${b.imgH}px)`:''}`:(b.subtitle||'')}</div>
-        </div>
-        <div style="display:flex;gap:6px;flex-shrink:0;">
-          <button class="action-btn" onclick="editBanner(${i})">✏️</button>
-          <button class="action-btn" onclick="moveBanner(${i},-1)" ${i===0?'disabled':''}>↑</button>
-          <button class="action-btn" onclick="moveBanner(${i},1)" ${i===banners.length-1?'disabled':''}>↓</button>
-          <button class="action-btn danger" onclick="deleteBanner(${i})">🗑️</button>
+
+      <div id="hero_bg_color_wrap" ${isImg?'style="display:none"':''}>
+        <div class="form-group">
+          <label class="form-label">Color de fondo</label>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <input type="color" class="form-control" id="h_bgcolor" value="${hc.bgColor||'#0B1120'}"
+              style="width:56px;height:40px;padding:2px;cursor:pointer;"
+              oninput="document.getElementById('h_bgcolor_text').value=this.value">
+            <input class="form-control" id="h_bgcolor_text" value="${hc.bgColor||'#0B1120'}" placeholder="#0B1120"
+              style="flex:1;" oninput="document.getElementById('h_bgcolor').value=this.value">
+          </div>
         </div>
       </div>
-    `).join('') : '<div style="text-align:center;padding:40px;color:var(--muted);">No hay banners. Agrega uno.</div>'}
+
+      <div id="hero_bg_image_wrap" ${!isImg?'style="display:none"':''}>
+        <div class="form-group">
+          <label class="form-label">URL de imagen <span style="color:var(--muted);font-weight:400;">(recomendado: 1920×600 px)</span></label>
+          <input class="form-control" id="h_bgimgurl"
+            value="${hc.bgImg&&!hc.bgImg.startsWith('data:')?hc.bgImg:''}"
+            placeholder="https://..." oninput="previewHeroBg()">
+          <div style="text-align:center;color:var(--muted);font-size:12px;margin:8px 0;">— o sube un archivo —</div>
+          <input type="file" accept="image/*" id="h_bgimgfile" onchange="uploadHeroBg(this)"
+            style="font-family:'DM Sans',sans-serif;font-size:13px;">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Oscurecimiento (overlay) <span id="h_overlay_val">${hc.bgOverlay||40}%</span></label>
+          <input type="range" min="0" max="80" step="1" value="${hc.bgOverlay||40}" id="h_bgoverlay"
+            oninput="document.getElementById('h_overlay_val').textContent=this.value+'%'"
+            style="width:100%;accent-color:var(--accent);">
+          <small style="color:var(--muted);font-size:11px;">0% = imagen sin oscurecer · 80% = muy oscura</small>
+        </div>
+        <div id="h_bgimg_preview" style="${hc.bgImg?'':'display:none'}margin-top:8px;">
+          <img id="h_bgimg_previmg" src="${hc.bgImg||''}" alt="Vista previa"
+            style="width:100%;height:130px;object-fit:cover;border-radius:8px;border:1px solid var(--border);">
+          <div style="font-size:11px;color:var(--muted);margin-top:4px;" id="h_bgimg_dims"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TEXTOS PRINCIPALES ── -->
+    <div class="settings-section">
+      <div class="settings-section-title">✏️ Textos principales</div>
+      <div class="form-group">
+        <label class="form-label">Título — texto blanco (primera línea)</label>
+        <input class="form-control" id="h_title" value="${hc.title}" placeholder="Todo lo que buscas,">
+        <small style="color:var(--muted);font-size:11px;margin-top:3px;display:block;">Termina con coma si quieres que el acento dorado aparezca en la siguiente línea</small>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Acento en dorado (segunda línea en cursiva)</label>
+        <input class="form-control" id="h_titleaccent" value="${hc.titleAccent}" placeholder="al mejor precio">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Subtítulo</label>
+        <textarea class="form-control" id="h_subtitle" style="min-height:72px;">${hc.subtitle}</textarea>
+      </div>
+    </div>
+
+    <!-- ── MINI-BANNERS ── -->
+    <div class="settings-section">
+      <div class="settings-section-title">📋 Mini-banners de beneficios</div>
+      <small style="color:var(--muted);font-size:12px;display:block;margin-bottom:16px;">
+        Los destinos de cada mini-banner son fijos: 🔒 abre el carrito · 🚚 va al selector de comunas · 🔄 va a devoluciones · 📍 va a comunas de Santiago.
+      </small>
+      ${feats.map((f,i)=>`
+        <div style="border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start;background:white;">
+          <div style="width:36px;height:36px;border-radius:8px;background:rgba(245,158,11,0.12);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-top:4px;">${f.icon}</div>
+          <div style="flex:1;">
+            <div class="form-group" style="margin-bottom:8px;">
+              <label class="form-label" style="font-size:10px;letter-spacing:.5px;">Título mini-banner ${i+1}</label>
+              <input class="form-control" id="h_feat${i}_title" value="${f.title}" style="font-size:13px;">
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" style="font-size:10px;letter-spacing:.5px;">Descripción</label>
+              <input class="form-control" id="h_feat${i}_sub" value="${f.sub}" style="font-size:13px;">
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <!-- ── BOTONES Y PRUEBA SOCIAL ── -->
+    <div class="settings-section">
+      <div class="settings-section-title">🔘 Botones y prueba social</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Botón principal (dorado)</label>
+          <input class="form-control" id="h_ctaprimary" value="${hc.ctaPrimary}" placeholder="Ver productos →">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Botón secundario (borde blanco)</label>
+          <input class="form-control" id="h_ctasecondary" value="${hc.ctaSecondary}" placeholder="Ver categorías">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Texto junto a las estrellas ★★★★★</label>
+        <input class="form-control" id="h_socialproof" value="${hc.socialProof}" placeholder="+500 clientes satisfechos en Chile">
+      </div>
+    </div>
+
+    <button class="btn btn-save" style="min-width:180px;padding:12px 28px;font-size:15px;" onclick="saveHeroConfig()">
+      💾 Guardar portada
+    </button>
   `;
 }
 
-function saveBannerInterval(){
-  const val = parseInt(document.getElementById('bannerIntervalSlider').value)||8;
-  const S = getSettings();
-  S.bannerInterval = val;
-  saveSettingsObj(S);
-  showToast(`✓ Rotación guardada: cada ${val} segundos`,'ok');
+function toggleHeroBg(){
+  const isImg = document.getElementById('hbg_image').checked;
+  document.getElementById('hero_bg_color_wrap').style.display = isImg?'none':'block';
+  document.getElementById('hero_bg_image_wrap').style.display = isImg?'block':'none';
 }
 
-function toggleBannerBg(){
-  const isImg = document.getElementById('bm_bgtype_image').checked;
-  document.getElementById('bm_bg_color_wrap').style.display = isImg?'none':'block';
-  document.getElementById('bm_bg_image_wrap').style.display = isImg?'block':'none';
-}
-
-function previewBannerImg(){
-  const url = document.getElementById('bm_imgurl').value;
-  if(!url){ document.getElementById('bm_img_preview_wrap').style.display='none'; return; }
-  const img = document.getElementById('bm_imgpreview');
-  img.src = url;
-  img.onload = ()=>{
-    document.getElementById('bm_img_preview_wrap').style.display='block';
-    document.getElementById('bm_img_dims').textContent=`Dimensiones reales: ${img.naturalWidth}×${img.naturalHeight}px`;
+function previewHeroBg(){
+  const url = document.getElementById('h_bgimgurl').value.trim();
+  const wrap = document.getElementById('h_bgimg_preview');
+  if(!url){ wrap.style.display='none'; return; }
+  const img = document.getElementById('h_bgimg_previmg');
+  img.src=url; img.removeAttribute('data-b64');
+  img.onload=()=>{
+    wrap.style.display='block';
+    document.getElementById('h_bgimg_dims').textContent=`${img.naturalWidth}×${img.naturalHeight}px`;
   };
 }
 
-function uploadBannerImg(input){
+function uploadHeroBg(input){
   if(!input.files[0]) return;
-  const reader = new FileReader();
-  reader.onload = e=>{
-    const img = document.getElementById('bm_imgpreview');
-    img.src = e.target.result;
-    img.setAttribute('data-b64', e.target.result);
-    document.getElementById('bm_imgurl').value='';
-    document.getElementById('bm_current_img').value=''; // clear so new upload takes over
-    img.onload = ()=>{
-      document.getElementById('bm_img_preview_wrap').style.display='block';
-      document.getElementById('bm_img_dims').textContent=`Dimensiones reales: ${img.naturalWidth}×${img.naturalHeight}px`;
-      if(!document.getElementById('bm_imgw').value) document.getElementById('bm_imgw').value = img.naturalWidth;
-      if(!document.getElementById('bm_imgh').value) document.getElementById('bm_imgh').value = img.naturalHeight;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    const img=document.getElementById('h_bgimg_previmg');
+    img.src=e.target.result;
+    img.setAttribute('data-b64',e.target.result);
+    document.getElementById('h_bgimgurl').value='';
+    img.onload=()=>{
+      document.getElementById('h_bgimg_preview').style.display='block';
+      document.getElementById('h_bgimg_dims').textContent=`${img.naturalWidth}×${img.naturalHeight}px`;
     };
   };
   reader.readAsDataURL(input.files[0]);
 }
 
-function toggleBtnTransparent(){
-  const isTransparent = document.getElementById('bm_btntransparent').checked;
-  document.getElementById('bm_btnbg').disabled = isTransparent;
-  updateBtnPreview();
-}
+function saveHeroConfig(){
+  const S = getSettings();
+  const isImg = document.getElementById('hbg_image').checked;
+  const ICONS = ['🔒','🚚','🔄','📍'];
 
-function updateBtnPreview(){
-  const btn = document.getElementById('bm_btn_preview');
-  const text = document.getElementById('bm_btn').value || 'Ver productos';
-  const color = document.getElementById('bm_btncolor').value;
-  const bg = document.getElementById('bm_btnbg').value;
-  const font = document.getElementById('bm_btnfont').value;
-  const isTransparent = document.getElementById('bm_btntransparent').checked;
-  btn.textContent = text + ' →';
-  btn.style.color = color;
-  btn.style.fontFamily = font;
-  if(isTransparent){
-    btn.style.background = 'transparent';
-    btn.style.border = `2px solid ${color}`;
-  } else {
-    btn.style.background = bg;
-    btn.style.border = 'none';
-  }
-}
-
-// Attach live preview listeners after DOM ready
-setTimeout(()=>{
-  ['bm_btn','bm_btncolor','bm_btnbg','bm_btnfont'].forEach(id=>{
-    const el = document.getElementById(id);
-    if(el) el.addEventListener('input', updateBtnPreview);
-  });
-}, 500);
-
-function openBannerModal(banner, idx){
-  document.getElementById('bannerModalTitle').textContent = banner?'Editar banner':'Agregar banner';
-  document.getElementById('bm_idx').value = idx!==undefined ? idx : -1;
-  document.getElementById('bm_title').value = banner?.title||'';
-  document.getElementById('bm_sub').value = banner?.subtitle||'';
-  document.getElementById('bm_tag').value = banner?.tag||'';
-  document.getElementById('bm_btn').value = banner?.btn||'';
-  document.getElementById('bm_link').value = banner?.link||'#todos';
-  document.getElementById('bm_btnpos').value = banner?.btnPos||'left';
-  document.getElementById('bm_btnfont').value = banner?.btnFont||"'DM Sans', sans-serif";
-  document.getElementById('bm_btncolor').value = banner?.btnColor||'#111111';
-  document.getElementById('bm_btnbg').value = banner?.btnBg||'#ffffff';
-  document.getElementById('bm_btntransparent').checked = banner?.btnBgTransparent||false;
-  document.getElementById('bm_bg').value = banner?.bg||'#1A1A2E';
-
-  const hasImg = !!(banner?.img);
-  document.getElementById('bm_bgtype_color').checked = !hasImg;
-  document.getElementById('bm_bgtype_image').checked = hasImg;
-  toggleBannerBg();
-
-  if(hasImg){
-    document.getElementById('bm_current_img').value = banner.img; // preserve existing
-    document.getElementById('bm_imgurl').value = banner.img.startsWith('data:') ? '' : banner.img;
-    document.getElementById('bm_imgw').value = banner.imgW||1440;
-    document.getElementById('bm_imgh').value = banner.imgH||520;
-    document.getElementById('bm_overlay').value = Math.round((banner.overlay != null ? banner.overlay : 0.35)*100);
-    document.getElementById('bm_overlay_val').textContent = Math.round((banner.overlay != null ? banner.overlay : 0.35)*100)+'%';
-    const prev = document.getElementById('bm_imgpreview');
-    prev.src = banner.img;
-    prev.removeAttribute('data-b64');
-    document.getElementById('bm_img_preview_wrap').style.display='block';
-  } else {
-    document.getElementById('bm_current_img').value = '';
-    document.getElementById('bm_imgurl').value='';
-    document.getElementById('bm_imgw').value=1440;
-    document.getElementById('bm_imgh').value=520;
-    document.getElementById('bm_overlay').value=35;
-    document.getElementById('bm_overlay_val').textContent='35%';
-    document.getElementById('bm_img_preview_wrap').style.display='none';
-  }
-
-  updateBtnPreview();
-  document.getElementById('bannerModal').classList.add('open');
-}
-
-function editBanner(i){ const S=getSettings(); openBannerModal(S.banners[i], i); }
-
-function closeBannerModal(){ document.getElementById('bannerModal').classList.remove('open'); }
-
-function saveBanner(){
-  const isImg = document.getElementById('bm_bgtype_image').checked;
-  let img='', imgW=0, imgH=0, overlay=0.35;
+  let bgImg = S.heroConfig?.bgImg||'';
   if(isImg){
-    const b64 = document.getElementById('bm_imgpreview').getAttribute('data-b64');
-    const urlInput = document.getElementById('bm_imgurl').value.trim();
-    const currentImg = document.getElementById('bm_current_img').value; // preserved
-    img = b64 || urlInput || currentImg; // use new upload, new URL, or keep existing
-    imgW = parseInt(document.getElementById('bm_imgw').value)||1440;
-    imgH = parseInt(document.getElementById('bm_imgh').value)||520;
-    overlay = parseInt(document.getElementById('bm_overlay').value)/100;
-    if(!img){ showToast('Por favor sube o pega la URL de la imagen'); return; }
+    const prevImg = document.getElementById('h_bgimg_previmg');
+    const b64 = prevImg?.getAttribute('data-b64')||'';
+    const urlVal = document.getElementById('h_bgimgurl').value.trim();
+    bgImg = b64 || urlVal || bgImg;
   }
 
-  const banner = {
-    title: document.getElementById('bm_title').value.trim(),
-    subtitle: document.getElementById('bm_sub').value.trim(),
-    tag: document.getElementById('bm_tag').value.trim(),
-    btn: document.getElementById('bm_btn').value.trim(),
-    link: document.getElementById('bm_link').value.trim()||'#todos',
-    btnPos: document.getElementById('bm_btnpos').value,
-    btnFont: document.getElementById('bm_btnfont').value,
-    btnColor: document.getElementById('bm_btncolor').value,
-    btnBg: document.getElementById('bm_btnbg').value,
-    btnBgTransparent: document.getElementById('bm_btntransparent').checked,
-    bg: document.getElementById('bm_bg').value,
-    img, imgW, imgH, overlay
+  const feats = [0,1,2,3].map(i=>({
+    icon: (S.heroConfig?.feats?.[i]?.icon)||ICONS[i],
+    title: document.getElementById(`h_feat${i}_title`).value.trim(),
+    sub: document.getElementById(`h_feat${i}_sub`).value.trim()
+  }));
+
+  S.heroConfig = {
+    bgType: isImg?'image':'color',
+    bgColor: document.getElementById('h_bgcolor').value,
+    bgImg: isImg?bgImg:'',
+    bgOverlay: parseInt(document.getElementById('h_bgoverlay').value)||40,
+    title: document.getElementById('h_title').value.trim(),
+    titleAccent: document.getElementById('h_titleaccent').value.trim(),
+    subtitle: document.getElementById('h_subtitle').value.trim(),
+    feats,
+    ctaPrimary: document.getElementById('h_ctaprimary').value.trim(),
+    ctaSecondary: document.getElementById('h_ctasecondary').value.trim(),
+    socialProof: document.getElementById('h_socialproof').value.trim()
   };
 
-  const S = getSettings();
-  const idx = parseInt(document.getElementById('bm_idx').value);
-  if(idx>=0) S.banners[idx]=banner; else S.banners.push(banner);
   saveSettingsObj(S);
-  closeBannerModal();
-  renderBanners();
-  showToast('✓ Banner guardado','ok');
+  showToast('✓ Portada guardada y sincronizada ☁️','ok');
 }
+
+// ════════════════════════════════════════════
+//  BANNERS (legacy — mantenido por compatibilidad)
+// ════════════════════════════════════════════
+
 
 function deleteBanner(i){
   if(!confirm('¿Eliminar este banner?')) return;
@@ -2503,6 +2518,7 @@ async function adminBoot(){
       if(githubMediaV > localMediaV){
         if(media.logoImg) S.logoImg = media.logoImg;
         if(media.banners) S.banners = media.banners;
+        if(media.heroConfig) S.heroConfig = media.heroConfig;
         S._mediaV = githubMediaV;
         localStorage.setItem('st_settings', JSON.stringify(S));
       }
