@@ -1,6 +1,6 @@
 {
   "bgType": "color",
-  "bgColor": "#7c797b",
+  "bgColor": "#0d0d0d",
   "bgImg": "",
   "bgOverlay": 40,
   "title": "¡Lo estabas buscando!",
@@ -31,5 +31,5 @@
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
   "socialProof": "+500 clientes satisfechos en Chile",
-  "_saved": 1779651436989
+  "_saved": 1779651590300
 }
