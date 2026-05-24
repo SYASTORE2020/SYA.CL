@@ -1233,6 +1233,9 @@
       "origPrice": 14990,
       "stock": 20,
       "weight": 0.15,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/vZPrgmQy/IMG-20240327-WA0036-Photoroom.png",
       "images": [
         "https://i.postimg.cc/vZPrgmQy/IMG-20240327-WA0036-Photoroom.png",
@@ -1263,7 +1266,7 @@
       "variantMatrix": {
         "Capsula|60": 20
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1791,5 +1794,5 @@
       "active": true
     }
   ],
-  "_v": 1779556824309
+  "_v": 1779616357370
 }
