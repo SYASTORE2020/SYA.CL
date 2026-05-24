@@ -1796,7 +1796,7 @@
   ],
   "heroConfig": {
     "bgType": "color",
-    "bgColor": "#d0d312",
+    "bgColor": "#afb139",
     "bgImg": "",
     "bgOverlay": 40,
     "title": "Lo estabas buscando!",
@@ -1828,5 +1828,5 @@
     "ctaSecondary": "Ver categorías",
     "socialProof": "+500 clientes satisfechos en Chile"
   },
-  "_v": 1779627538031
+  "_v": 1779627668722
 }
