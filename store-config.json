@@ -1794,5 +1794,39 @@
       "active": true
     }
   ],
-  "_v": 1779625785493
+  "heroConfig": {
+    "bgType": "color",
+    "bgColor": "#d0d312",
+    "bgImg": "",
+    "bgOverlay": 40,
+    "title": "Todo lo que buscas,",
+    "titleAccent": "al mejor precio",
+    "subtitle": "Moda, fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro.",
+    "feats": [
+      {
+        "icon": "🔒",
+        "title": "Pago 100% seguro con MercadoPago",
+        "sub": "Tu dinero protegido en todo momento"
+      },
+      {
+        "icon": "🚚",
+        "title": "Envíos a todo Chile",
+        "sub": "Consulta el precio de tu envío antes de comprar"
+      },
+      {
+        "icon": "🔄",
+        "title": "Garantía de satisfacción",
+        "sub": "Si no te gusta, te ayudamos — ver política"
+      },
+      {
+        "icon": "📍",
+        "title": "Pago contra entrega · Provincia de Santiago",
+        "sub": "Ver comunas disponibles para entrega"
+      }
+    ],
+    "ctaPrimary": "Ver productos →",
+    "ctaSecondary": "Ver categorías",
+    "socialProof": "+500 clientes satisfechos en Chile"
+  },
+  "_v": 1779626494416
 }
