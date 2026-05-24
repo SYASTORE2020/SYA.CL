@@ -1542,15 +1542,18 @@
       "id": "movwqijmz41t6",
       "name": "Camiseta Colo Colo-Pre Partido 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "•  Base: Rojo intenso como color principal, con patrones geometricos y tribales en negro que recorren toda la camiseta en vertical.\n •  Detalles: Puños y Bordes en negro.\n •  Dorsal y nombre: Las camisetas \"Pre Partido\" no tienen dorsal ni nombre del jugador.",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Rojo intenso como color principal, con patrones geometricos y tribales en negro que recorren toda la camiseta en vertical.\n •  Detalles: Puños y Bordes en negro.\n •  Dorsal y nombre: Las camisetas \"Pre Partido\" no tienen dorsal ni nombre del jugador.",
       "price": 20990,
       "origPrice": 24990,
       "stock": 28,
       "weight": 0.34,
-      "img": "https://i.postimg.cc/BvyzpdzR/Camiseta-colo-colo-Roja.jpg",
+      "gcat": "5697",
+      "gender": "male",
+      "color": "Rojo con rayas",
+      "img": "https://i.postimg.cc/Twsrt67G/Camiseta28.jpg",
       "images": [
-        "https://i.postimg.cc/BvyzpdzR/Camiseta-colo-colo-Roja.jpg",
-        "https://i.postimg.cc/DzDN6tNq/Camiseta-colo-colo-Roja1.jpg"
+        "https://i.postimg.cc/Twsrt67G/Camiseta28.jpg",
+        "https://i.postimg.cc/qRF81Tbr/Camiseta27.jpg"
       ],
       "variants": [
         {
@@ -1559,7 +1562,7 @@
             {
               "label": "SIN JUGADOR",
               "stock": 0,
-              "img": "https://i.postimg.cc/DzDN6tNq/Camiseta-colo-colo-Roja1.jpg"
+              "img": "https://i.postimg.cc/qRF81Tbr/Camiseta27.jpg"
             }
           ]
         },
@@ -1829,5 +1832,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779642853033
+  "_v": 1779643030219
 }
