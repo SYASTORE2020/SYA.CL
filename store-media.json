@@ -58,8 +58,8 @@
     "bgColor": "#d0d312",
     "bgImg": "",
     "bgOverlay": 40,
-    "title": "Todo lo que buscas,",
-    "titleAccent": "al mejor precio",
+    "title": "Lo estabas buscando!",
+    "titleAccent": "acá está al mejor precio",
     "subtitle": "Moda, fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro.",
     "feats": [
       {
@@ -87,5 +87,5 @@
     "ctaSecondary": "Ver categorías",
     "socialProof": "+500 clientes satisfechos en Chile"
   },
-  "_v": 1779626688253
+  "_v": 1779627078241
 }
