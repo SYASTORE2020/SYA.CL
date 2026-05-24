@@ -196,7 +196,7 @@
         "Mbappe|L": 5,
         "Mbappe|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -540,7 +540,7 @@
         "Ronaldo 7|L": 5,
         "Ronaldo 7|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -603,7 +603,7 @@
         "KAKA 22|L": 5,
         "KAKA 22|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -666,7 +666,7 @@
         "Mbappe|L": 5,
         "Mbappe|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -753,7 +753,7 @@
         "Ronaldo 7|L": 5,
         "Ronaldo 7|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -854,7 +854,7 @@
         "Kane|16": 0,
         "Palmer|16": 0
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -941,7 +941,7 @@
         "Musiala|L": 5,
         "Musiala|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -1028,7 +1028,7 @@
         "James 10|L": 5,
         "James 10|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -1131,7 +1131,7 @@
         "Neymar 10|XL": 5,
         "Raphinha 11|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -1221,7 +1221,7 @@
         "Messi 10|L": 5,
         "Messi 10|XL": 5
       },
-      "featured": true,
+      "featured": false,
       "active": true
     },
     {
@@ -1233,9 +1233,6 @@
       "origPrice": 14990,
       "stock": 20,
       "weight": 0.15,
-      "gcat": "",
-      "gender": "",
-      "color": "",
       "img": "https://i.postimg.cc/vZPrgmQy/IMG-20240327-WA0036-Photoroom.png",
       "images": [
         "https://i.postimg.cc/vZPrgmQy/IMG-20240327-WA0036-Photoroom.png",
@@ -1829,5 +1826,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779632475327
+  "_v": 1779642332065
 }
