@@ -1328,7 +1328,7 @@ async function fetchCloud(){
     }catch(e){}
     const merged = Object.assign({}, cfgData);
     delete merged.products; delete merged.banners; delete merged.logoImg;
-    // heroConfig puede venir tanto de store-config como de store-media
+    delete merged.heroConfig; // heroConfig solo viene de store-media.json — nunca de store-config
     const mergedSettings = Object.assign(getSettings(), merged);
     localStorage.setItem('st_settings', JSON.stringify(mergedSettings));
   }
@@ -1336,7 +1336,10 @@ async function fetchCloud(){
     const S = getSettings();
     if(mediaData.logoImg !== undefined) S.logoImg = mediaData.logoImg;
     if(mediaData.banners !== undefined) S.banners = mediaData.banners;
-    if(mediaData.heroConfig !== undefined) S.heroConfig = mediaData.heroConfig;
+    // heroConfig: aplicar desde GitHub solo si tiene contenido real
+    if(mediaData.heroConfig && Object.keys(mediaData.heroConfig).length > 0){
+      S.heroConfig = mediaData.heroConfig;
+    }
     localStorage.setItem('st_settings', JSON.stringify(S));
   }
   // Nota: el HTML fresco está garantizado por los meta Cache-Control del <head>
