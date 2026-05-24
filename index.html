@@ -223,137 +223,110 @@
     /* admin hint — secret access */
     .admin-hint { display:none; }
 
-    /* ── HERO V2 ── */
-    .hero-v2 {
-      padding: 40px 64px 0;
+    /* ── HERO CAROUSEL ── */
+    .hero {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/6;   /* proporción de pantalla ancha en desktop */
+      overflow: hidden;
+      background: #111;
+      user-select: none;
+      touch-action: pan-y;
     }
-    .hv2-badge {
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      padding: 72px 64px;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      pointer-events: none;
+    }
+    .hero-slide.active { opacity: 1; pointer-events: all; }
+
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-content { width:100%; z-index: 2; }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      color: white;
+      padding: 5px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 54px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+    .hero-subtitle {
+      color: rgba(255,255,255,0.85);
+      font-size: 17px;
+      margin-bottom: 36px;
+      max-width: 440px;
+    }
+    .hero-btn {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 100px;
-      padding: 6px 16px 6px 6px;
-      margin-bottom: 28px;
+      gap: 8px;
+      background: white;
+      color: var(--primary);
+      padding: 14px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
-    .hv2-badge-logo {
-      width: 32px; height: 32px;
-      border-radius: 7px;
-      object-fit: cover;
-      flex-shrink: 0;
+    .hero-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.22); }
+
+    .hero-nav {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+      align-items: center;
     }
-    .hv2-badge-dot {
-      width: 5px; height: 5px;
+    .hero-dot {
+      width: 8px; height: 8px;
       border-radius: 50%;
-      background: #F59E0B;
-      flex-shrink: 0;
+      background: rgba(255,255,255,0.45);
+      border: none; cursor: pointer;
+      transition: all 0.3s;
+      padding: 0;
     }
-    .hv2-badge-text {
-      font-size: 11px; font-weight: 600;
-      letter-spacing: 1.5px; text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
+    .hero-dot.active {
+      background: white;
+      width: 26px;
+      border-radius: 4px;
     }
-    .hv2-body {
-      display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 48px;
-      align-items: start;
-    }
-    .hv2-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 50px; font-weight: 800;
-      color: #fff; line-height: 1.0;
-      letter-spacing: -1.5px; margin-bottom: 16px;
-    }
-    .hv2-accent { color: #F59E0B; font-style: italic; }
-    .hv2-sub {
-      font-size: 15px; color: rgba(255,255,255,0.5);
-      line-height: 1.65; margin-bottom: 24px; max-width: 420px;
-    }
-    .hv2-features {
-      display: flex; flex-direction: column;
-      gap: 8px; margin-bottom: 28px;
-    }
-    .hv2-feat {
-      display: flex; align-items: center; gap: 14px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 10px; padding: 13px 16px;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s, border-color 0.2s;
-    }
-    .hv2-feat:hover {
-      background: rgba(245,158,11,0.1);
-      border-color: rgba(245,158,11,0.28);
-    }
-    .hv2-feat-icon {
-      width: 36px; height: 36px; border-radius: 9px;
-      background: rgba(245,158,11,0.15); color: #F59E0B;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; flex-shrink: 0;
-    }
-    .hv2-feat-copy { flex: 1; }
-    .hv2-feat-title { font-size: 13px; font-weight: 600; color: #fff; line-height: 1.25; }
-    .hv2-feat-sub { font-size: 11px; color: rgba(255,255,255,0.42); margin-top: 2px; }
-    .hv2-feat-chev { color: rgba(255,255,255,0.25); font-size: 18px; line-height: 1; }
-    .hv2-ctas { display: flex; gap: 10px; margin-bottom: 20px; }
-    .hv2-cta-primary {
-      background: #F59E0B; color: #0B1120; border: none;
-      padding: 12px 24px; border-radius: 8px;
-      font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700;
-      cursor: pointer; display: inline-flex; align-items: center; gap: 7px;
-      transition: background 0.2s, transform 0.18s; text-decoration: none;
-    }
-    .hv2-cta-primary:hover { background: #e08e08; transform: translateY(-1px); }
-    .hv2-cta-secondary {
-      background: transparent; color: #fff;
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 12px 24px; border-radius: 8px;
-      font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500;
-      cursor: pointer; transition: background 0.2s; text-decoration: none;
-    }
-    .hv2-cta-secondary:hover { background: rgba(255,255,255,0.07); }
-    .hv2-proof { display: flex; align-items: center; gap: 10px; padding-bottom: 36px; }
-    .hv2-stars { color: #F59E0B; font-size: 15px; letter-spacing: 1px; }
-    .hv2-proof-text { font-size: 12px; color: rgba(255,255,255,0.4); }
-    .hv2-right { display: flex; flex-direction: column; gap: 10px; padding-top: 4px; }
-    .hv2-cat-big {
-      border-radius: 14px; overflow: hidden;
-      height: 200px; position: relative;
-      cursor: pointer; background: #1a2540;
-    }
-    .hv2-cat-big img { width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease; }
-    .hv2-cat-big:hover img { transform: scale(1.04); }
-    .hv2-cat-overlay { position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.72) 0%,transparent 55%); }
-    .hv2-cat-footer { position:absolute;bottom:12px;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between; }
-    .hv2-cat-name { color:#fff;font-size:14px;font-weight:600; }
-    .hv2-cat-badge { background:#F59E0B;color:#0B1120;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;letter-spacing:.5px;text-transform:uppercase; }
-    .hv2-cat-row { display:grid;grid-template-columns:1fr 1fr;gap:10px; }
-    .hv2-cat-small {
-      border-radius: 12px; overflow: hidden;
-      height: 108px; position: relative;
-      cursor: pointer; background: #1a2540;
-    }
-    .hv2-cat-small img { width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease; }
-    .hv2-cat-small:hover img { transform: scale(1.06); }
-    .hv2-cat-small-footer { position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,0.78) 0%,transparent 100%);padding:8px 10px 9px; }
-    .hv2-cat-small-name { color:#fff;font-size:12px;font-weight:600; }
-    .hv2-trust {
-      display: grid; grid-template-columns: repeat(4,1fr);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin: 0 -64px;
-    }
-    .hv2-trust-item {
-      padding: 16px 20px; display:flex; flex-direction:column; gap:2px;
-      border-right: 1px solid rgba(255,255,255,0.08);
-      cursor: pointer; transition: background 0.18s; text-decoration: none;
-    }
-    .hv2-trust-item:last-child { border-right: none; }
-    .hv2-trust-item:hover { background: rgba(255,255,255,0.04); }
-    .hv2-trust-icon { color:#F59E0B;font-size:18px;margin-bottom:4px; }
-    .hv2-trust-title { font-size:12px;font-weight:600;color:#fff; }
-    .hv2-trust-sub { font-size:11px;color:rgba(255,255,255,0.38); }
 
     /* ── SECTION ── */
     .section { padding: 64px 40px; }
@@ -1030,14 +1003,6 @@
       .product-img-wrap { height: 120px; }
       .section-title { font-size: 20px; }
     }
-    @media (max-width:768px) {
-      .hero-v2 { padding: 24px 20px 0; }
-      .hv2-body { grid-template-columns: 1fr; gap: 24px; }
-      .hv2-title { font-size: 30px; }
-      .hv2-right { display: none; }
-      .hv2-trust { grid-template-columns: repeat(2,1fr); margin: 0 -20px; }
-      .hv2-trust-item:nth-child(2) { border-right: none; }
-    }
   </style>
 </head>
 <body>
@@ -1060,7 +1025,7 @@
 </nav>
 
 <!-- ── HERO CAROUSEL ── -->
-<section class="hero-v2" id="heroSection" style="background:#0B1120;position:relative;"></section>
+<section class="hero" id="heroSection"></section>
 
 <!-- ── CATEGORIES ── -->
 <section class="section">
@@ -1328,20 +1293,14 @@ async function fetchCloud(){
     }catch(e){}
     const merged = Object.assign({}, cfgData);
     delete merged.products; delete merged.banners; delete merged.logoImg;
-    // heroConfig: aplicar de GitHub solo si es más nuevo que el local
-    const localHeroSaved = ((getSettings().heroConfig)||{})._saved || 0;
-    const ghHeroSaved    = (merged.heroConfig||{})._saved || 0;
-    if(!ghHeroSaved || ghHeroSaved <= localHeroSaved) delete merged.heroConfig;
-    const mergedSettings = Object.assign(getSettings(), merged);
-    localStorage.setItem('st_settings', JSON.stringify(mergedSettings));
+    localStorage.setItem('st_settings', JSON.stringify(Object.assign(getSettings(), merged)));
   }
   if(mediaData){
     const S = getSettings();
     if(mediaData.logoImg !== undefined) S.logoImg = mediaData.logoImg;
     if(mediaData.banners !== undefined) S.banners = mediaData.banners;
-    // heroConfig viene de store-config.json — no de store-media.json
+    if(mediaData.heroConfig && mediaData.heroConfig._saved){ S.heroConfig = mediaData.heroConfig; }
     localStorage.setItem('st_settings', JSON.stringify(S));
-    // (heroConfig con _saved timestamp — garantiza que es un valor real guardado por el admin
   }
   // Nota: el HTML fresco está garantizado por los meta Cache-Control del <head>
   // No se necesita redirect — eso causaba 22+ segundos de carga en móvil.
@@ -1412,15 +1371,139 @@ function syncCartUI(){
 //  RENDER
 // ════════════════════════════════════════════
 
+
+// ── FETCH HERO CONFIG ──
+async function fetchHeroConfig(){
+  let localHero = {};
+  try{ localHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
+  const localSaved = localHero._saved || 0;
+  const API = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/hero.json`;
+  try{
+    const r = await fetch(API, {headers:{'Accept':'application/vnd.github.v3.raw'}});
+    if(r.ok){
+      const hc = await r.json();
+      if(hc && typeof hc==='object' && Object.keys(hc).length>0){
+        const rs = hc._saved||0;
+        if(rs >= localSaved){ localStorage.setItem('st_hero', JSON.stringify(hc)); return hc; }
+        return localHero;
+      }
+    }
+  }catch(e){}
+  return localHero;
+}
+
+// ── HERO BTN CART ──
+function heroBtnCart(){
+  if(!cartCount()){ showToast('Aún no has agregado productos al carrito'); return; }
+  openCart();
+}
+
+// ── RENDER HERO V2 ──
+function renderHeroV2(S){
+  const el = document.getElementById('heroSection');
+  if(!el) return;
+
+  const cats      = S.categories || [];
+  const catImages = S.catImages  || {};
+  const logoSrc   = S.logoImg    || 'logo.jpg';
+  const waNum     = S.whatsappNumber || '56991065770';
+  const prods     = getProducts().filter(p=>p.active);
+
+  // Leer heroConfig desde st_hero
+  let hc = {};
+  try{ hc = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
+  const bgColor = hc.bgColor || '#0B1120';
+  const bgType  = hc.bgType  || 'color';
+  const bgImg   = hc.bgImg   || '';
+
+  // Aplicar fondo
+  el.style.position = 'relative';
+  if(bgType==='image' && bgImg){
+    el.style.backgroundImage    = `url('${bgImg}')`;
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
+    el.style.background         = '';
+  } else {
+    el.style.backgroundImage = '';
+    el.style.background      = bgColor;
+  }
+
+  const FEAT_DEF = [
+    {icon:'🔒',title:'Pago 100% seguro con MercadoPago',sub:'Tu dinero protegido en todo momento'},
+    {icon:'🚚',title:'Envíos a todo Chile',sub:'Consulta el precio de tu envío antes de comprar'},
+    {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
+    {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
+  ];
+  const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
+
+  const FEAT_LINKS = [
+    `href="#" onclick="heroBtnCart();return false;"`,
+    `href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')"`,
+    `href="devoluciones.html"`,
+    `href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')"`
+  ];
+
+  let catCardsHTML = '';
+  if(cats.length > 0){
+    const c0 = cats[0], img0 = catImages[c0]||'';
+    catCardsHTML += `<div class="hv2-cat-big" onclick="filterBy('${c0}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c0}">${img0?`<img src="${img0}" alt="${c0}" loading="lazy">`:''}  <div class="hv2-cat-overlay"></div><div class="hv2-cat-footer"><span class="hv2-cat-name">${c0}</span><span class="hv2-cat-badge">Popular</span></div></div>`;
+    const rest = cats.slice(1);
+    for(let i=0;i<rest.length;i+=2){
+      catCardsHTML += '<div class="hv2-cat-row">';
+      [rest[i],rest[i+1]].forEach(c=>{
+        if(!c) return;
+        const img=catImages[c]||'';
+        catCardsHTML+=`<div class="hv2-cat-small" onclick="filterBy('${c}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c}">${img?`<img src="${img}" alt="${c}" loading="lazy">`:''}  <div class="hv2-cat-small-footer"><span class="hv2-cat-small-name">${c}</span></div></div>`;
+      });
+      catCardsHTML += '</div>';
+    }
+  }
+
+  el.innerHTML = `
+    <div class="hv2-badge">
+      <img class="hv2-badge-logo" src="${logoSrc}" alt="${S.storeName}">
+      <span class="hv2-badge-dot"></span>
+      <span class="hv2-badge-text">Tienda Online · Chile</span>
+    </div>
+    <div class="hv2-body">
+      <div class="hv2-left">
+        <h1 class="hv2-title">${hc.title||'Todo lo que buscas,'}<br><span class="hv2-accent">${hc.titleAccent||'al mejor precio'}</span></h1>
+        <p class="hv2-sub">${hc.subtitle||S.storeSlogan||'Los mejores productos al mejor precio'}</p>
+        <div class="hv2-features">
+          ${feats.map((f,i)=>`<a class="hv2-feat" ${FEAT_LINKS[i]}><div class="hv2-feat-icon">${f.icon}</div><div class="hv2-feat-copy"><div class="hv2-feat-title">${f.title}</div><div class="hv2-feat-sub">${f.sub}</div></div><span class="hv2-feat-chev">›</span></a>`).join('')}
+        </div>
+        <div class="hv2-ctas">
+          <a class="hv2-cta-primary" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">${hc.ctaPrimary||'Ver productos →'}</a>
+          <a class="hv2-cta-secondary" href="#" onclick="document.getElementById('catGrid').scrollIntoView({behavior:'smooth'});return false;">${hc.ctaSecondary||'Ver categorías'}</a>
+        </div>
+        <div class="hv2-proof">
+          <span class="hv2-stars">★★★★★</span>
+          <span class="hv2-proof-text">${hc.socialProof||'+500 clientes satisfechos en Chile'}</span>
+        </div>
+      </div>
+      <div class="hv2-right">${catCardsHTML}</div>
+    </div>
+    <div class="hv2-trust">
+      <a class="hv2-trust-item" href="#" onclick="heroBtnCart();return false;"><span class="hv2-trust-icon">🔒</span><span class="hv2-trust-title">Pago 100% seguro</span><span class="hv2-trust-sub">Procesado por MercadoPago</span></a>
+      <a class="hv2-trust-item" href="https://wa.me/${waNum}" target="_blank"><span class="hv2-trust-icon">💬</span><span class="hv2-trust-title">Soporte directo</span><span class="hv2-trust-sub">Te respondemos rápido</span></a>
+      <a class="hv2-trust-item" href="devoluciones.html"><span class="hv2-trust-icon">🔄</span><span class="hv2-trust-title">Garantía de compra</span><span class="hv2-trust-sub">Política de devolución</span></a>
+      <a class="hv2-trust-item" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;"><span class="hv2-trust-icon">⭐</span><span class="hv2-trust-title">+500 clientes</span><span class="hv2-trust-sub">Compradores satisfechos</span></a>
+    </div>
+  `;
+
+  // Re-aplicar fondo después del innerHTML
+  if(bgType==='image' && bgImg){
+    el.style.backgroundImage    = `url('${bgImg}')`;
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
+  } else {
+    el.style.background = bgColor;
+  }
+}
+
 async function boot(){
-  // Render inicial con caché local
   renderWithData();
-  // Cargar hero.json y datos de nube en paralelo
-  const [_hc] = await Promise.all([
-    fetchHeroConfig(),
-    fetchCloud()
-  ]);
-  // Re-renderizar con datos frescos (hero.json ya está en st_hero)
+  await Promise.all([ fetchHeroConfig(), fetchCloud() ]);
   renderWithData();
   syncFirebaseRatings().then(()=>{ renderWithData(); });
 }
@@ -2216,352 +2299,6 @@ function showToast(msg, type=''){
   t.textContent=msg;
   t.className='toast visible '+(type==='success'?'success':'');
   setTimeout(()=>t.className='toast',3000);
-}
-
-
-// ── HERO BTN CART ──
-function heroBtnCart(){
-  if(!cartCount()){ showToast('Aún no has agregado productos al carrito'); return; }
-  openCart();
-}
-
-// ── RENDER HERO V2 ──
-function renderHeroV2(S){
-  const el = document.getElementById('heroSection');
-  if(!el) return;
-
-  const cats      = S.categories || [];
-  const catImages = S.catImages  || {};
-  const logoSrc   = S.logoImg    || 'logo.jpg';
-  const waNum     = S.whatsappNumber || '56991065770';
-  const prods     = getProducts().filter(p=>p.active);
-
-  // ── Hero config con defaults ──
-  const FEAT_DEF = [
-    {icon:'🔒',title:'Pago 100% seguro con MercadoPago',sub:'Tu dinero protegido en todo momento'},
-    {icon:'🚚',title:'Envíos a todo Chile',sub:'Consulta el precio de tu envío antes de comprar'},
-    {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
-    {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
-  ];
-  // Leer heroConfig desde hero.json (clave st_hero — completamente independiente)
-  let _heroRaw = {};
-  try{ _heroRaw = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
-  const hc = Object.assign({
-    bgType:'color', bgColor:'#0B1120', bgImg:'', bgOverlay:40,
-    title:'Todo lo que buscas,', titleAccent:'al mejor precio',
-    subtitle: S.storeSlogan || 'Los mejores productos al mejor precio',
-    feats: FEAT_DEF,
-    ctaPrimary:'Ver productos →', ctaSecondary:'Ver categorías',
-    socialProof:'+500 clientes satisfechos en Chile'
-  }, _heroRaw);
-
-  // ── Aplicar fondo del hero ──
-  el.style.position = 'relative';
-  if(hc.bgType==='image' && hc.bgImg){
-    el.style.backgroundImage    = `url('${hc.bgImg}')`;
-    el.style.backgroundSize     = 'cover';
-    el.style.backgroundPosition = 'center';
-    el.style.background         = '';
-  } else {
-    el.style.backgroundImage = '';
-    el.style.background      = hc.bgColor || '#0B1120';
-  }
-  const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
-
-  // ── Fondo del hero ──
-  let heroOverlayHTML = '';
-  el.style.position = 'relative';
-  if(hc.bgType==='image' && hc.bgImg){
-    el.style.background   = '';
-    el.style.backgroundImage    = `url('${hc.bgImg}')`;
-    el.style.backgroundSize     = 'cover';
-    el.style.backgroundPosition = 'center';
-    const ov = (hc.bgOverlay||40)/100;
-    heroOverlayHTML = `<div style="position:absolute;inset:0;background:rgba(0,0,0,${ov});z-index:0;pointer-events:none;border-radius:0;"></div>`;
-  } else {
-    el.style.backgroundImage    = '';
-    el.style.backgroundSize     = '';
-    el.style.backgroundPosition = '';
-    el.style.background = hc.bgColor || '#0B1120';
-  }
-
-  // ── Categorías dinámicas (derecha) ──
-  let catCardsHTML = '';
-  if(cats.length > 0){
-    const c0   = cats[0];
-    const img0 = catImages[c0]||'';
-    catCardsHTML += `
-      <div class="hv2-cat-big" onclick="filterBy('${c0}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c0}">
-        ${img0?`<img src="${img0}" alt="${c0}" loading="lazy">`:''}
-        <div class="hv2-cat-overlay"></div>
-        <div class="hv2-cat-footer">
-          <span class="hv2-cat-name">${c0}</span>
-          <span class="hv2-cat-badge">Popular</span>
-        </div>
-      </div>`;
-    const rest = cats.slice(1);
-    for(let i=0; i<rest.length; i+=2){
-      catCardsHTML += '<div class="hv2-cat-row">';
-      [rest[i], rest[i+1]].forEach(c=>{
-        if(!c) return;
-        const img = catImages[c]||'';
-        catCardsHTML += `
-          <div class="hv2-cat-small" onclick="filterBy('${c}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c}">
-            ${img?`<img src="${img}" alt="${c}" loading="lazy">`:''}
-            <div class="hv2-cat-small-footer"><span class="hv2-cat-small-name">${c}</span></div>
-          </div>`;
-      });
-      catCardsHTML += '</div>';
-    }
-  }
-
-  const FEAT_LINKS = [
-    `href="#" onclick="heroBtnCart();return false;"`,
-    `href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')"`,
-    `href="devoluciones.html"`,
-    `href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')"`
-  ];
-
-  el.innerHTML = heroOverlayHTML + `
-    <div style="position:relative;z-index:1;">
-      <div class="hv2-badge">
-        <img class="hv2-badge-logo" src="${logoSrc}" alt="${S.storeName}">
-        <span class="hv2-badge-dot"></span>
-        <span class="hv2-badge-text">Tienda Online · Chile</span>
-      </div>
-
-      <div class="hv2-body">
-        <div class="hv2-left">
-          <h1 class="hv2-title">${_heroRaw.title||'Todo lo que buscas,'}<br><span class="hv2-accent">${_heroRaw.titleAccent||'al mejor precio'}</span></h1>
-          <p class="hv2-sub">${_heroRaw.subtitle||S.storeSlogan||'Los mejores productos al mejor precio'}</p>
-
-          <div class="hv2-features">
-            ${(_heroRaw.feats||feats).map((f,i)=>`
-            <a class="hv2-feat" ${FEAT_LINKS[i]}>
-              <div class="hv2-feat-icon">${f.icon}</div>
-              <div class="hv2-feat-copy">
-                <div class="hv2-feat-title">${f.title}</div>
-                <div class="hv2-feat-sub">${f.sub}</div>
-              </div>
-              <span class="hv2-feat-chev">›</span>
-            </a>`).join('')}
-          </div>
-
-          <div class="hv2-ctas">
-            <a class="hv2-cta-primary" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">${_heroRaw.ctaPrimary||'Ver productos →'}</a>
-            <a class="hv2-cta-secondary" href="#" onclick="document.getElementById('catGrid').scrollIntoView({behavior:'smooth'});return false;">${_heroRaw.ctaSecondary||'Ver categorías'}</a>
-          </div>
-
-          <div class="hv2-proof">
-            <span class="hv2-stars">★★★★★</span>
-            <span class="hv2-proof-text">${_heroRaw.socialProof||'+500 clientes satisfechos en Chile'}</span>
-          </div>
-        </div>
-
-        <div class="hv2-right">
-          ${catCardsHTML}
-        </div>
-      </div>
-
-      <div class="hv2-trust">
-        <a class="hv2-trust-item" href="#" onclick="heroBtnCart();return false;">
-          <span class="hv2-trust-icon">🔒</span>
-          <span class="hv2-trust-title">Pago 100% seguro</span>
-          <span class="hv2-trust-sub">Procesado por MercadoPago</span>
-        </a>
-        <a class="hv2-trust-item" href="https://wa.me/${waNum}" target="_blank">
-          <span class="hv2-trust-icon">💬</span>
-          <span class="hv2-trust-title">Soporte directo</span>
-          <span class="hv2-trust-sub">Te respondemos rápido</span>
-        </a>
-        <a class="hv2-trust-item" href="devoluciones.html">
-          <span class="hv2-trust-icon">🔄</span>
-          <span class="hv2-trust-title">Garantía de compra</span>
-          <span class="hv2-trust-sub">Política de devolución</span>
-        </a>
-        <a class="hv2-trust-item" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">
-          <span class="hv2-trust-icon">⭐</span>
-          <span class="hv2-trust-title">+500 clientes</span>
-          <span class="hv2-trust-sub">Compradores satisfechos</span>
-        </a>
-      </div>
-    </div>
-  `;
-}
-
-
-// ── HERO BTN CART ──
-function heroBtnCart(){
-  if(!cartCount()){ showToast('Aún no has agregado productos al carrito'); return; }
-  openCart();
-}
-
-// ── RENDER HERO V2 ──
-function renderHeroV2(S){
-  const el = document.getElementById('heroSection');
-  if(!el) return;
-  const cats      = S.categories || [];
-  const catImages = S.catImages  || {};
-  const logoSrc   = S.logoImg    || 'logo.jpg';
-  const waNum     = S.whatsappNumber || '56991065770';
-  const prods     = getProducts().filter(p=>p.active);
-
-  // Generar tarjetas de categorías (dinámico)
-  let catCardsHTML = '';
-  if(cats.length > 0){
-    const c0   = cats[0];
-    const img0 = catImages[c0] || '';
-    catCardsHTML += `
-      <div class="hv2-cat-big" onclick="filterBy('${c0}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c0}">
-        ${img0 ? `<img src="${img0}" alt="${c0}" loading="lazy">` : ''}
-        <div class="hv2-cat-overlay"></div>
-        <div class="hv2-cat-footer">
-          <span class="hv2-cat-name">${c0}</span>
-          <span class="hv2-cat-badge">Popular</span>
-        </div>
-      </div>`;
-    const rest = cats.slice(1);
-    for(let i=0; i<rest.length; i+=2){
-      catCardsHTML += '<div class="hv2-cat-row">';
-      [rest[i], rest[i+1]].forEach(c=>{
-        if(!c) return;
-        const img = catImages[c]||'';
-        catCardsHTML += `
-          <div class="hv2-cat-small" onclick="filterBy('${c}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c}">
-            ${img ? `<img src="${img}" alt="${c}" loading="lazy">` : ''}
-            <div class="hv2-cat-small-footer"><span class="hv2-cat-small-name">${c}</span></div>
-          </div>`;
-      });
-      catCardsHTML += '</div>';
-    }
-  }
-
-  el.innerHTML = `
-    <div class="hv2-badge">
-      <img class="hv2-badge-logo" src="${logoSrc}" alt="${S.storeName}">
-      <span class="hv2-badge-dot"></span>
-      <span class="hv2-badge-text">Tienda Online · Chile</span>
-    </div>
-
-    <div class="hv2-body">
-      <div class="hv2-left">
-        <h1 class="hv2-title">Todo lo que buscas,<br><span class="hv2-accent">al mejor precio</span></h1>
-        <p class="hv2-sub">${S.storeSlogan || 'Los mejores productos al mejor precio'} — envíos rápidos a todo Chile.</p>
-
-        <div class="hv2-features">
-          <a class="hv2-feat" href="#" onclick="heroBtnCart();return false;">
-            <div class="hv2-feat-icon">🔒</div>
-            <div class="hv2-feat-copy">
-              <div class="hv2-feat-title">Pago 100% seguro con MercadoPago</div>
-              <div class="hv2-feat-sub">Tu dinero protegido en todo momento</div>
-            </div>
-            <span class="hv2-feat-chev">›</span>
-          </a>
-          <a class="hv2-feat" href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')">
-            <div class="hv2-feat-icon">🚚</div>
-            <div class="hv2-feat-copy">
-              <div class="hv2-feat-title">Envíos a todo Chile</div>
-              <div class="hv2-feat-sub">Consulta el precio de tu envío antes de comprar</div>
-            </div>
-            <span class="hv2-feat-chev">›</span>
-          </a>
-          <a class="hv2-feat" href="devoluciones.html">
-            <div class="hv2-feat-icon">🔄</div>
-            <div class="hv2-feat-copy">
-              <div class="hv2-feat-title">Garantía de satisfacción</div>
-              <div class="hv2-feat-sub">Si no te gusta, te ayudamos — ver política</div>
-            </div>
-            <span class="hv2-feat-chev">›</span>
-          </a>
-          <a class="hv2-feat" href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')">
-            <div class="hv2-feat-icon">📍</div>
-            <div class="hv2-feat-copy">
-              <div class="hv2-feat-title">Pago contra entrega · Provincia de Santiago</div>
-              <div class="hv2-feat-sub">Ver comunas disponibles para entrega</div>
-            </div>
-            <span class="hv2-feat-chev">›</span>
-          </a>
-        </div>
-
-        <div class="hv2-ctas">
-          <a class="hv2-cta-primary" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">Ver productos →</a>
-          <a class="hv2-cta-secondary" href="#" onclick="document.getElementById('catGrid').scrollIntoView({behavior:'smooth'});return false;">Ver categorías</a>
-        </div>
-
-        <div class="hv2-proof">
-          <span class="hv2-stars">★★★★★</span>
-          <span class="hv2-proof-text">+500 clientes satisfechos en Chile</span>
-        </div>
-      </div>
-
-      <div class="hv2-right">
-        ${catCardsHTML}
-      </div>
-    </div>
-
-    <div class="hv2-trust">
-      <a class="hv2-trust-item" href="#" onclick="heroBtnCart();return false;">
-        <span class="hv2-trust-icon">🔒</span>
-        <span class="hv2-trust-title">Pago 100% seguro</span>
-        <span class="hv2-trust-sub">Procesado por MercadoPago</span>
-      </a>
-      <a class="hv2-trust-item" href="https://wa.me/${waNum}" target="_blank">
-        <span class="hv2-trust-icon">💬</span>
-        <span class="hv2-trust-title">Soporte directo</span>
-        <span class="hv2-trust-sub">Te respondemos rápido</span>
-      </a>
-      <a class="hv2-trust-item" href="devoluciones.html">
-        <span class="hv2-trust-icon">🔄</span>
-        <span class="hv2-trust-title">Garantía de compra</span>
-        <span class="hv2-trust-sub">Política de devolución</span>
-      </a>
-      <a class="hv2-trust-item" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">
-        <span class="hv2-trust-icon">⭐</span>
-        <span class="hv2-trust-title">+500 clientes</span>
-        <span class="hv2-trust-sub">Compradores satisfechos</span>
-      </a>
-    </div>
-  `;
-  // Re-aplicar fondo después del innerHTML (garantía)
-  if(hc.bgType==='image' && hc.bgImg){
-    el.style.backgroundImage    = `url('${hc.bgImg}')`;
-    el.style.backgroundSize     = 'cover';
-    el.style.backgroundPosition = 'center';
-  } else {
-    el.style.background = hc.bgColor || '#0B1120';
-  }
-}
-
-
-// ── FETCH HERO CONFIG — usa GitHub API con protección de versión local ──
-async function fetchHeroConfig(){
-  // Leer versión local primero
-  let localHero = {};
-  try{ localHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
-  const localSaved = localHero._saved || 0;
-
-  const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/hero.json`;
-  try {
-    const r = await fetch(API_URL, {
-      headers: { 'Accept': 'application/vnd.github.v3.raw' }
-    });
-    if(r.ok){
-      const hc = await r.json();
-      if(hc && typeof hc === 'object' && Object.keys(hc).length > 0){
-        const remoteSaved = hc._saved || 0;
-        // Solo sobreescribir si GitHub tiene versión más nueva o igual
-        // Si local es más nuevo (admin acaba de guardar), conservar local
-        if(remoteSaved >= localSaved){
-          localStorage.setItem('st_hero', JSON.stringify(hc));
-          return hc;
-        }
-        // Local es más nuevo — GitHub aún no tiene la versión actualizada
-        return localHero;
-      }
-    }
-  } catch(e){}
-  // Fallback: usar lo que hay en localStorage
-  return localHero;
 }
 
 // Init
