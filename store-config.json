@@ -1730,10 +1730,10 @@
       "gcat": "",
       "gender": "",
       "color": "",
-      "img": "https://i.postimg.cc/FHGG02Q2/Camiseta24.jpg",
+      "img": "https://i.postimg.cc/gcsJbW3r/Chat-GPT-Image-24-may-2026-01-51-27-p-m.png",
       "images": [
-        "https://i.postimg.cc/FHGG02Q2/Camiseta24.jpg",
-        "https://i.postimg.cc/YCMmP0FW/Polera-Universidad-de-Chile-2026-Entrenamiento-1.jpg"
+        "https://i.postimg.cc/gcsJbW3r/Chat-GPT-Image-24-may-2026-01-51-27-p-m.png",
+        "https://i.postimg.cc/nV2zfJqC/Chat-GPT-Image-24-may-2026-01-47-45-p-m.png"
       ],
       "variants": [
         {
@@ -1742,7 +1742,7 @@
             {
               "label": "SIN JUGADOR",
               "stock": 0,
-              "img": "https://i.postimg.cc/YCMmP0FW/Polera-Universidad-de-Chile-2026-Entrenamiento-1.jpg"
+              "img": "https://i.postimg.cc/nV2zfJqC/Chat-GPT-Image-24-may-2026-01-47-45-p-m.png"
             }
           ]
         },
@@ -1841,5 +1841,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779644396933
+  "_v": 1779645196787
 }
