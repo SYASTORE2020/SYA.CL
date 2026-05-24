@@ -1,10 +1,10 @@
 {
   "bgType": "color",
-  "bgColor": "#39a9b1",
+  "bgColor": "#69b139",
   "bgImg": "",
   "bgOverlay": 40,
-  "title": "Todo lo que buscas,",
-  "titleAccent": "al mejor precio de Chile",
+  "title": "¡Lo estabas buscando!",
+  "titleAccent": "acá está al mejor precio",
   "subtitle": "Fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro",
   "feats": [
     {
