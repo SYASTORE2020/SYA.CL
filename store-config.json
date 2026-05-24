@@ -1371,16 +1371,18 @@
       "id": "moxri4tc218ws",
       "name": "Camiseta Universidad de Chile- Visitante 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "•  Base: Blanco como color Principal, limpio y clasico. \n •  Detalles: Mangas azules con toque con toques en rojo diseño asimetrico que cruza desde la manga hacia la espalda. Tiene trazos tipo pincelado en azul y rojo. Cuello y puños en azul, para mantener los colores del club.\n •  Dorsal y nombre:",
-      "price": 20990,
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Blanco como color Principal, limpio y clasico. \n •  Detalles: Mangas azules con toque con toques en rojo diseño asimetrico que cruza desde la manga hacia la espalda. Tiene trazos tipo pincelado en azul y rojo. Cuello y puños en azul, para mantener los colores del club.\n •  Dorsal y nombre:",
+      "price": 19990,
       "origPrice": 24990,
       "stock": 40,
       "weight": 0.35,
-      "img": "https://i.postimg.cc/3NYZ27BH/Whats-App-Image-2026-05-10-at-12-05-42-AM-(1).jpg",
+      "gcat": "5697",
+      "gender": "male",
+      "color": "Blanco",
+      "img": "https://i.postimg.cc/C5sY7F7m/Camiseta33.jpg",
       "images": [
-        "https://i.postimg.cc/3NYZ27BH/Whats-App-Image-2026-05-10-at-12-05-42-AM-(1).jpg",
-        "https://i.postimg.cc/4yWptcyn/Whats-App-Image-2026-05-10-at-12-12-40-AM.jpg",
-        "https://i.postimg.cc/QChqcsbs/Whats-App-Image-2026-05-10-at-12-09-32-AM.jpg"
+        "https://i.postimg.cc/C5sY7F7m/Camiseta33.jpg",
+        "https://i.postimg.cc/T1JG0R0Q/Camiseta34.jpg"
       ],
       "variants": [
         {
@@ -1389,7 +1391,7 @@
             {
               "label": "Aranguiz",
               "stock": 0,
-              "img": "https://i.postimg.cc/4yWptcyn/Whats-App-Image-2026-05-10-at-12-12-40-AM.jpg"
+              "img": "https://i.postimg.cc/T1JG0R0Q/Camiseta34.jpg"
             }
           ]
         },
@@ -1839,5 +1841,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779644260021
+  "_v": 1779644396933
 }
