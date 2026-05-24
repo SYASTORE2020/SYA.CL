@@ -2254,6 +2254,18 @@ function renderHeroV2(S){
     ctaPrimary:'Ver productos →', ctaSecondary:'Ver categorías',
     socialProof:'+500 clientes satisfechos en Chile'
   }, _heroRaw);
+
+  // ── Aplicar fondo del hero ──
+  el.style.position = 'relative';
+  if(hc.bgType==='image' && hc.bgImg){
+    el.style.backgroundImage    = `url('${hc.bgImg}')`;
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
+    el.style.background         = '';
+  } else {
+    el.style.backgroundImage = '';
+    el.style.background      = hc.bgColor || '#0B1120';
+  }
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
 
   // ── Fondo del hero ──
@@ -2320,11 +2332,11 @@ function renderHeroV2(S){
 
       <div class="hv2-body">
         <div class="hv2-left">
-          <h1 class="hv2-title">${hc.title}<br><span class="hv2-accent">${hc.titleAccent}</span></h1>
-          <p class="hv2-sub">${hc.subtitle}</p>
+          <h1 class="hv2-title">${_heroRaw.title||'Todo lo que buscas,'}<br><span class="hv2-accent">${_heroRaw.titleAccent||'al mejor precio'}</span></h1>
+          <p class="hv2-sub">${_heroRaw.subtitle||S.storeSlogan||'Los mejores productos al mejor precio'}</p>
 
           <div class="hv2-features">
-            ${feats.map((f,i)=>`
+            ${(_heroRaw.feats||feats).map((f,i)=>`
             <a class="hv2-feat" ${FEAT_LINKS[i]}>
               <div class="hv2-feat-icon">${f.icon}</div>
               <div class="hv2-feat-copy">
@@ -2336,13 +2348,13 @@ function renderHeroV2(S){
           </div>
 
           <div class="hv2-ctas">
-            <a class="hv2-cta-primary" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">${hc.ctaPrimary}</a>
-            <a class="hv2-cta-secondary" href="#" onclick="document.getElementById('catGrid').scrollIntoView({behavior:'smooth'});return false;">${hc.ctaSecondary}</a>
+            <a class="hv2-cta-primary" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">${_heroRaw.ctaPrimary||'Ver productos →'}</a>
+            <a class="hv2-cta-secondary" href="#" onclick="document.getElementById('catGrid').scrollIntoView({behavior:'smooth'});return false;">${_heroRaw.ctaSecondary||'Ver categorías'}</a>
           </div>
 
           <div class="hv2-proof">
             <span class="hv2-stars">★★★★★</span>
-            <span class="hv2-proof-text">${hc.socialProof}</span>
+            <span class="hv2-proof-text">${_heroRaw.socialProof||'+500 clientes satisfechos en Chile'}</span>
           </div>
         </div>
 
@@ -2510,6 +2522,14 @@ function renderHeroV2(S){
       </a>
     </div>
   `;
+  // Re-aplicar fondo después del innerHTML (garantía)
+  if(hc.bgType==='image' && hc.bgImg){
+    el.style.backgroundImage    = `url('${hc.bgImg}')`;
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
+  } else {
+    el.style.background = hc.bgColor || '#0B1120';
+  }
 }
 
 
