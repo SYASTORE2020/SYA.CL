@@ -1,11 +1,11 @@
 {
   "bgType": "color",
-  "bgColor": "#7b4c8a",
+  "bgColor": "#ae329d",
   "bgImg": "",
   "bgOverlay": 40,
-  "title": "12345678",
-  "titleAccent": "acá está al mejor precio",
-  "subtitle": "Fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro",
+  "title": "¡Lo estabas buscando!",
+  "titleAccent": "acá está, al mejor precio",
+  "subtitle": "",
   "feats": [
     {
       "icon": "🔒",
@@ -30,5 +30,6 @@
   ],
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
-  "socialProof": "+500 clientes satisfechos en Chile"
+  "socialProof": "+500 clientes satisfechos en Chile",
+  "_saved": 1779647133266
 }
