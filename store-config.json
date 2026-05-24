@@ -1721,9 +1721,12 @@
       "origPrice": 24990,
       "stock": 28,
       "weight": 0.35,
-      "img": "https://i.postimg.cc/nhpQWrm4/Polera-Universidad-de-Chile-2026-Entrenamiento.jpg",
+      "gcat": "",
+      "gender": "",
+      "color": "",
+      "img": "https://i.postimg.cc/FHGG02Q2/Camiseta24.jpg",
       "images": [
-        "https://i.postimg.cc/nhpQWrm4/Polera-Universidad-de-Chile-2026-Entrenamiento.jpg",
+        "https://i.postimg.cc/FHGG02Q2/Camiseta24.jpg",
         "https://i.postimg.cc/YCMmP0FW/Polera-Universidad-de-Chile-2026-Entrenamiento-1.jpg"
       ],
       "variants": [
@@ -1832,5 +1835,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779643030219
+  "_v": 1779643089497
 }
