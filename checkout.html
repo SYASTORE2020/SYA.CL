@@ -418,6 +418,13 @@ const BX_RATES = {
 let currentShippingCost = 0;
 function getShippingCost(region){ return BX_RATES[region] || 6990; }
 
+// Firebase URL — hardcodeado para garantizar que TODOS los pedidos lleguen al admin
+// independientemente del dispositivo del cliente
+const FIREBASE_URL = (function(){
+  const fromSettings = (function(){ try{ return JSON.parse(localStorage.getItem('st_settings')||'{}').firebaseUrl||''; }catch(e){ return ''; } })();
+  return (fromSettings || 'https://sya-store-39770-default-rtdb.firebaseio.com').replace(/\/$/, '');
+})();
+
 function getSettings(){ try{ return Object.assign({storeName:'SyA Store',whatsappNumber:'56995180865',mpWebhookUrl:'https://verdant-tapioca-41d95c.netlify.app/.netlify/functions/mp-crear-preferencia'},JSON.parse(localStorage.getItem('st_settings')||'{}')); }catch(e){ return {storeName:'SyA Store',whatsappNumber:'56995180865',mpWebhookUrl:'https://verdant-tapioca-41d95c.netlify.app/.netlify/functions/mp-crear-preferencia'}; } }
 
 // ── Descuenta stock de los productos vendidos ──
@@ -448,11 +455,10 @@ function decrementStock(orderItems){
   if(changed){
     localStorage.setItem('st_products', JSON.stringify(prods));
     // Sincronizar stock con Firebase para persistencia entre dispositivos
-    const fbUrl=(getSettings().firebaseUrl||'').trim().replace(/\/$/,'');
-    if(fbUrl){
+    if(FIREBASE_URL){
       const stockData={};
       prods.forEach(p=>{ stockData[p.id]={stock:p.stock, variantMatrix:p.variantMatrix||null}; });
-      fetch(fbUrl+'/stock.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(stockData)}).catch(()=>{});
+      fetch(FIREBASE_URL+'/stock.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(stockData)}).catch(()=>{});
     }
   }
 }
@@ -462,9 +468,12 @@ function clearCart(){ localStorage.removeItem('st_cart'); }
 function getOrders(){ try{ return JSON.parse(localStorage.getItem('st_orders')||'[]'); }catch(e){ return []; } }
 function saveOrders(o){ localStorage.setItem('st_orders',JSON.stringify(o)); }
 function pushOrderToFirebase(order){
-  const fbUrl=(getSettings().firebaseUrl||'').trim().replace(/\/$/,'');
-  if(!fbUrl) return;
-  fetch(fbUrl+'/orders/'+order.id+'.json',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(order)}).catch(()=>{});
+  if(!FIREBASE_URL) return;
+  fetch(FIREBASE_URL+'/orders/'+order.id+'.json',{
+    method:'PUT',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(order)
+  }).catch(()=>{});
 }
 function fmtPrice(p){ return '$'+Number(p).toLocaleString('es-CL'); }
 function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7); }
