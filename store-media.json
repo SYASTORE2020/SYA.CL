@@ -60,7 +60,7 @@
     "bgOverlay": 40,
     "title": "¡Lo estabas buscando!",
     "titleAccent": "acá está al mejor precio",
-    "subtitle": "Moda, fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro.",
+    "subtitle": "Fútbol, rock y más — envíos rápidos a todo Chile con pago 100% seguro.",
     "feats": [
       {
         "icon": "🔒",
@@ -87,5 +87,5 @@
     "ctaSecondary": "Ver categorías",
     "socialProof": "+500 clientes satisfechos en Chile"
   },
-  "_v": 1779628337896
+  "_v": 1779628673103
 }
