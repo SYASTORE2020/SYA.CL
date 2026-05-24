@@ -1413,12 +1413,15 @@ function syncCartUI(){
 // ════════════════════════════════════════════
 
 async function boot(){
-  // Mostrar tienda con datos en caché mientras carga la nube
+  // Render inicial con caché local
   renderWithData();
-  // Cargar datos frescos de GitHub (y hace hard-reload si hay versión nueva)
-  await fetchCloud();
+  // Cargar hero.json y datos de nube en paralelo
+  const [_hc] = await Promise.all([
+    fetchHeroConfig(),
+    fetchCloud()
+  ]);
+  // Re-renderizar con datos frescos (hero.json ya está en st_hero)
   renderWithData();
-  // Sincronizar ratings de Firebase en background (para tarjetas de producto)
   syncFirebaseRatings().then(()=>{ renderWithData(); });
 }
 
@@ -2240,7 +2243,9 @@ function renderHeroV2(S){
     {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
     {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
   ];
-  // Leer heroConfig desde st_settings (igual que todos los demás ajustes)
+  // Leer heroConfig desde hero.json (clave st_hero — completamente independiente)
+  let _heroRaw = {};
+  try{ _heroRaw = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
   const hc = Object.assign({
     bgType:'color', bgColor:'#0B1120', bgImg:'', bgOverlay:40,
     title:'Todo lo que buscas,', titleAccent:'al mejor precio',
@@ -2248,7 +2253,7 @@ function renderHeroV2(S){
     feats: FEAT_DEF,
     ctaPrimary:'Ver productos →', ctaSecondary:'Ver categorías',
     socialProof:'+500 clientes satisfechos en Chile'
-  }, S.heroConfig || {});
+  }, _heroRaw);
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
 
   // ── Fondo del hero ──
@@ -2505,6 +2510,24 @@ function renderHeroV2(S){
       </a>
     </div>
   `;
+}
+
+
+// ── FETCH HERO CONFIG — archivo independiente hero.json ──
+async function fetchHeroConfig(){
+  const RAW = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/main`;
+  try {
+    const r = await fetch(`${RAW}/hero.json?_=${Date.now()}`);
+    if(r.ok){
+      const hc = await r.json();
+      if(hc && typeof hc === 'object'){
+        localStorage.setItem('st_hero', JSON.stringify(hc));
+        return hc;
+      }
+    }
+  } catch(e){}
+  // Fallback: leer desde localStorage
+  try{ return JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){ return {}; }
 }
 
 // Init

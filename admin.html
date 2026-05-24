@@ -1990,10 +1990,10 @@ const HERO_DEFAULTS = {
 
 function renderBanners(){
   const S = getSettings();
-  // Leer desde st_hero (clave propia) para mostrar valores actuales en el formulario
-  let _stHero = {};
-  try{ _stHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
-  const hc = Object.assign({}, HERO_DEFAULTS, S.heroConfig||{}, _stHero);
+  // heroConfig: desde localStorage (último valor guardado)
+  let _savedHero = {};
+  try{ _savedHero = JSON.parse(localStorage.getItem('st_hero_preview')||'{}'); }catch(e){}
+  const hc = Object.assign({}, HERO_DEFAULTS, S.heroConfig||{}, _savedHero);
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : HERO_DEFAULTS.feats;
   const isImg = hc.bgType==='image';
 
@@ -2152,9 +2152,8 @@ function uploadHeroBg(input){
   reader.readAsDataURL(input.files[0]);
 }
 
-function saveHeroConfig(){
+async function saveHeroConfig(){
   try {
-    const S = getSettings();
     const isImg = document.getElementById('hbg_image') && document.getElementById('hbg_image').checked;
     const ICONS = ['🔒','🚚','🔄','📍'];
 
@@ -2165,19 +2164,15 @@ function saveHeroConfig(){
       if(!bgImg){ const u = document.getElementById('h_bgimgurl'); bgImg = u ? u.value.trim() : ''; }
     }
 
+    const g = id => { const el=document.getElementById(id); return el ? el.value.trim() : ''; };
+
     const feats = [0,1,2,3].map(i=>{
       const tEl = document.getElementById('h_feat'+i+'_title');
       const sEl = document.getElementById('h_feat'+i+'_sub');
-      return {
-        icon: ICONS[i],
-        title: tEl ? tEl.value.trim() : (S.heroConfig&&S.heroConfig.feats&&S.heroConfig.feats[i] ? S.heroConfig.feats[i].title : ''),
-        sub:   sEl ? sEl.value.trim() : (S.heroConfig&&S.heroConfig.feats&&S.heroConfig.feats[i] ? S.heroConfig.feats[i].sub : '')
-      };
+      return { icon:ICONS[i], title:tEl?tEl.value.trim():'', sub:sEl?sEl.value.trim():'' };
     });
 
-    const g = id => { const el=document.getElementById(id); return el?el.value.trim():''; };
-
-    S.heroConfig = {
+    const heroConfig = {
       bgType:      isImg ? 'image' : 'color',
       bgColor:     g('h_bgcolor') || '#0B1120',
       bgImg:       isImg ? bgImg : '',
@@ -2188,14 +2183,33 @@ function saveHeroConfig(){
       feats,
       ctaPrimary:   g('h_ctaprimary')   || 'Ver productos →',
       ctaSecondary: g('h_ctasecondary') || 'Ver categorías',
-      socialProof:  g('h_socialproof')  || '+500 clientes satisfechos en Chile',
-      _saved: Date.now()
+      socialProof:  g('h_socialproof')  || '+500 clientes satisfechos en Chile'
     };
 
-    saveSettingsObj(S);
-    showToast('✓ Portada guardada y sincronizada ☁️','ok');
+    if(!getGHToken()){
+      showToast('⚠ Sin token GitHub — configura en Ajustes para sincronizar');
+      return;
+    }
+
+    const saveBtn = document.querySelector('[onclick="saveHeroConfig()"]');
+    if(saveBtn){ saveBtn.textContent='⏳ Guardando...'; saveBtn.disabled=true; }
+
+    // Escribir directo a hero.json — archivo independiente, sin merges
+    const ok = await pushToGitHub(
+      'hero.json',
+      JSON.stringify(heroConfig, null, 2),
+      '🎨 Actualizar portada hero'
+    );
+
+    if(saveBtn){ saveBtn.textContent='💾 Guardar portada'; saveBtn.disabled=false; }
+
+    if(ok){
+      showToast('✓ Portada guardada y sincronizada ☁️','ok');
+    } else {
+      showToast('⚠ Error al subir a GitHub — verifica el token en Configuración');
+    }
   } catch(err) {
-    showToast('❌ Error al guardar portada: ' + err.message);
+    showToast('❌ Error: ' + err.message);
     console.error('saveHeroConfig error:', err);
   }
 }
