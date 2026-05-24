@@ -2513,24 +2513,35 @@ function renderHeroV2(S){
 }
 
 
-// ── FETCH HERO CONFIG — usa GitHub API (sin caché CDN) ──
+// ── FETCH HERO CONFIG — usa GitHub API con protección de versión local ──
 async function fetchHeroConfig(){
+  // Leer versión local primero
+  let localHero = {};
+  try{ localHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
+  const localSaved = localHero._saved || 0;
+
   const API_URL = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/hero.json`;
   try {
-    // GitHub API no tiene caché CDN — siempre devuelve la versión más reciente
     const r = await fetch(API_URL, {
       headers: { 'Accept': 'application/vnd.github.v3.raw' }
     });
     if(r.ok){
       const hc = await r.json();
       if(hc && typeof hc === 'object' && Object.keys(hc).length > 0){
-        localStorage.setItem('st_hero', JSON.stringify(hc));
-        return hc;
+        const remoteSaved = hc._saved || 0;
+        // Solo sobreescribir si GitHub tiene versión más nueva o igual
+        // Si local es más nuevo (admin acaba de guardar), conservar local
+        if(remoteSaved >= localSaved){
+          localStorage.setItem('st_hero', JSON.stringify(hc));
+          return hc;
+        }
+        // Local es más nuevo — GitHub aún no tiene la versión actualizada
+        return localHero;
       }
     }
   } catch(e){}
-  // Fallback: leer desde localStorage (puede tener datos del admin si mismo dispositivo)
-  try{ return JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){ return {}; }
+  // Fallback: usar lo que hay en localStorage
+  return localHero;
 }
 
 // Init

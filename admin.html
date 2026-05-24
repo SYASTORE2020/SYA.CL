@@ -2183,7 +2183,8 @@ async function saveHeroConfig(){
       feats,
       ctaPrimary:   g('h_ctaprimary')   || 'Ver productos →',
       ctaSecondary: g('h_ctasecondary') || 'Ver categorías',
-      socialProof:  g('h_socialproof')  || '+500 clientes satisfechos en Chile'
+      socialProof:  g('h_socialproof')  || '+500 clientes satisfechos en Chile',
+      _saved:       Date.now()
     };
 
     if(!getGHToken()){
