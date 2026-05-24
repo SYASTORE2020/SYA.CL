@@ -1003,6 +1003,61 @@
       .product-img-wrap { height: 120px; }
       .section-title { font-size: 20px; }
     }
+
+    /* ── HERO V2 ── */
+    .hero-v2{background:#0B1120;padding:40px 64px 0;position:relative;}
+    .hv2-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 16px 6px 6px;margin-bottom:28px;}
+    .hv2-badge-logo{width:32px;height:32px;border-radius:7px;object-fit:cover;flex-shrink:0;}
+    .hv2-badge-dot{width:5px;height:5px;border-radius:50%;background:#F59E0B;flex-shrink:0;}
+    .hv2-badge-text{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.65);}
+    .hv2-body{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:start;}
+    .hv2-title{font-family:'Syne',sans-serif;font-size:50px;font-weight:800;color:#fff;line-height:1;letter-spacing:-1.5px;margin-bottom:16px;}
+    .hv2-accent{color:#F59E0B;font-style:italic;}
+    .hv2-sub{font-size:15px;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:24px;max-width:420px;}
+    .hv2-features{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;}
+    .hv2-feat{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:13px 16px;cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s;}
+    .hv2-feat:hover{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.28);}
+    .hv2-feat-icon{width:36px;height:36px;border-radius:9px;background:rgba(245,158,11,.15);color:#F59E0B;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+    .hv2-feat-copy{flex:1;}
+    .hv2-feat-title{font-size:13px;font-weight:600;color:#fff;line-height:1.25;}
+    .hv2-feat-sub{font-size:11px;color:rgba(255,255,255,.42);margin-top:2px;}
+    .hv2-feat-chev{color:rgba(255,255,255,.25);font-size:18px;line-height:1;}
+    .hv2-ctas{display:flex;gap:10px;margin-bottom:20px;}
+    .hv2-cta-primary{background:#F59E0B;color:#0B1120;border:none;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:7px;text-decoration:none;transition:background .2s;}
+    .hv2-cta-primary:hover{background:#e08e08;}
+    .hv2-cta-secondary{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.2);padding:12px 24px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;text-decoration:none;}
+    .hv2-cta-secondary:hover{background:rgba(255,255,255,.07);}
+    .hv2-proof{display:flex;align-items:center;gap:10px;padding-bottom:36px;}
+    .hv2-stars{color:#F59E0B;font-size:15px;letter-spacing:1px;}
+    .hv2-proof-text{font-size:12px;color:rgba(255,255,255,.4);}
+    .hv2-right{display:flex;flex-direction:column;gap:10px;padding-top:4px;}
+    .hv2-cat-big{border-radius:14px;overflow:hidden;height:200px;position:relative;cursor:pointer;background:#1a2540;}
+    .hv2-cat-big img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .hv2-cat-big:hover img{transform:scale(1.04);}
+    .hv2-cat-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72) 0%,transparent 55%);}
+    .hv2-cat-footer{position:absolute;bottom:12px;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between;}
+    .hv2-cat-name{color:#fff;font-size:14px;font-weight:600;}
+    .hv2-cat-badge{background:#F59E0B;color:#0B1120;font-size:10px;font-weight:700;padding:3px 8px;border-radius:4px;text-transform:uppercase;}
+    .hv2-cat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .hv2-cat-small{border-radius:12px;overflow:hidden;height:108px;position:relative;cursor:pointer;background:#1a2540;}
+    .hv2-cat-small img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
+    .hv2-cat-small:hover img{transform:scale(1.06);}
+    .hv2-cat-small-footer{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.78) 0%,transparent 100%);padding:8px 10px 9px;}
+    .hv2-cat-small-name{color:#fff;font-size:12px;font-weight:600;}
+    .hv2-trust{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.08);margin:0 -64px;}
+    .hv2-trust-item{padding:16px 20px;display:flex;flex-direction:column;gap:2px;border-right:1px solid rgba(255,255,255,.08);cursor:pointer;transition:background .18s;text-decoration:none;}
+    .hv2-trust-item:last-child{border-right:none;}
+    .hv2-trust-item:hover{background:rgba(255,255,255,.04);}
+    .hv2-trust-icon{color:#F59E0B;font-size:18px;margin-bottom:4px;}
+    .hv2-trust-title{font-size:12px;font-weight:600;color:#fff;}
+    .hv2-trust-sub{font-size:11px;color:rgba(255,255,255,.38);}
+    @media(max-width:768px){
+      .hero-v2{padding:24px 20px 0;}
+      .hv2-body{grid-template-columns:1fr;gap:24px;}
+      .hv2-title{font-size:30px;}
+      .hv2-right{display:none;}
+      .hv2-trust{grid-template-columns:repeat(2,1fr);margin:0 -20px;}
+    }
   </style>
 </head>
 <body>
@@ -1025,7 +1080,7 @@
 </nav>
 
 <!-- ── HERO CAROUSEL ── -->
-<section class="hero" id="heroSection"></section>
+<section class="hero-v2" id="heroSection" style="background:#0B1120;"></section>
 
 <!-- ── CATEGORIES ── -->
 <section class="section">
@@ -1299,7 +1354,6 @@ async function fetchCloud(){
     const S = getSettings();
     if(mediaData.logoImg !== undefined) S.logoImg = mediaData.logoImg;
     if(mediaData.banners !== undefined) S.banners = mediaData.banners;
-    if(mediaData.heroConfig && mediaData.heroConfig._saved){ S.heroConfig = mediaData.heroConfig; }
     localStorage.setItem('st_settings', JSON.stringify(S));
   }
   // Nota: el HTML fresco está garantizado por los meta Cache-Control del <head>
@@ -1371,139 +1425,10 @@ function syncCartUI(){
 //  RENDER
 // ════════════════════════════════════════════
 
-
-// ── FETCH HERO CONFIG ──
-async function fetchHeroConfig(){
-  let localHero = {};
-  try{ localHero = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
-  const localSaved = localHero._saved || 0;
-  const API = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/hero.json`;
-  try{
-    const r = await fetch(API, {headers:{'Accept':'application/vnd.github.v3.raw'}});
-    if(r.ok){
-      const hc = await r.json();
-      if(hc && typeof hc==='object' && Object.keys(hc).length>0){
-        const rs = hc._saved||0;
-        if(rs >= localSaved){ localStorage.setItem('st_hero', JSON.stringify(hc)); return hc; }
-        return localHero;
-      }
-    }
-  }catch(e){}
-  return localHero;
-}
-
-// ── HERO BTN CART ──
-function heroBtnCart(){
-  if(!cartCount()){ showToast('Aún no has agregado productos al carrito'); return; }
-  openCart();
-}
-
-// ── RENDER HERO V2 ──
-function renderHeroV2(S){
-  const el = document.getElementById('heroSection');
-  if(!el) return;
-
-  const cats      = S.categories || [];
-  const catImages = S.catImages  || {};
-  const logoSrc   = S.logoImg    || 'logo.jpg';
-  const waNum     = S.whatsappNumber || '56991065770';
-  const prods     = getProducts().filter(p=>p.active);
-
-  // Leer heroConfig desde st_hero
-  let hc = {};
-  try{ hc = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
-  const bgColor = hc.bgColor || '#0B1120';
-  const bgType  = hc.bgType  || 'color';
-  const bgImg   = hc.bgImg   || '';
-
-  // Aplicar fondo
-  el.style.position = 'relative';
-  if(bgType==='image' && bgImg){
-    el.style.backgroundImage    = `url('${bgImg}')`;
-    el.style.backgroundSize     = 'cover';
-    el.style.backgroundPosition = 'center';
-    el.style.background         = '';
-  } else {
-    el.style.backgroundImage = '';
-    el.style.background      = bgColor;
-  }
-
-  const FEAT_DEF = [
-    {icon:'🔒',title:'Pago 100% seguro con MercadoPago',sub:'Tu dinero protegido en todo momento'},
-    {icon:'🚚',title:'Envíos a todo Chile',sub:'Consulta el precio de tu envío antes de comprar'},
-    {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
-    {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
-  ];
-  const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
-
-  const FEAT_LINKS = [
-    `href="#" onclick="heroBtnCart();return false;"`,
-    `href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')"`,
-    `href="devoluciones.html"`,
-    `href="checkout.html#comunas-santiago" onclick="sessionStorage.setItem('scrollToComunas','1')"`
-  ];
-
-  let catCardsHTML = '';
-  if(cats.length > 0){
-    const c0 = cats[0], img0 = catImages[c0]||'';
-    catCardsHTML += `<div class="hv2-cat-big" onclick="filterBy('${c0}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c0}">${img0?`<img src="${img0}" alt="${c0}" loading="lazy">`:''}  <div class="hv2-cat-overlay"></div><div class="hv2-cat-footer"><span class="hv2-cat-name">${c0}</span><span class="hv2-cat-badge">Popular</span></div></div>`;
-    const rest = cats.slice(1);
-    for(let i=0;i<rest.length;i+=2){
-      catCardsHTML += '<div class="hv2-cat-row">';
-      [rest[i],rest[i+1]].forEach(c=>{
-        if(!c) return;
-        const img=catImages[c]||'';
-        catCardsHTML+=`<div class="hv2-cat-small" onclick="filterBy('${c}');document.getElementById('todos').scrollIntoView({behavior:'smooth'});" title="Ver ${c}">${img?`<img src="${img}" alt="${c}" loading="lazy">`:''}  <div class="hv2-cat-small-footer"><span class="hv2-cat-small-name">${c}</span></div></div>`;
-      });
-      catCardsHTML += '</div>';
-    }
-  }
-
-  el.innerHTML = `
-    <div class="hv2-badge">
-      <img class="hv2-badge-logo" src="${logoSrc}" alt="${S.storeName}">
-      <span class="hv2-badge-dot"></span>
-      <span class="hv2-badge-text">Tienda Online · Chile</span>
-    </div>
-    <div class="hv2-body">
-      <div class="hv2-left">
-        <h1 class="hv2-title">${hc.title||'Todo lo que buscas,'}<br><span class="hv2-accent">${hc.titleAccent||'al mejor precio'}</span></h1>
-        <p class="hv2-sub">${hc.subtitle||S.storeSlogan||'Los mejores productos al mejor precio'}</p>
-        <div class="hv2-features">
-          ${feats.map((f,i)=>`<a class="hv2-feat" ${FEAT_LINKS[i]}><div class="hv2-feat-icon">${f.icon}</div><div class="hv2-feat-copy"><div class="hv2-feat-title">${f.title}</div><div class="hv2-feat-sub">${f.sub}</div></div><span class="hv2-feat-chev">›</span></a>`).join('')}
-        </div>
-        <div class="hv2-ctas">
-          <a class="hv2-cta-primary" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;">${hc.ctaPrimary||'Ver productos →'}</a>
-          <a class="hv2-cta-secondary" href="#" onclick="document.getElementById('catGrid').scrollIntoView({behavior:'smooth'});return false;">${hc.ctaSecondary||'Ver categorías'}</a>
-        </div>
-        <div class="hv2-proof">
-          <span class="hv2-stars">★★★★★</span>
-          <span class="hv2-proof-text">${hc.socialProof||'+500 clientes satisfechos en Chile'}</span>
-        </div>
-      </div>
-      <div class="hv2-right">${catCardsHTML}</div>
-    </div>
-    <div class="hv2-trust">
-      <a class="hv2-trust-item" href="#" onclick="heroBtnCart();return false;"><span class="hv2-trust-icon">🔒</span><span class="hv2-trust-title">Pago 100% seguro</span><span class="hv2-trust-sub">Procesado por MercadoPago</span></a>
-      <a class="hv2-trust-item" href="https://wa.me/${waNum}" target="_blank"><span class="hv2-trust-icon">💬</span><span class="hv2-trust-title">Soporte directo</span><span class="hv2-trust-sub">Te respondemos rápido</span></a>
-      <a class="hv2-trust-item" href="devoluciones.html"><span class="hv2-trust-icon">🔄</span><span class="hv2-trust-title">Garantía de compra</span><span class="hv2-trust-sub">Política de devolución</span></a>
-      <a class="hv2-trust-item" href="#todos" onclick="document.getElementById('todos').scrollIntoView({behavior:'smooth'});return false;"><span class="hv2-trust-icon">⭐</span><span class="hv2-trust-title">+500 clientes</span><span class="hv2-trust-sub">Compradores satisfechos</span></a>
-    </div>
-  `;
-
-  // Re-aplicar fondo después del innerHTML
-  if(bgType==='image' && bgImg){
-    el.style.backgroundImage    = `url('${bgImg}')`;
-    el.style.backgroundSize     = 'cover';
-    el.style.backgroundPosition = 'center';
-  } else {
-    el.style.background = bgColor;
-  }
-}
-
 async function boot(){
+  // Mostrar tienda con datos en caché mientras carga la nube
   renderWithData();
-  await Promise.all([ fetchHeroConfig(), fetchCloud() ]);
+  await Promise.all([fetchHeroConfig(), fetchCloud()]);
   renderWithData();
   syncFirebaseRatings().then(()=>{ renderWithData(); });
 }
@@ -2299,6 +2224,172 @@ function showToast(msg, type=''){
   t.textContent=msg;
   t.className='toast visible '+(type==='success'?'success':'');
   setTimeout(()=>t.className='toast',3000);
+}
+
+// ── HERO CONFIG ──
+function setComunasScroll(){ sessionStorage.setItem('scrollToComunas','1'); }
+
+function heroBtnCart(){
+  if(!cartCount()){ showToast('Aún no has agregado productos al carrito'); return; }
+  openCart();
+}
+
+async function fetchHeroConfig(){
+  var local = {};
+  try{ local = JSON.parse(localStorage.getItem('st_hero') || '{}'); }catch(e){}
+  var localSaved = local._saved || 0;
+  try{
+    var r = await fetch(
+      'https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME + '/contents/hero.json',
+      { headers: { 'Accept': 'application/vnd.github.v3.raw' } }
+    );
+    if(r.ok){
+      var hc = await r.json();
+      if(hc && typeof hc === 'object' && Object.keys(hc).length > 0){
+        if((hc._saved || 0) >= localSaved){
+          localStorage.setItem('st_hero', JSON.stringify(hc));
+        }
+      }
+    }
+  }catch(e){}
+}
+
+function renderHeroV2(S){
+  var el = document.getElementById('heroSection');
+  if(!el) return;
+
+  // Leer config guardada
+  var hc = {};
+  try{ hc = JSON.parse(localStorage.getItem('st_hero') || '{}'); }catch(e){}
+
+  // Aplicar fondo
+  var bgColor = hc.bgColor || '#0B1120';
+  var bgType  = hc.bgType  || 'color';
+  var bgImg   = hc.bgImg   || '';
+  el.style.position = 'relative';
+  if(bgType === 'image' && bgImg){
+    el.style.backgroundImage    = 'url(' + bgImg + ')';
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
+    el.style.backgroundColor    = '';
+  } else {
+    el.style.backgroundImage = '';
+    el.style.background      = bgColor;
+  }
+
+  // Categorías
+  var cats      = S.categories || [];
+  var catImages = S.catImages  || {};
+  var logoSrc   = S.logoImg    || 'logo.jpg';
+  var waNum     = S.whatsappNumber || '56991065770';
+
+  var catH = '';
+  if(cats.length > 0){
+    var c0 = cats[0], img0 = catImages[c0] || '';
+    catH += '<div class="hv2-cat-big" onclick="filterBy(\'' + c0 + '\');document.getElementById(\'todos\').scrollIntoView({behavior:\'smooth\'});">';
+    if(img0) catH += '<img src="' + img0 + '" alt="' + c0 + '" loading="lazy">';
+    catH += '<div class="hv2-cat-overlay"></div>';
+    catH += '<div class="hv2-cat-footer"><span class="hv2-cat-name">' + c0 + '</span><span class="hv2-cat-badge">Popular</span></div>';
+    catH += '</div>';
+    var rest = cats.slice(1);
+    for(var i = 0; i < rest.length; i += 2){
+      catH += '<div class="hv2-cat-row">';
+      var pair = [rest[i], rest[i+1]];
+      for(var j = 0; j < pair.length; j++){
+        var c = pair[j]; if(!c) continue;
+        var img = catImages[c] || '';
+        catH += '<div class="hv2-cat-small" onclick="filterBy(\'' + c + '\');document.getElementById(\'todos\').scrollIntoView({behavior:\'smooth\'});">';
+        if(img) catH += '<img src="' + img + '" alt="' + c + '" loading="lazy">';
+        catH += '<div class="hv2-cat-small-footer"><span class="hv2-cat-small-name">' + c + '</span></div>';
+        catH += '</div>';
+      }
+      catH += '</div>';
+    }
+  }
+
+  // Mini-banners (feats)
+  var FEAT_DEF = [
+    { icon: '🔒', title: 'Pago 100% seguro con MercadoPago', sub: 'Tu dinero protegido en todo momento' },
+    { icon: '🚚', title: 'Envíos a todo Chile', sub: 'Consulta el precio de tu envío antes de comprar' },
+    { icon: '🔄', title: 'Garantía de satisfacción', sub: 'Si no te gusta, te ayudamos — ver política' },
+    { icon: '📍', title: 'Pago contra entrega · Provincia de Santiago', sub: 'Ver comunas disponibles para entrega' }
+  ];
+  var feats = (hc.feats && hc.feats.length === 4) ? hc.feats : FEAT_DEF;
+
+  var featLinks = [
+    'href="#" onclick="heroBtnCart();return false;"',
+    'href="checkout.html#comunas-santiago" onclick="setComunasScroll()"',
+    'href="devoluciones.html"',
+    'href="checkout.html#comunas-santiago" onclick="setComunasScroll()"'
+  ];
+
+  var featsH = '';
+  for(var fi = 0; fi < feats.length; fi++){
+    var f = feats[fi];
+    featsH += '<a class="hv2-feat" ' + featLinks[fi] + '>';
+    featsH += '<div class="hv2-feat-icon">' + f.icon + '</div>';
+    featsH += '<div class="hv2-feat-copy">';
+    featsH += '<div class="hv2-feat-title">' + f.title + '</div>';
+    featsH += '<div class="hv2-feat-sub">' + f.sub + '</div>';
+    featsH += '</div>';
+    featsH += '<span class="hv2-feat-chev">›</span></a>';
+  }
+
+  // Textos
+  var title       = hc.title       || 'Todo lo que buscas,';
+  var titleAccent = hc.titleAccent || 'al mejor precio';
+  var subtitle    = hc.subtitle    || S.storeSlogan || 'Los mejores productos al mejor precio';
+  var ctaPrimary  = hc.ctaPrimary  || 'Ver productos →';
+  var ctaSecondary= hc.ctaSecondary|| 'Ver categorías';
+  var socialProof = hc.socialProof || '+500 clientes satisfechos en Chile';
+
+  // Construir badge
+  var badgeH = '<div class="hv2-badge">';
+  if(logoSrc) badgeH += '<img class="hv2-badge-logo" src="' + logoSrc + '" alt="' + S.storeName + '">';
+  badgeH += '<span class="hv2-badge-dot"></span>';
+  badgeH += '<span class="hv2-badge-text">Tienda Online · Chile</span></div>';
+
+  // Overlay imagen
+  var overlayH = '';
+  if(bgType === 'image' && bgImg){
+    var ov = ((hc.bgOverlay || 40) / 100);
+    overlayH = '<div style="position:absolute;inset:0;background:rgba(0,0,0,' + ov + ');z-index:0;pointer-events:none;"></div>';
+  }
+
+  // innerHTML
+  el.innerHTML =
+    overlayH +
+    '<div style="position:relative;z-index:1;">' +
+    badgeH +
+    '<div class="hv2-body">' +
+      '<div class="hv2-left">' +
+        '<h1 class="hv2-title">' + title + '<br><span class="hv2-accent">' + titleAccent + '</span></h1>' +
+        '<p class="hv2-sub">' + subtitle + '</p>' +
+        '<div class="hv2-features">' + featsH + '</div>' +
+        '<div class="hv2-ctas">' +
+          '<a class="hv2-cta-primary" href="#todos" onclick="document.getElementById(\'todos\').scrollIntoView({behavior:\'smooth\'});return false;">' + ctaPrimary + '</a>' +
+          '<a class="hv2-cta-secondary" href="#" onclick="document.getElementById(\'catGrid\').scrollIntoView({behavior:\'smooth\'});return false;">' + ctaSecondary + '</a>' +
+        '</div>' +
+        '<div class="hv2-proof"><span class="hv2-stars">★★★★★</span><span class="hv2-proof-text">' + socialProof + '</span></div>' +
+      '</div>' +
+      '<div class="hv2-right">' + catH + '</div>' +
+    '</div>' +
+    '<div class="hv2-trust">' +
+      '<a class="hv2-trust-item" href="#" onclick="heroBtnCart();return false;"><span class="hv2-trust-icon">🔒</span><span class="hv2-trust-title">Pago 100% seguro</span><span class="hv2-trust-sub">Procesado por MercadoPago</span></a>' +
+      '<a class="hv2-trust-item" href="https://wa.me/' + waNum + '" target="_blank"><span class="hv2-trust-icon">💬</span><span class="hv2-trust-title">Soporte directo</span><span class="hv2-trust-sub">Te respondemos rápido</span></a>' +
+      '<a class="hv2-trust-item" href="devoluciones.html"><span class="hv2-trust-icon">🔄</span><span class="hv2-trust-title">Garantía de compra</span><span class="hv2-trust-sub">Política de devolución</span></a>' +
+      '<a class="hv2-trust-item" href="#todos" onclick="document.getElementById(\'todos\').scrollIntoView({behavior:\'smooth\'});return false;"><span class="hv2-trust-icon">⭐</span><span class="hv2-trust-title">+500 clientes</span><span class="hv2-trust-sub">Compradores satisfechos</span></a>' +
+    '</div>' +
+    '</div>';
+
+  // Re-aplicar fondo (garantía)
+  if(bgType === 'image' && bgImg){
+    el.style.backgroundImage    = 'url(' + bgImg + ')';
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
+  } else {
+    el.style.background = bgColor;
+  }
 }
 
 // Init
