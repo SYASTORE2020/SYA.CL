@@ -1328,7 +1328,10 @@ async function fetchCloud(){
     }catch(e){}
     const merged = Object.assign({}, cfgData);
     delete merged.products; delete merged.banners; delete merged.logoImg;
-    delete merged.heroConfig; // heroConfig solo viene de store-media.json — nunca de store-config
+    // heroConfig: aplicar de GitHub solo si es más nuevo que el local
+    const localHeroSaved = ((getSettings().heroConfig)||{})._saved || 0;
+    const ghHeroSaved    = (merged.heroConfig||{})._saved || 0;
+    if(!ghHeroSaved || ghHeroSaved <= localHeroSaved) delete merged.heroConfig;
     const mergedSettings = Object.assign(getSettings(), merged);
     localStorage.setItem('st_settings', JSON.stringify(mergedSettings));
   }
@@ -1336,11 +1339,9 @@ async function fetchCloud(){
     const S = getSettings();
     if(mediaData.logoImg !== undefined) S.logoImg = mediaData.logoImg;
     if(mediaData.banners !== undefined) S.banners = mediaData.banners;
+    // heroConfig viene de store-config.json — no de store-media.json
     localStorage.setItem('st_settings', JSON.stringify(S));
-    // heroConfig: clave propia st_hero — nunca toca st_settings
-    if(mediaData.heroConfig && Object.keys(mediaData.heroConfig).length > 0){
-      localStorage.setItem('st_hero', JSON.stringify(mediaData.heroConfig));
-    }
+    // (heroConfig con _saved timestamp — garantiza que es un valor real guardado por el admin
   }
   // Nota: el HTML fresco está garantizado por los meta Cache-Control del <head>
   // No se necesita redirect — eso causaba 22+ segundos de carga en móvil.
@@ -2239,9 +2240,7 @@ function renderHeroV2(S){
     {icon:'🔄',title:'Garantía de satisfacción',sub:'Si no te gusta, te ayudamos — ver política'},
     {icon:'📍',title:'Pago contra entrega · Provincia de Santiago',sub:'Ver comunas disponibles para entrega'}
   ];
-  // Leer heroConfig desde su clave propia (st_hero), sin interferencia de st_settings
-  let _hcRaw = {};
-  try{ _hcRaw = JSON.parse(localStorage.getItem('st_hero')||'{}'); }catch(e){}
+  // Leer heroConfig desde st_settings (igual que todos los demás ajustes)
   const hc = Object.assign({
     bgType:'color', bgColor:'#0B1120', bgImg:'', bgOverlay:40,
     title:'Todo lo que buscas,', titleAccent:'al mejor precio',
@@ -2249,7 +2248,7 @@ function renderHeroV2(S){
     feats: FEAT_DEF,
     ctaPrimary:'Ver productos →', ctaSecondary:'Ver categorías',
     socialProof:'+500 clientes satisfechos en Chile'
-  }, _hcRaw);
+  }, S.heroConfig || {});
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
 
   // ── Fondo del hero ──

@@ -993,9 +993,10 @@ async function syncToCloud(){
     categories:S.categories||[], catIcons:S.catIcons||{}, catImages:S.catImages||{},
     emailjsKey:S.emailjsKey||'', emailjsService:S.emailjsService||'', emailjsTemplate:S.emailjsTemplate||'',
     bannerInterval:S.bannerInterval||8, adminPassword:S.adminPassword, products:prods,
+    heroConfig: S.heroConfig||{},
     _v: now
-  }; // heroConfig va solo en store-media.json
-  const media = { logoImg:S.logoImg||'', banners:S.banners||[], heroConfig:S.heroConfig||{}, _v:now };
+  };
+  const media = { logoImg:S.logoImg||'', banners:S.banners||[], _v:now };
 
   // Un solo commit atómico con ambos archivos
   return await pushBothToGitHub(
@@ -2152,45 +2153,51 @@ function uploadHeroBg(input){
 }
 
 function saveHeroConfig(){
-  const S = getSettings();
-  const isImg = document.getElementById('hbg_image').checked;
-  const ICONS = ['🔒','🚚','🔄','📍'];
+  try {
+    const S = getSettings();
+    const isImg = document.getElementById('hbg_image') && document.getElementById('hbg_image').checked;
+    const ICONS = ['🔒','🚚','🔄','📍'];
 
-  let bgImg = S.heroConfig?.bgImg||'';
-  if(isImg){
-    const prevImg = document.getElementById('h_bgimg_previmg');
-    const b64 = prevImg?.getAttribute('data-b64')||'';
-    const urlVal = document.getElementById('h_bgimgurl').value.trim();
-    bgImg = b64 || urlVal || bgImg;
+    let bgImg = '';
+    if(isImg){
+      const prevImg = document.getElementById('h_bgimg_previmg');
+      bgImg = (prevImg && prevImg.getAttribute('data-b64')) || '';
+      if(!bgImg){ const u = document.getElementById('h_bgimgurl'); bgImg = u ? u.value.trim() : ''; }
+    }
+
+    const feats = [0,1,2,3].map(i=>{
+      const tEl = document.getElementById('h_feat'+i+'_title');
+      const sEl = document.getElementById('h_feat'+i+'_sub');
+      return {
+        icon: ICONS[i],
+        title: tEl ? tEl.value.trim() : (S.heroConfig&&S.heroConfig.feats&&S.heroConfig.feats[i] ? S.heroConfig.feats[i].title : ''),
+        sub:   sEl ? sEl.value.trim() : (S.heroConfig&&S.heroConfig.feats&&S.heroConfig.feats[i] ? S.heroConfig.feats[i].sub : '')
+      };
+    });
+
+    const g = id => { const el=document.getElementById(id); return el?el.value.trim():''; };
+
+    S.heroConfig = {
+      bgType:      isImg ? 'image' : 'color',
+      bgColor:     g('h_bgcolor') || '#0B1120',
+      bgImg:       isImg ? bgImg : '',
+      bgOverlay:   parseInt((document.getElementById('h_bgoverlay')||{value:'40'}).value)||40,
+      title:       g('h_title')       || 'Todo lo que buscas,',
+      titleAccent: g('h_titleaccent') || 'al mejor precio',
+      subtitle:    g('h_subtitle')    || '',
+      feats,
+      ctaPrimary:   g('h_ctaprimary')   || 'Ver productos →',
+      ctaSecondary: g('h_ctasecondary') || 'Ver categorías',
+      socialProof:  g('h_socialproof')  || '+500 clientes satisfechos en Chile',
+      _saved: Date.now()
+    };
+
+    saveSettingsObj(S);
+    showToast('✓ Portada guardada y sincronizada ☁️','ok');
+  } catch(err) {
+    showToast('❌ Error al guardar portada: ' + err.message);
+    console.error('saveHeroConfig error:', err);
   }
-
-  const feats = [0,1,2,3].map(i=>({
-    icon: (S.heroConfig?.feats?.[i]?.icon)||ICONS[i],
-    title: document.getElementById(`h_feat${i}_title`).value.trim(),
-    sub: document.getElementById(`h_feat${i}_sub`).value.trim()
-  }));
-
-  const heroConfig = {
-    bgType: isImg?'image':'color',
-    bgColor: document.getElementById('h_bgcolor').value,
-    bgImg: isImg?bgImg:'',
-    bgOverlay: parseInt(document.getElementById('h_bgoverlay').value)||40,
-    title: document.getElementById('h_title').value.trim(),
-    titleAccent: document.getElementById('h_titleaccent').value.trim(),
-    subtitle: document.getElementById('h_subtitle').value.trim(),
-    feats,
-    ctaPrimary: document.getElementById('h_ctaprimary').value.trim(),
-    ctaSecondary: document.getElementById('h_ctasecondary').value.trim(),
-    socialProof: document.getElementById('h_socialproof').value.trim()
-  };
-
-  // Guardar en clave propia st_hero (aislada de st_settings)
-  localStorage.setItem('st_hero', JSON.stringify(heroConfig));
-
-  // También guardar en S.heroConfig y sincronizar con GitHub
-  S.heroConfig = heroConfig;
-  saveSettingsObj(S);
-  showToast('✓ Portada guardada y sincronizada ☁️','ok');
 }
 
 // ════════════════════════════════════════════
