@@ -1131,7 +1131,7 @@
         "Neymar 10|XL": 5,
         "Raphinha 11|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1794,5 +1794,5 @@
       "active": true
     }
   ],
-  "_v": 1779616370470
+  "_v": 1779616378643
 }
