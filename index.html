@@ -225,7 +225,6 @@
 
     /* ── HERO V2 ── */
     .hero-v2 {
-      background: #0B1120;
       padding: 40px 64px 0;
     }
     .hv2-badge {
@@ -1061,7 +1060,7 @@
 </nav>
 
 <!-- ── HERO CAROUSEL ── -->
-<section class="hero-v2" id="heroSection"></section>
+<section class="hero-v2" id="heroSection" style="background:#0B1120;position:relative;"></section>
 
 <!-- ── CATEGORIES ── -->
 <section class="section">
@@ -1329,7 +1328,9 @@ async function fetchCloud(){
     }catch(e){}
     const merged = Object.assign({}, cfgData);
     delete merged.products; delete merged.banners; delete merged.logoImg;
-    localStorage.setItem('st_settings', JSON.stringify(Object.assign(getSettings(), merged)));
+    // heroConfig puede venir tanto de store-config como de store-media
+    const mergedSettings = Object.assign(getSettings(), merged);
+    localStorage.setItem('st_settings', JSON.stringify(mergedSettings));
   }
   if(mediaData){
     const S = getSettings();
@@ -2246,16 +2247,21 @@ function renderHeroV2(S){
   const feats = (hc.feats && hc.feats.length===4) ? hc.feats : FEAT_DEF;
 
   // ── Fondo del hero ──
-  let heroBgCSS = '';
   let heroOverlayHTML = '';
+  el.style.position = 'relative';
   if(hc.bgType==='image' && hc.bgImg){
-    heroBgCSS = `background-image:url('${hc.bgImg}');background-size:cover;background-position:center;`;
+    el.style.background   = '';
+    el.style.backgroundImage    = `url('${hc.bgImg}')`;
+    el.style.backgroundSize     = 'cover';
+    el.style.backgroundPosition = 'center';
     const ov = (hc.bgOverlay||40)/100;
-    heroOverlayHTML = `<div style="position:absolute;inset:0;background:rgba(0,0,0,${ov});z-index:0;pointer-events:none;"></div>`;
+    heroOverlayHTML = `<div style="position:absolute;inset:0;background:rgba(0,0,0,${ov});z-index:0;pointer-events:none;border-radius:0;"></div>`;
   } else {
-    heroBgCSS = `background:${hc.bgColor||'#0B1120'};`;
+    el.style.backgroundImage    = '';
+    el.style.backgroundSize     = '';
+    el.style.backgroundPosition = '';
+    el.style.background = hc.bgColor || '#0B1120';
   }
-  el.style.cssText = heroBgCSS + 'position:relative;';
 
   // ── Categorías dinámicas (derecha) ──
   let catCardsHTML = '';
