@@ -1131,7 +1131,7 @@
         "Neymar 10|XL": 5,
         "Raphinha 11|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1841,5 +1841,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779668189117
+  "_v": 1779668200198
 }
