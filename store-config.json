@@ -34,6 +34,93 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpln3xymzpvvh",
+      "name": "Camiseta Selleccion - Edicion Especial Froral 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "",
+      "price": 24990,
+      "origPrice": 0,
+      "stock": 40,
+      "weight": 0.29,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "Crema",
+      "img": "https://i.postimg.cc/SK3SKZRj/Camiseta38.jpg",
+      "images": [
+        "https://i.postimg.cc/SK3SKZRj/Camiseta38.jpg",
+        "https://i.postimg.cc/nLgFLdrr/Camiseta37.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Jugador",
+          "options": [
+            {
+              "label": "SIN JUGADOR",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "10",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "12",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "14",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "16",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "SIN JUGADOR|10": 5,
+        "SIN JUGADOR|12": 5,
+        "SIN JUGADOR|14": 5,
+        "SIN JUGADOR|16": 5,
+        "SIN JUGADOR|S": 5,
+        "SIN JUGADOR|M": 5,
+        "SIN JUGADOR|L": 5,
+        "SIN JUGADOR|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpeod69mcl4go",
       "name": "Camiseta Universidad de Chile- Local 2026",
       "cat": "Camisetas de Futbol",
@@ -1841,5 +1928,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779739232287
+  "_v": 1779739773367
 }
