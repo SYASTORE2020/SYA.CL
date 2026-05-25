@@ -941,7 +941,7 @@
         "Musiala|L": 5,
         "Musiala|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1841,5 +1841,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779668177133
+  "_v": 1779668183100
 }
