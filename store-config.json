@@ -37,7 +37,7 @@
       "id": "mpln3xymzpvvh",
       "name": "Camiseta Selleccion - Edicion Especial Froral 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n  \n •  Base: Color crema con estampado de flores rosadas y patron agrietado.\n •  Detalles: Cuello en V con ribete negro y beige, detalles de las 3 rayas en los hombros.",
       "price": 24990,
       "origPrice": 0,
       "stock": 40,
@@ -57,7 +57,7 @@
             {
               "label": "SIN JUGADOR",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/nLgFLdrr/Camiseta37.jpg"
             }
           ]
         },
@@ -1928,5 +1928,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779739773367
+  "_v": 1779739981138
 }
