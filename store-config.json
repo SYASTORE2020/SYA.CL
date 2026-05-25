@@ -1028,7 +1028,7 @@
         "James 10|L": 5,
         "James 10|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1841,5 +1841,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779668183100
+  "_v": 1779668189117
 }
