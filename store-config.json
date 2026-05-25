@@ -131,7 +131,7 @@
         "Vargas|L": 5,
         "Vargas|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -1841,5 +1841,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779649078117
+  "_v": 1779668129500
 }
