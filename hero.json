@@ -1,7 +1,7 @@
 {
   "bgType": "image",
   "bgColor": "#151414",
-  "bgImg": "https://i.postimg.cc/RFWtdj9h/sya-2-portada.jpg",
+  "bgImg": "https://i.postimg.cc/rF8V7v3P/Sya-portada-3.jpg",
   "bgOverlay": 40,
   "title": "¡Lo estabas buscando!",
   "titleAccent": "acá está, al mejor precio",
@@ -30,6 +30,6 @@
   ],
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
-  "socialProof": "Cada día más clientes satisfechos en Chile",
-  "_saved": 1779769935095
+  "socialProof": "Cada día más clientes satisfechos",
+  "_saved": 1779799007915
 }
