@@ -52,7 +52,28 @@
         "https://i.postimg.cc/dQB3Q2Mw/Bioprost4.jpg",
         "https://i.postimg.cc/xjR8jvrS/Bioprost5.jpg"
       ],
-      "variants": [],
+      "variants": [
+        {
+          "name": "Tipo",
+          "options": [
+            {
+              "label": "Capsula",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "CANTIDAD",
+          "options": [
+            {
+              "label": "30 Capsulas",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
       "variantMatrix": {},
       "featured": false,
       "active": true
@@ -1955,5 +1976,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779806670355
+  "_v": 1779806738203
 }
