@@ -1,7 +1,7 @@
 {
-  "bgType": "color",
+  "bgType": "image",
   "bgColor": "#151414",
-  "bgImg": "",
+  "bgImg": "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
   "bgOverlay": 40,
   "title": "¡Lo estabas buscando!",
   "titleAccent": "acá está, al mejor precio",
@@ -31,5 +31,5 @@
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
   "socialProof": "+500 clientes satisfechos en Chile",
-  "_saved": 1779652775769
+  "_saved": 1779766693081
 }
