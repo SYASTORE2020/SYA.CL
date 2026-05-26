@@ -2,7 +2,7 @@
   "bgType": "image",
   "bgColor": "#151414",
   "bgImg": "https://i.postimg.cc/rF8V7v3P/Sya-portada-3.jpg",
-  "bgOverlay": 40,
+  "bgOverlay": 69,
   "title": "¡Lo estabas buscando!",
   "titleAccent": "acá está, al mejor precio",
   "subtitle": "Futbol, rock, y más",
@@ -31,5 +31,5 @@
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
   "socialProof": "Cada día más clientes satisfechos",
-  "_saved": 1779799360182
+  "_saved": 1779799592840
 }
