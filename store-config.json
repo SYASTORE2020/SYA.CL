@@ -40,7 +40,7 @@
       "desc": "Suplemento en tabletas formulado con ingredientes 100% naturales como Tribulus Terresris, Maca, Uña de Gato, Ginseng y Sabal Serrulata. El frasco contiene 30 tabletas de 500mg.\n- Nota: Es un suplemento alimenticio, no ssutituye una dieta equilibrada.         Consulta con un profesionalde salud antes de consumir si tienes condiciones medicas o tomas otros medicamentos.",
       "price": 17990,
       "origPrice": 0,
-      "stock": 0,
+      "stock": 21,
       "weight": 0,
       "gcat": "5765",
       "gender": "male",
@@ -52,29 +52,11 @@
         "https://i.postimg.cc/dQB3Q2Mw/Bioprost4.jpg",
         "https://i.postimg.cc/xjR8jvrS/Bioprost5.jpg"
       ],
-      "variants": [
-        {
-          "name": "Tipo",
-          "options": [
-            {
-              "label": "Capsula",
-              "stock": 0,
-              "img": ""
-            }
-          ]
-        },
-        {
-          "name": "CANTIDAD",
-          "options": [
-            {
-              "label": "30 Capsulas",
-              "stock": 0,
-              "img": ""
-            }
-          ]
-        }
-      ],
-      "variantMatrix": {},
+      "variants": [],
+      "variantMatrix": {
+        "Capsula|30 Capsulas": 1,
+        "Capsula|30 ": 20
+      },
       "featured": false,
       "active": true
     },
@@ -1976,5 +1958,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779806738203
+  "_v": 1779806834153
 }
