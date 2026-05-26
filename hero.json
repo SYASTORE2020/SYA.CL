@@ -1,7 +1,7 @@
 {
   "bgType": "image",
   "bgColor": "#151414",
-  "bgImg": "https://i.postimg.cc/65xP7Qgq/Camiseta2.jpg",
+  "bgImg": "https://www.shutterstock.com/shutterstock/photos/2343399319/display_1500/stock-photo-confident-athletic-man-in-sports-clothing-running-down-the-hill-outdoors-2343399319.jpg",
   "bgOverlay": 40,
   "title": "¡Lo estabas buscando!",
   "titleAccent": "acá está, al mejor precio",
@@ -31,5 +31,5 @@
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
   "socialProof": "+500 clientes satisfechos en Chile",
-  "_saved": 1779766693081
+  "_saved": 1779767241719
 }
