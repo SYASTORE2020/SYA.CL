@@ -34,6 +34,87 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpmsnnhezn9so",
+      "name": "Camiseta Seleccion Chile - Local 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "",
+      "price": 24990,
+      "origPrice": 0,
+      "stock": 60,
+      "weight": 0.3,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "Rojo",
+      "img": "https://i.postimg.cc/ydZD1xqw/Camiseta38.webp",
+      "images": [
+        "https://i.postimg.cc/ydZD1xqw/Camiseta38.webp",
+        "https://i.postimg.cc/tJGYYbyD/camiseta39.webp"
+      ],
+      "variants": [
+        {
+          "name": "JUGADOR",
+          "options": [
+            {
+              "label": "Sin Jugador",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Alexis",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Cepeda",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Sin Jugador|S": 5,
+        "Alexis|S": 5,
+        "Cepeda|S": 5,
+        "Sin Jugador|M": 5,
+        "Alexis|M": 5,
+        "Cepeda|M": 5,
+        "Sin Jugador|L": 5,
+        "Alexis|L": 5,
+        "Cepeda|L": 5,
+        "Sin Jugador|XL": 5,
+        "Alexis|XL": 5,
+        "Cepeda|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpmr77o9hlj7t",
       "name": "BIOPROST 30 Cap.",
       "cat": "Productos Naturales",
@@ -1978,5 +2059,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779808697885
+  "_v": 1779809557166
 }
