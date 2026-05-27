@@ -10,7 +10,8 @@
     "Camisetas de Futbol",
     "Poleras Bandas de Rock",
     "Arte y Manualidades",
-    "Productos Naturales"
+    "Productos Naturales",
+    "Hogar y Aromas"
   ],
   "catIcons": {
     "Electrónica": "💻",
@@ -2210,5 +2211,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779905143059
+  "_v": 1779906924223
 }
