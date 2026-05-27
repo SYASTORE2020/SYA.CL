@@ -34,6 +34,93 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpnftzwkshmwu",
+      "name": "Camiseta Seleccion España - Local 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "",
+      "price": 19990,
+      "origPrice": 24990,
+      "stock": 40,
+      "weight": 0.3,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "Rojo",
+      "img": "https://i.postimg.cc/xdk0B8Vk/camiseta51.jpg",
+      "images": [
+        "https://i.postimg.cc/xdk0B8Vk/camiseta51.jpg",
+        "https://i.postimg.cc/N0ygZFv5/camiseta48.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Jugador",
+          "options": [
+            {
+              "label": "Lamine Yamal",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "10",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "12",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "14",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "16",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Lamine Yamal|10": 5,
+        "Lamine Yamal|12": 5,
+        "Lamine Yamal|14": 5,
+        "Lamine Yamal|16": 5,
+        "Lamine Yamal|S": 5,
+        "Lamine Yamal|M": 5,
+        "Lamine Yamal|L": 5,
+        "Lamine Yamal|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpmsnnhezn9so",
       "name": "Camiseta Seleccion Chile - Local 2026",
       "cat": "Camisetas de Futbol",
@@ -2059,5 +2146,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779847996333
+  "_v": 1779848484363
 }
