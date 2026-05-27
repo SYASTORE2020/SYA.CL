@@ -198,7 +198,8 @@
       "img": "https://i.postimg.cc/ydZD1xqw/Camiseta38.webp",
       "images": [
         "https://i.postimg.cc/ydZD1xqw/Camiseta38.webp",
-        "https://i.postimg.cc/tJGYYbyD/camiseta39.webp"
+        "https://i.postimg.cc/tJGYYbyD/camiseta39.webp",
+        "https://i.postimg.cc/yd8Ynj6c/camiseta52.jpg"
       ],
       "variants": [
         {
@@ -217,7 +218,7 @@
             {
               "label": "Cepeda",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/yd8Ynj6c/camiseta52.jpg"
             }
           ]
         },
@@ -2209,5 +2210,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779849276575
+  "_v": 1779849454820
 }
