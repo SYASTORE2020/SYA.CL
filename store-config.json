@@ -39,7 +39,7 @@
       "id": "mpoewux64qfjr",
       "name": "Varillas de Incienso Larga Duracion - Pack 3",
       "cat": "Hogar y Aromas",
-      "desc": "",
+      "desc": "Transforma tu espacio con el Aroma dulce y frutal. Este incienso de la Linea ANCESTRAL esta elaborado artesanalmente, enrrollado a mano para conservar la esencia natural de cada ingrediente.\n\nPor que te va a gustar:\n- Aroma envolvente\n- Larga Duracion\n- Artesanal",
       "price": 12990,
       "origPrice": 0,
       "stock": 41,
@@ -49,7 +49,9 @@
       "color": "",
       "img": "https://i.postimg.cc/431hnQ14/Frutos-Rojos.jpg",
       "images": [
-        "https://i.postimg.cc/431hnQ14/Frutos-Rojos.jpg"
+        "https://i.postimg.cc/431hnQ14/Frutos-Rojos.jpg",
+        "https://i.postimg.cc/qRTqchjD/Vainilla.jpg",
+        "https://i.postimg.cc/hjBv8zpy/chicle.jpg"
       ],
       "variants": [
         {
@@ -68,17 +70,17 @@
             {
               "label": "Frutos Rojos",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/431hnQ14/Frutos-Rojos.jpg"
             },
             {
               "label": "Vainilla",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/qRTqchjD/Vainilla.jpg"
             },
             {
               "label": "Chicle",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/hjBv8zpy/chicle.jpg"
             }
           ]
         }
@@ -2274,5 +2276,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779924135300
+  "_v": 1779924954812
 }
