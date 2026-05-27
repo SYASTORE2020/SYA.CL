@@ -36,7 +36,7 @@
   "products": [
     {
       "id": "mpoewux64qfjr",
-      "name": "Varillas de Incienso Frutos Rojos - Larga Duracion",
+      "name": "Varillas de Incienso Larga Duracion - Pack 3",
       "cat": "Hogar y Aromas",
       "desc": "",
       "price": 12990,
@@ -55,17 +55,7 @@
           "name": "Varillas",
           "options": [
             {
-              "label": "10",
-              "stock": 0,
-              "img": ""
-            }
-          ]
-        },
-        {
-          "name": "Pack",
-          "options": [
-            {
-              "label": "1",
+              "label": "30",
               "stock": 0,
               "img": ""
             }
@@ -2256,5 +2246,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779907414191
+  "_v": 1779907696496
 }
