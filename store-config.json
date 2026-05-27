@@ -231,11 +231,12 @@
       "gcat": "5697",
       "gender": "male",
       "color": "Rojo",
-      "img": "https://i.postimg.cc/ydZD1xqw/Camiseta38.webp",
+      "img": "https://i.postimg.cc/Vvtf0YcB/camiseta55.jpg",
       "images": [
-        "https://i.postimg.cc/ydZD1xqw/Camiseta38.webp",
-        "https://i.postimg.cc/tJGYYbyD/camiseta39.webp",
-        "https://i.postimg.cc/yd8Ynj6c/camiseta52.jpg"
+        "https://i.postimg.cc/Vvtf0YcB/camiseta55.jpg",
+        "https://i.postimg.cc/yd8Ynj6c/camiseta52.jpg",
+        "https://i.postimg.cc/0jSkK8qf/Camiseta53.jpg",
+        "https://i.postimg.cc/mk9L1bGy/camiseta54.jpg"
       ],
       "variants": [
         {
@@ -244,12 +245,12 @@
             {
               "label": "Sin Jugador",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/mk9L1bGy/camiseta54.jpg"
             },
             {
               "label": "Alexis",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/0jSkK8qf/Camiseta53.jpg"
             },
             {
               "label": "Cepeda",
@@ -2246,5 +2247,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779907696496
+  "_v": 1779910747456
 }
