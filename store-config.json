@@ -34,6 +34,69 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpng2vrv94pvs",
+      "name": "Camiseta Seleccion España - Visitante 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n  \n •  Base: Color beish.\n •  Detalles:  Cuello y puños en granate con ribete dorado, tres fanjas granate en los hombros.",
+      "price": 19990,
+      "origPrice": 24990,
+      "stock": 20,
+      "weight": 0.3,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "",
+      "img": "https://i.postimg.cc/SKXyHRbn/camiseta50.jpg",
+      "images": [
+        "https://i.postimg.cc/SKXyHRbn/camiseta50.jpg",
+        "https://i.postimg.cc/6Q79FqxT/camiseta49.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Jugador",
+          "options": [
+            {
+              "label": "Lamine Yamal",
+              "stock": 0,
+              "img": "https://i.postimg.cc/6Q79FqxT/camiseta49.jpg"
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Lamine Yamal|S": 5,
+        "Lamine Yamal|M": 5,
+        "Lamine Yamal|L": 5,
+        "Lamine Yamal|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpnftzwkshmwu",
       "name": "Camiseta Seleccion España - Local 2026",
       "cat": "Camisetas de Futbol",
@@ -2146,5 +2209,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779848577959
+  "_v": 1779848898912
 }
