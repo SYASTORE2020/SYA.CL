@@ -42,7 +42,7 @@
       "desc": "",
       "price": 12990,
       "origPrice": 0,
-      "stock": 11,
+      "stock": 41,
       "weight": 0,
       "gcat": "",
       "gender": "",
@@ -53,10 +53,30 @@
       ],
       "variants": [
         {
-          "name": "Varillas",
+          "name": "Pack",
           "options": [
             {
-              "label": "30",
+              "label": "3",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Aroma",
+          "options": [
+            {
+              "label": "Frutos Rojos",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Vainilla",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Chicle",
               "stock": 0,
               "img": ""
             }
@@ -65,7 +85,13 @@
       ],
       "variantMatrix": {
         "10|3": 1,
-        "10|1": 10
+        "10|1": 10,
+        "3|Frutos Rojos": 5,
+        "3|Vainilla": 5,
+        "3|Chicle": 5,
+        "6|Frutos Rojos": 5,
+        "6|Vainilla": 5,
+        "6|Chicle": 5
       },
       "featured": false,
       "active": true
@@ -2248,5 +2274,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779911513666
+  "_v": 1779924122094
 }
