@@ -202,7 +202,7 @@
       ],
       "variants": [
         {
-          "name": "JUGADOR",
+          "name": "Jugador",
           "options": [
             {
               "label": "Sin Jugador",
@@ -2209,5 +2209,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779849198146
+  "_v": 1779849246796
 }
