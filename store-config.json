@@ -35,6 +35,51 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpoewux64qfjr",
+      "name": "Varrillas de Incienso Frutos Rojos - Larga Duracion",
+      "cat": "Hogar y Aromas",
+      "desc": "",
+      "price": 12990,
+      "origPrice": 0,
+      "stock": 11,
+      "weight": 0,
+      "gcat": "",
+      "gender": "",
+      "color": "",
+      "img": "https://i.postimg.cc/8znGZQ50/FRUTOS-ROJOS.png",
+      "images": [
+        "https://i.postimg.cc/8znGZQ50/FRUTOS-ROJOS.png"
+      ],
+      "variants": [
+        {
+          "name": "Varillas",
+          "options": [
+            {
+              "label": "10",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Pack",
+          "options": [
+            {
+              "label": "1",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "10|3": 1,
+        "10|1": 10
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpng2vrv94pvs",
       "name": "Camiseta Seleccion España - Visitante 2026",
       "cat": "Camisetas de Futbol",
@@ -2211,5 +2256,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779906924223
+  "_v": 1779907404434
 }
