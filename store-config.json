@@ -37,7 +37,7 @@
       "id": "mpnftzwkshmwu",
       "name": "Camiseta Seleccion España - Local 2026",
       "cat": "Camisetas de Futbol",
-      "desc": "",
+      "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n  \n •  Base: Color rojo.\n •  Detalles:  En azul y blanco en cuello y mangas, Cuello en V.",
       "price": 19990,
       "origPrice": 24990,
       "stock": 40,
@@ -57,7 +57,7 @@
             {
               "label": "Lamine Yamal",
               "stock": 0,
-              "img": ""
+              "img": "https://i.postimg.cc/N0ygZFv5/camiseta48.jpg"
             }
           ]
         },
@@ -2146,5 +2146,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779848484363
+  "_v": 1779848577959
 }
