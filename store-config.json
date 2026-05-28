@@ -39,10 +39,10 @@
   "products": [
     {
       "id": "mpot22dfdhuqq",
-      "name": "Body Sexy con cuello de Halter y Encaje para Mujer",
+      "name": "CBody Sexy con cuello de Halter y Encaje para Mujer",
       "cat": "Lenceria",
-      "desc": "Siente la combinacion perfecta de sensualidad y elegancia con este body de encaje negro. diseño halter con escote profundo en V y espalda descubierta con lazo ajustable para un fit a tu medida.",
-      "price": 4990,
+      "desc": "",
+      "price": 5500,
       "origPrice": 0,
       "stock": 1,
       "weight": 0.15,
@@ -86,8 +86,8 @@
       "id": "mposs33b1twk5",
       "name": "Conjunto de Lenceria 2 piezas con encaje",
       "cat": "Lenceria",
-      "desc": "Conjunto sexy de dos piezas en encaje negro con detalles de lazos. El bralette tipo copas triangulares y ajuste regulable, ideal para resaltar tu figura. La tanga viene con tirantes laterales ajustable para un fit comodo personalizado.",
-      "price": 3990,
+      "desc": "",
+      "price": 4990,
       "origPrice": 0,
       "stock": 2,
       "weight": 0.15,
@@ -1798,13 +1798,16 @@
     },
     {
       "id": "mp050mivbxejf",
-      "name": "Lana Antialergica Pack de 5 Unidades",
+      "name": "Lana de Tejido y Crochet Antialergica 100 Mts C/u Pack de 5 Unidades",
       "cat": "Arte y Manualidades",
       "desc": "Set de 5 Ovillos negros, blanco y rosa, cada uno de 100gr. Perfecta para tus proyectos de tejido y crochet. Textura suave y color intenso que no destiñe.",
       "price": 7990,
       "origPrice": 9990,
       "stock": 45,
       "weight": 0.11,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/QNf6c9Rq/Whats-App-Image-2026-05-10-at-12-34-00-AM.jpg",
       "images": [
         "https://i.postimg.cc/QNf6c9Rq/Whats-App-Image-2026-05-10-at-12-34-00-AM.jpg",
@@ -2371,5 +2374,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779932285053
+  "_v": 1779933747932
 }
