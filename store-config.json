@@ -12,7 +12,8 @@
     "Arte y Manualidades",
     "Productos Naturales",
     "Hogar y Aromas",
-    "Lenceria"
+    "Lenceria",
+    "Jugueteria y Bebe"
   ],
   "catIcons": {
     "Electrónica": "💻",
@@ -2369,5 +2370,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779991497811
+  "_v": 1779993484057
 }
