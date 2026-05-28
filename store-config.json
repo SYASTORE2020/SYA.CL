@@ -2035,13 +2035,16 @@
     },
     {
       "id": "mowxt37k6i3h3",
-      "name": "Malla Plastica Transparente Pack de 3 Unidades",
+      "name": "Malla Plastica LiensoTransparente Para Bordar - Pack de 3 Unidades",
       "cat": "Arte y Manualidades",
       "desc": "",
       "price": 7000,
       "origPrice": 12990,
       "stock": 10,
       "weight": 0.12,
+      "gcat": "",
+      "gender": "",
+      "color": "",
       "img": "https://i.postimg.cc/ht3gFZw7/Malla-de-Plastico-1-jpeg1.jpg",
       "images": [
         "https://i.postimg.cc/ht3gFZw7/Malla-de-Plastico-1-jpeg1.jpg",
@@ -2374,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779933747932
+  "_v": 1779933794095
 }
