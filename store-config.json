@@ -2027,13 +2027,16 @@
     },
     {
       "id": "mowxt37k6i3h3",
-      "name": "Malla Plastica Transparente Pack de 3 Unidades",
+      "name": "Set 3 Moldes Malla Plastica Canvas - Facil de Tejer",
       "cat": "Arte y Manualidades",
-      "desc": "",
+      "desc": "Crea tus propios bolsos con este set de tres bases de malla plastica troquelada. Diseño rectagular con asas integradas, ideal para tejer con hilo, lana o trapillo usando tecnica de punto de cruz o plastic canvas.",
       "price": 7000,
       "origPrice": 12990,
       "stock": 10,
       "weight": 0.12,
+      "gcat": "6149",
+      "gender": "female",
+      "color": "",
       "img": "https://i.postimg.cc/ht3gFZw7/Malla-de-Plastico-1-jpeg1.jpg",
       "images": [
         "https://i.postimg.cc/ht3gFZw7/Malla-de-Plastico-1-jpeg1.jpg",
@@ -2366,5 +2369,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779990944341
+  "_v": 1779991497811
 }
