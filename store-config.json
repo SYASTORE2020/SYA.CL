@@ -37,6 +37,54 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mposs33b1twk5",
+      "name": "Conjunto de Lenceria 2 piezas con encaje",
+      "cat": "Lenceria",
+      "desc": "",
+      "price": 4990,
+      "origPrice": 0,
+      "stock": 2,
+      "weight": 0.15,
+      "gcat": "",
+      "gender": "female",
+      "color": "Negro",
+      "img": "https://i.postimg.cc/GmthYByB/Captura-de-pantalla-14-8-2024-02555-cl-shein-com-upscayl-9x-realesrgan-x4plus-anime.png",
+      "images": [
+        "https://i.postimg.cc/GmthYByB/Captura-de-pantalla-14-8-2024-02555-cl-shein-com-upscayl-9x-realesrgan-x4plus-anime.png",
+        "https://i.postimg.cc/GmthYBy4/Captura-de-pantalla-14-8-2024-02619-cl-shein-com-upscayl-9x-realesrgan-x4plus-anime.png",
+        "https://i.postimg.cc/vZTH91VD/Captura-de-pantalla-14-8-2024-02633-cl-shein-com-upscayl-9x-realesrgan-x4plus-anime.png",
+        "https://i.postimg.cc/13dRK9G0/Captura-de-pantalla-14-8-2024-02645-cl-shein-com-upscayl-9x-realesrgan-x4plus-anime.png",
+        "https://i.postimg.cc/y8xY9JZk/Captura-de-pantalla-14-8-2024-0267-cl-shein-com-upscayl-9x-realesrgan-x4plus-anime.png"
+      ],
+      "variants": [
+        {
+          "name": "Color ",
+          "options": [
+            {
+              "label": "Negro",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla ",
+          "options": [
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Negro|M": 2
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpoewux64qfjr",
       "name": "Varillas de Incienso Larga Duracion - Pack 3",
       "cat": "Hogar y Aromas",
@@ -2277,5 +2325,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779930251621
+  "_v": 1779930696367
 }
