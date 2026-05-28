@@ -41,8 +41,8 @@
       "id": "mpot22dfdhuqq",
       "name": "Body Sexy con cuello de Halter y Encaje para Mujer",
       "cat": "Lenceria",
-      "desc": "",
-      "price": 5500,
+      "desc": "Siente la combinacion perfecta de sensualidad y elegancia con este body de encaje negro. diseño halter con escote profundo en V y espalda descubierta con lazo ajustable para un fit a tu medida.",
+      "price": 4990,
       "origPrice": 0,
       "stock": 1,
       "weight": 0.15,
@@ -86,8 +86,8 @@
       "id": "mposs33b1twk5",
       "name": "Conjunto de Lenceria 2 piezas con encaje",
       "cat": "Lenceria",
-      "desc": "",
-      "price": 4990,
+      "desc": "Conjunto sexy de dos piezas en encaje negro con detalles de lazos. El bralette tipo copas triangulares y ajuste regulable, ideal para resaltar tu figura. La tanga viene con tirantes laterales ajustable para un fit comodo personalizado.",
+      "price": 3990,
       "origPrice": 0,
       "stock": 2,
       "weight": 0.15,
@@ -253,8 +253,8 @@
         "Lamine Yamal|L": 5,
         "Lamine Yamal|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mpnftzwkshmwu",
@@ -340,8 +340,8 @@
         "Lamine Yamal|L": 5,
         "Lamine Yamal|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mpmsnnhezn9so",
@@ -423,14 +423,14 @@
         "Alexis|XL": 5,
         "Cepeda|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mpmr77o9hlj7t",
       "name": "BIOPROST 30 Cap.",
       "cat": "Productos Naturales",
-      "desc": "El frasco contiene 30 Unds de 500mg.",
+      "desc": "Suplemento en tabletas formulado con ingredientes 100% naturales como Tribulus Terresris, Maca, Uña de Gato, Ginseng y Sabal Serrulata. El frasco contiene 30 tabletas de 500mg.\n- Nota: Es un suplemento alimenticio, no ssutituye una dieta equilibrada.         Consulta con un profesionalde salud antes de consumir si tienes condiciones medicas o tomas otros medicamentos.",
       "price": 17990,
       "origPrice": 20990,
       "stock": 20,
@@ -557,8 +557,8 @@
         "SIN JUGADOR|L": 5,
         "SIN JUGADOR|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mpeod69mcl4go",
@@ -658,8 +658,8 @@
         "Vargas|L": 5,
         "Vargas|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp8pup9xvj3zm",
@@ -723,8 +723,8 @@
         "Mbappe|L": 5,
         "Mbappe|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp5txs3th7axk",
@@ -798,7 +798,7 @@
         "Merchandise de rock|2XL": 5
       },
       "featured": false,
-      "active": false
+      "active": true
     },
     {
       "id": "mp5srame1eseb",
@@ -867,7 +867,7 @@
         "Black Ice Tour|2XL": 5
       },
       "featured": false,
-      "active": false
+      "active": true
     },
     {
       "id": "mp4okb89l3e3a",
@@ -936,7 +936,7 @@
         "The Book of Souls|2XL": 5
       },
       "featured": false,
-      "active": false
+      "active": true
     },
     {
       "id": "mp4o3ljno4wkb",
@@ -1005,7 +1005,7 @@
         "Mural de Canciones|2XL": 5
       },
       "featured": false,
-      "active": false
+      "active": true
     },
     {
       "id": "mp37smz9jww33",
@@ -1067,8 +1067,8 @@
         "Ronaldo 7|L": 5,
         "Ronaldo 7|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp37b274smwr6",
@@ -1130,8 +1130,8 @@
         "KAKA 22|L": 5,
         "KAKA 22|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp2ybbnh9z6ou",
@@ -1193,8 +1193,8 @@
         "Mbappe|L": 5,
         "Mbappe|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp2xnr5xso6tu",
@@ -1280,8 +1280,8 @@
         "Ronaldo 7|L": 5,
         "Ronaldo 7|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp21z64wg6nx1",
@@ -1381,8 +1381,8 @@
         "Kane|16": 0,
         "Palmer|16": 0
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp21tr21h1fqb",
@@ -1468,8 +1468,8 @@
         "Musiala|L": 5,
         "Musiala|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp1un0hw0ozwf",
@@ -1555,8 +1555,8 @@
         "James 10|L": 5,
         "James 10|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp1tot73bv22o",
@@ -1658,8 +1658,8 @@
         "Neymar 10|XL": 5,
         "Raphinha 11|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp1sapvnoxyma",
@@ -1748,8 +1748,8 @@
         "Messi 10|L": 5,
         "Messi 10|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mp05gf314m48e",
@@ -1798,16 +1798,13 @@
     },
     {
       "id": "mp050mivbxejf",
-      "name": "Lana de Tejido y Crochet Antialergica 100 Mts C/u Pack de 5 Unidades",
+      "name": "Lana Antialergica Pack de 5 Unidades",
       "cat": "Arte y Manualidades",
       "desc": "Set de 5 Ovillos negros, blanco y rosa, cada uno de 100gr. Perfecta para tus proyectos de tejido y crochet. Textura suave y color intenso que no destiñe.",
       "price": 7990,
       "origPrice": 9990,
       "stock": 45,
       "weight": 0.11,
-      "gcat": "",
-      "gender": "",
-      "color": "",
       "img": "https://i.postimg.cc/QNf6c9Rq/Whats-App-Image-2026-05-10-at-12-34-00-AM.jpg",
       "images": [
         "https://i.postimg.cc/QNf6c9Rq/Whats-App-Image-2026-05-10-at-12-34-00-AM.jpg",
@@ -1984,8 +1981,8 @@
         "Aranguiz|L": 5,
         "Aranguiz|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "moxrcigu9syqu",
@@ -2030,21 +2027,18 @@
       "variantMatrix": {
         "SIN JUGADOR|XL": 1
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "mowxt37k6i3h3",
-      "name": "Malla Plastica LiensoTransparente Para Bordar - Pack de 3 Unidades",
+      "name": "Malla Plastica Transparente Pack de 3 Unidades",
       "cat": "Arte y Manualidades",
       "desc": "",
       "price": 7000,
       "origPrice": 12990,
       "stock": 10,
       "weight": 0.12,
-      "gcat": "",
-      "gender": "",
-      "color": "",
       "img": "https://i.postimg.cc/ht3gFZw7/Malla-de-Plastico-1-jpeg1.jpg",
       "images": [
         "https://i.postimg.cc/ht3gFZw7/Malla-de-Plastico-1-jpeg1.jpg",
@@ -2164,8 +2158,8 @@
         "SIN JUGADOR|L": 5,
         "SIN JUGADOR|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "movr4hjjsw1cu",
@@ -2251,8 +2245,8 @@
         "SIN JUGADOR|L": 5,
         "SIN JUGADOR|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     },
     {
       "id": "movqcw23r9wz1",
@@ -2338,8 +2332,8 @@
         "SIN JUGADOR|L": 5,
         "SIN JUGADOR|XL": 5
       },
-      "featured": true,
-      "active": false
+      "featured": false,
+      "active": true
     }
   ],
   "heroConfig": {
@@ -2377,5 +2371,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779937362925
+  "_v": 1779989844545
 }
