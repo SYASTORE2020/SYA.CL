@@ -1556,7 +1556,7 @@
         "James 10|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp1tot73bv22o",
@@ -1659,7 +1659,7 @@
         "Raphinha 11|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp1sapvnoxyma",
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936489940
+  "_v": 1779936492836
 }
