@@ -1280,7 +1280,7 @@
         "Ronaldo 7|L": 5,
         "Ronaldo 7|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779933908858
+  "_v": 1779933914407
 }
