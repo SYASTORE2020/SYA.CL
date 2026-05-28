@@ -2251,7 +2251,7 @@
         "SIN JUGADOR|L": 5,
         "SIN JUGADOR|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779933962101
+  "_v": 1779933966263
 }
