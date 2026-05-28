@@ -424,7 +424,7 @@
         "Cepeda|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mpmr77o9hlj7t",
@@ -558,7 +558,7 @@
         "SIN JUGADOR|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mpeod69mcl4go",
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936469871
+  "_v": 1779936474266
 }
