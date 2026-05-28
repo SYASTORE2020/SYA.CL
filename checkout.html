@@ -259,7 +259,7 @@
           <div class="ship-icon">📦</div>
           <div>
             <strong>Envío vía BlueExpress</strong><br>
-            Tu comuna está fuera de la Provincia de Santiago. El despacho se realiza por <strong>BlueExpress</strong> y el <strong>costo de envío lo pagas tú al recibir</strong> el pedido directamente al repartidor.<br>
+            Tu comuna está fuera de la Provincia de Santiago. El despacho se realiza por <strong>BlueExpress</strong> y el <strong>costo de envío se suma al total de tu compra</strong> y se paga junto con el pedido por MercadoPago.<br>
             <small style="margin-top:5px;display:block;opacity:.85;">Solo disponible MercadoPago para tu zona.</small>
           </div>
         </div>
@@ -312,10 +312,6 @@
             <div class="pay-badge badge-orange">RECOMENDADO</div>
           </label>
 
-        </div>
-
-        <div class="bx-note" id="bxNote">
-          📦 <strong>Sobre tu envío BlueExpress:</strong> El costo de despacho no está incluido en el precio de tu compra. Lo pagas directamente al repartidor cuando recibes tu pedido.
         </div>
 
         <button class="submit-btn btn-mp" id="submitBtn" onclick="submitOrder()">
@@ -597,7 +593,7 @@ function onCommuneChange(){
   const bBX   = document.getElementById('bannerBX');
   const optE  = document.getElementById('opt-entrega');
   const eDesc = document.getElementById('entregaDesc');
-  const bxN   = document.getElementById('bxNote');
+  const bxN   = { classList: { add:()=>{}, remove:()=>{} } }; // bxNote eliminado
 
   if(!commune){
     currentShippingCost = 0;
