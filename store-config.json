@@ -39,9 +39,9 @@
   "products": [
     {
       "id": "mpot22dfdhuqq",
-      "name": "CBody Sexy con cuello de Halter y Encaje para Mujer",
+      "name": "Body Sexy con cuello de Halter y Encaje para Mujer",
       "cat": "Lenceria",
-      "desc": "",
+      "desc": "Siente la combinacion perfecta de sensualidad y elegancia con este body de encaje negro. diseño halter con escote profundo en V y espalda descubierta con lazo ajustable para un fit a tu medida.",
       "price": 4990,
       "origPrice": 0,
       "stock": 1,
@@ -2371,5 +2371,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779932080750
+  "_v": 1779932285053
 }
