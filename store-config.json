@@ -867,7 +867,7 @@
         "Black Ice Tour|2XL": 5
       },
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "mp4okb89l3e3a",
@@ -936,7 +936,7 @@
         "The Book of Souls|2XL": 5
       },
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "mp4o3ljno4wkb",
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936478125
+  "_v": 1779936479832
 }
