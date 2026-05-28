@@ -171,7 +171,7 @@
         <div class="form-group">
           <select class="form-input" id="c_commune" onchange="onCommuneChange()">
             <option value="">— Selecciona tu comuna —</option>
-            <optgroup label="✅ Provincia de Santiago — Envío GRATIS contra entrega">
+            <optgroup label="✅ Provincia de Santiago — Envío $2.500 contra entrega">
               <option>Cerrillos</option><option>Cerro Navia</option><option>Conchalí</option>
               <option>El Bosque</option><option>Estación Central</option><option>Huechuraba</option>
               <option>Independencia</option><option>La Cisterna</option><option>La Florida</option>
@@ -244,9 +244,9 @@
         <div class="ship-banner free" id="bannerFree" style="scroll-margin-top:80px;">
           <div class="ship-icon">🟢</div>
           <div>
-            <strong>¡Envío GRATIS para tu comuna!</strong><br>
-            Estás en la <strong>Provincia de Santiago</strong>. Puedes elegir pago contra entrega — nuestros repartidores de confianza te llegan sin costo.<br>
-            <button class="toggle-communes" onclick="toggleList()">📋 Ver las 32 comunas con envío gratis</button>
+            <strong>Envío $2.500 para tu comuna</strong><br>
+            Estás en la <strong>Provincia de Santiago</strong>. Puedes elegir pago contra entrega — nuestros repartidores de confianza te llegan a domicilio.<br>
+            <button class="toggle-communes" onclick="toggleList()">📋 Ver las 32 comunas con envío $2.500</button>
             <div class="communes-panel" id="communePanel">
               <div style="font-size:12px;font-weight:700;color:#065f46;">Comunas de la Provincia de Santiago:</div>
               <div class="communes-grid" id="communeChips"></div>
@@ -298,7 +298,7 @@
               <div class="pay-name">Pago contra entrega</div>
               <div class="pay-desc" id="entregaDesc">Solo disponible en la Provincia de Santiago</div>
             </div>
-            <div class="pay-badge badge-green">ENVÍO GRATIS</div>
+            <div class="pay-badge badge-green">ENVÍO $2.500</div>
           </label>
 
           <!-- MERCADOPAGO -->
@@ -570,8 +570,10 @@ function updateShippingDisplay(){
   const subtotal = cart.reduce((s,i)=>{ const p=prods.find(pr=>pr.id===i.id); return s+(p?p.price*i.qty:0); }, 0);
   const grand = subtotal + currentShippingCost;
   gt.textContent = fmtPrice(grand);
-  if(currentShippingCost === 0 && document.getElementById('c_commune').value){
-    sv.innerHTML = '<span style="color:var(--success);font-weight:700;">🟢 Gratis (Provincia Santiago)</span>';
+  const commune = document.getElementById('c_commune').value;
+  const isSantiagoCommune = commune && SANTIAGO_COMMUNES.has(commune);
+  if(isSantiagoCommune && currentShippingCost === 2500){
+    sv.innerHTML = '<span style="color:#1e40af;font-weight:700;">📦 $2.500</span> <small style="color:var(--muted);font-weight:400;">(Provincia de Santiago)</small>';
   } else if(currentShippingCost > 0){
     const region = document.getElementById('c_region').value;
     sv.innerHTML = `<span style="color:#1e40af;font-weight:700;">📦 ${fmtPrice(currentShippingCost)}</span> <small style="color:var(--muted);font-weight:400;">(BlueExpress · ${region})</small>`;
@@ -606,10 +608,10 @@ function onCommuneChange(){
   }
 
   if(isSantiago){
-    currentShippingCost = 0;
+    currentShippingCost = 2500;
     bFree.classList.add('show'); bBX.classList.remove('show');
     optE.classList.remove('disabled');
-    eDesc.textContent = 'Paga cuando te llegue el pedido · envío gratis en '+commune;
+    eDesc.textContent = 'Paga cuando te llegue el pedido · envío $2.500 en '+commune;
     bxN.classList.remove('show');
   } else {
     currentShippingCost = getShippingCost(region);
@@ -794,11 +796,11 @@ function sendWA(order,S){
   const items=order.items.map(i=>{const p=prods.find(pr=>pr.id===i.id);return`  • ${p?p.name:i.id} × ${i.qty} = ${fmtPrice((p?p.price:0)*i.qty)}`;}).join('\n');
   const payL=order.paymentMethod==='mercadopago'?'💳 MercadoPago (pagado)':'🏠 Contra entrega (cobrar al entregar)';
   const shipL=order.shipping==='gratis'
-    ? '🟢 GRATIS — Provincia Santiago'
+    ? '🟢 $2.500 — Provincia Santiago'
     : `📦 BlueExpress ${fmtPrice(order.shippingCost||0)} — ${order.customer.region}`;
   const totalLine = order.shippingCost>0
-    ? `💰 *Subtotal productos:* ${fmtPrice(order.subtotal||order.total)}\n🚚 *Envío BlueExpress:* ${fmtPrice(order.shippingCost)}\n💰 *TOTAL COBRADO:* ${fmtPrice(order.total)}`
-    : `💰 *Total:* ${fmtPrice(order.total)} (envío gratis)`;
+    ? `💰 *Subtotal productos:* ${fmtPrice(order.subtotal||order.total)}\n🚚 *Envío:* ${fmtPrice(order.shippingCost)}\n💰 *TOTAL COBRADO:* ${fmtPrice(order.total)}`
+    : `💰 *Subtotal:* ${fmtPrice(order.subtotal||order.total)}\n🚚 *Envío Santiago:* ${fmtPrice(2500)}\n💰 *TOTAL COBRADO:* ${fmtPrice(order.total)}`;
   const msg=`🛍️ *NUEVO PEDIDO #${order.id.slice(-6).toUpperCase()}*\n────────────────────\n👤 *Cliente*\nNombre: ${order.customer.name}\nTeléfono: ${order.customer.phone}\nEmail: ${order.customer.email}\n\n📦 *Productos*\n${items}\n\n${totalLine}\n💳 *Pago:* ${payL}\n🚚 *Envío:* ${shipL}\n\n🏠 *Dirección*\n${order.customer.address}\n*${order.customer.commune}*, Región ${order.customer.region}${order.customer.notes?'\n\n📝 Notas: '+order.customer.notes:''}\n────────────────────\n🔄 Devoluciones hasta 7 días de recibido`;
   setTimeout(()=>window.open(`https://wa.me/${S.whatsappNumber}?text=${encodeURIComponent(msg)}`,'_blank'),800);
 }
@@ -964,7 +966,7 @@ function printLabel(){
     doc.setFillColor(230,245,235);
     doc.roundedRect(P,y-2,W-P*2,10,2,2,'F');
     doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(5,100,60);
-    doc.text('PROVINCIA DE SANTIAGO', W/2, y+4.5, {align:'center'});
+    doc.text('PROVINCIA DE SANTIAGO — $2.500', W/2, y+4.5, {align:'center'});
   } else {
     doc.setFillColor(219,234,254);
     doc.roundedRect(P,y-2,W-P*2,10,2,2,'F');
