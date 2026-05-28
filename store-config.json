@@ -40,6 +40,77 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mppv5et59om0x",
+      "name": "Cubo Sonajero - 4 Pulgadas",
+      "cat": "Jugueteria y Bebe",
+      "desc": "",
+      "price": 5500,
+      "origPrice": 0,
+      "stock": 40,
+      "weight": 0,
+      "gcat": "",
+      "gender": "",
+      "color": "",
+      "img": "https://i.postimg.cc/prq9RXC1/Chat-GPT-Image-28-may-2026-02-57-42-p-m.png",
+      "images": [
+        "https://i.postimg.cc/prq9RXC1/Chat-GPT-Image-28-may-2026-02-57-42-p-m.png"
+      ],
+      "variants": [
+        {
+          "name": "Color ",
+          "options": [
+            {
+              "label": "Verde",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Naranja",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Animal",
+          "options": [
+            {
+              "label": "Mono",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Oso Panda",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Canguro",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Zorro",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Verde|Mono": 5,
+        "Naranja|Mono": 5,
+        "Verde|Oso Panda": 5,
+        "Naranja|Oso Panda": 5,
+        "Verde|Canguro": 5,
+        "Naranja|Canguro": 5,
+        "Verde|Zorro": 5,
+        "Naranja|Zorro": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mppskk0myfi0r",
       "name": "Incienso Ancestral Larga Duracion - Pack 3 Cajas",
       "cat": "Hogar y Aromas",
@@ -2371,5 +2442,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779994089934
+  "_v": 1779995143487
 }
