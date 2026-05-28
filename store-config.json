@@ -57,7 +57,7 @@
       ],
       "variants": [
         {
-          "name": "Aroma / Fragancia",
+          "name": "Aroma ",
           "options": [
             {
               "label": "Frutos Rojos",
@@ -77,7 +77,7 @@
           ]
         },
         {
-          "name": "Cantidad / Presentacion",
+          "name": "Cantidad ",
           "options": [
             {
               "label": "Pack 3 Cajas",
@@ -2366,5 +2366,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779990811230
+  "_v": 1779990944341
 }
