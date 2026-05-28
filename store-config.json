@@ -659,7 +659,7 @@
         "Vargas|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp8pup9xvj3zm",
@@ -724,7 +724,7 @@
         "Mbappe|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp5txs3th7axk",
@@ -798,7 +798,7 @@
         "Merchandise de rock|2XL": 5
       },
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "mp5srame1eseb",
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936474266
+  "_v": 1779936478125
 }
