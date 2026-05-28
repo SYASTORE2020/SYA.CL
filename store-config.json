@@ -37,6 +37,51 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpot22dfdhuqq",
+      "name": "CBody Sexy con cuello de Halter y Encaje para Mujer",
+      "cat": "Lenceria",
+      "desc": "",
+      "price": 5989,
+      "origPrice": 0,
+      "stock": 1,
+      "weight": 0.15,
+      "gcat": "",
+      "gender": "female",
+      "color": "Negro",
+      "img": "https://i.postimg.cc/Vk82Q2z2/Captura-de-pantalla-13-8-2024-234026-cl-shein-com.png",
+      "images": [
+        "https://i.postimg.cc/Vk82Q2z2/Captura-de-pantalla-13-8-2024-234026-cl-shein-com.png",
+        "https://i.postimg.cc/bwh4c4qW/Captura-de-pantalla-13-8-2024-234040-cl-shein-com.png"
+      ],
+      "variants": [
+        {
+          "name": "Color ",
+          "options": [
+            {
+              "label": "Negro",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Negro|M": 1
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mposs33b1twk5",
       "name": "Conjunto de Lenceria 2 piezas con encaje",
       "cat": "Lenceria",
@@ -2325,5 +2370,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779930696367
+  "_v": 1779931161995
 }
