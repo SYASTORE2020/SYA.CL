@@ -1005,7 +1005,7 @@
         "Mural de Canciones|2XL": 5
       },
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "mp37smz9jww33",
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936479832
+  "_v": 1779936482221
 }
