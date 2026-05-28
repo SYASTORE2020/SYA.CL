@@ -2030,7 +2030,7 @@
       "variantMatrix": {
         "SIN JUGADOR|XL": 1
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779933950103
+  "_v": 1779933955616
 }
