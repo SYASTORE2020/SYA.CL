@@ -87,7 +87,7 @@
       "name": "Conjunto de Lenceria 2 piezas con encaje",
       "cat": "Lenceria",
       "desc": "",
-      "price": 4990,
+      "price": 3990,
       "origPrice": 0,
       "stock": 2,
       "weight": 0.15,
@@ -2371,5 +2371,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779931871261
+  "_v": 1779931885325
 }
