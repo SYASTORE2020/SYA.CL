@@ -2252,7 +2252,7 @@
         "SIN JUGADOR|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "movqcw23r9wz1",
@@ -2339,7 +2339,7 @@
         "SIN JUGADOR|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     }
   ],
   "heroConfig": {
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936502181
+  "_v": 1779936506538
 }
