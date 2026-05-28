@@ -1068,7 +1068,7 @@
         "Ronaldo 7|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp37b274smwr6",
@@ -1131,7 +1131,7 @@
         "KAKA 22|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp2ybbnh9z6ou",
@@ -1194,7 +1194,7 @@
         "Mbappe|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp2xnr5xso6tu",
@@ -1281,7 +1281,7 @@
         "Ronaldo 7|XL": 5
       },
       "featured": true,
-      "active": true
+      "active": false
     },
     {
       "id": "mp21z64wg6nx1",
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779936482221
+  "_v": 1779936486887
 }
