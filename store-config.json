@@ -38,6 +38,64 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mppskk0myfi0r",
+      "name": "Incienso Ancestral Larga Duracion - Pack 3 Cajas",
+      "cat": "Hogar y Aromas",
+      "desc": "Transforma tu espacio con el Aroma dulce y frutal. Este incienso de la Linea ANCESTRAL esta elaborado artesanalmente, enrrollado a mano para conservar la esencia natural de cada ingrediente.\n\nPor que te va a gustar:\n* Aroma envolvente\n* Larga Duracion\n* Artesanal",
+      "price": 9990,
+      "origPrice": 0,
+      "stock": 15,
+      "weight": 0,
+      "gcat": "",
+      "gender": "",
+      "color": "",
+      "img": "https://i.postimg.cc/431hnQ14/Frutos-Rojos.jpg",
+      "images": [
+        "https://i.postimg.cc/431hnQ14/Frutos-Rojos.jpg",
+        "https://i.postimg.cc/hjBv8zpy/chicle.jpg",
+        "https://i.postimg.cc/qRTqchjD/Vainilla.jpg"
+      ],
+      "variants": [
+        {
+          "name": "Aroma / Fragancia",
+          "options": [
+            {
+              "label": "Frutos Rojos",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Vainilla",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "Chicle",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Cantidad / Presentacion",
+          "options": [
+            {
+              "label": "Pack 3 Cajas",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Frutos Rojos|Pack 3 Cajas": 5,
+        "Vainilla|Pack 3 Cajas": 5,
+        "Chicle|Pack 3 Cajas": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpot22dfdhuqq",
       "name": "Body Sexy con cuello de Halter y Encaje para Mujer",
       "cat": "Lenceria",
@@ -2308,5 +2366,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779990513188
+  "_v": 1779990811230
 }
