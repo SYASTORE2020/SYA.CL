@@ -1748,7 +1748,7 @@
         "Messi 10|L": 5,
         "Messi 10|XL": 5
       },
-      "featured": false,
+      "featured": true,
       "active": true
     },
     {
@@ -2377,5 +2377,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1779933938879
+  "_v": 1779933943050
 }
