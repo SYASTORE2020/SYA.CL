@@ -522,7 +522,7 @@ function boot(){
   const oid = p.get('order_id');
   if(st==='approved'){
     const o = getOrders().find(o=>o.id===oid);
-    if(o){ o.status='confirmed'; saveOrders(getOrders().map(x=>x.id===oid?o:x)); decrementStock(o.items); sendWA(o,S); notifyCustomer(o,'confirmed'); lastOrder=o; }
+    if(o){ o.status='confirmed'; saveOrders(getOrders().map(x=>x.id===oid?o:x)); decrementStock(o.items); sendWA(o,S); notifyCustomer(o,'confirmed'); notifyAdminTelegram(o); lastOrder=o; }
     showSuccess(oid||uid(),'mercadopago');
   } else if(st==='pending'){
     const o = getOrders().find(o=>o.id===oid);
