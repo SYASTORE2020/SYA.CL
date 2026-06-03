@@ -40,6 +40,68 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpygbwa3hje7c",
+      "name": "Camiseta Seleccion Uruguay - Local 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "",
+      "price": 17500,
+      "origPrice": 0,
+      "stock": 20,
+      "weight": 0,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "",
+      "img": "https://i.postimg.cc/VsZ1T8Q2/Chat-GPT-Image-3-jun-2026-03-10-06-p-m.png",
+      "images": [
+        "https://i.postimg.cc/VsZ1T8Q2/Chat-GPT-Image-3-jun-2026-03-10-06-p-m.png"
+      ],
+      "variants": [
+        {
+          "name": "Jugador",
+          "options": [
+            {
+              "label": "Valverde",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Valverde|S": 5,
+        "Valverde|M": 5,
+        "Valverde|L": 5,
+        "Valverde|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mpyg8fl7le7sj",
       "name": "Camiseta Seleccion Japon - Local 2026",
       "cat": "Camisetas de Futbol",
@@ -2504,5 +2566,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780514285901
+  "_v": 1780514447410
 }
