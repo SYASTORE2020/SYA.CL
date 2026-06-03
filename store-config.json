@@ -734,7 +734,7 @@
       "name": "Camiseta Seleccion Francia - Titular 2026",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n •  Base: Tono azul marino con diseño de lineas diagonales en azul claro.\n •  Detalles: Cuello polo blanco, logo y escudo borados en dorado.",
-      "price": 24990,
+      "price": 17500,
       "origPrice": 0,
       "stock": 20,
       "weight": 0.3,
@@ -2442,5 +2442,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780512786414
+  "_v": 1780512805303
 }
