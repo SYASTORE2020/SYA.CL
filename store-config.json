@@ -106,7 +106,7 @@
       "name": "Camiseta Seleccion Japon - Local 2026",
       "cat": "Camisetas de Futbol",
       "desc": "",
-      "price": 17499,
+      "price": 17500,
       "origPrice": 0,
       "stock": 20,
       "weight": 0,
@@ -2566,5 +2566,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780514447410
+  "_v": 1780514471153
 }
