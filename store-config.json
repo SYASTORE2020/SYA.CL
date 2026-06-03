@@ -1631,10 +1631,10 @@
       "name": "Camiseta Seleccion Brazil -Local 2026",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Amarillo Clasic, el color historico de Brasil\n •  Detalles: Cuello y Mangas rematados en verde oscuro, mismo tono del triangulo en el cuello en V. Costados con paneles laterales en turquesa/verde agua que estilizan la figura y dan un toque moderno.",
-      "price": 24990,
+      "price": 17500,
       "origPrice": 0,
       "stock": 80,
-      "weight": 0.35,
+      "weight": 0.33,
       "gcat": "5697",
       "gender": "male",
       "color": "Amarillo",
@@ -2442,5 +2442,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780512882137
+  "_v": 1780512896716
 }
