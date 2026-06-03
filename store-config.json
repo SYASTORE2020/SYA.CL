@@ -40,6 +40,68 @@
   "adminPassword": "12345678",
   "products": [
     {
+      "id": "mpyg8fl7le7sj",
+      "name": "Camiseta Seleccion Japon - Local 2026",
+      "cat": "Camisetas de Futbol",
+      "desc": "",
+      "price": 17499,
+      "origPrice": 0,
+      "stock": 20,
+      "weight": 0,
+      "gcat": "5697",
+      "gender": "male",
+      "color": "",
+      "img": "https://i.postimg.cc/Nfx8Ypb5/camiseta62.webp",
+      "images": [
+        "https://i.postimg.cc/Nfx8Ypb5/camiseta62.webp"
+      ],
+      "variants": [
+        {
+          "name": "Jugador",
+          "options": [
+            {
+              "label": "Doan",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        },
+        {
+          "name": "Talla",
+          "options": [
+            {
+              "label": "S",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "M",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "L",
+              "stock": 0,
+              "img": ""
+            },
+            {
+              "label": "XL",
+              "stock": 0,
+              "img": ""
+            }
+          ]
+        }
+      ],
+      "variantMatrix": {
+        "Doan|S": 5,
+        "Doan|M": 5,
+        "Doan|L": 5,
+        "Doan|XL": 5
+      },
+      "featured": false,
+      "active": true
+    },
+    {
       "id": "mppv5et59om0x",
       "name": "Cubo Sonajero - 4 Pulgadas",
       "cat": "Jugueteria y Bebe",
@@ -2442,5 +2504,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780512915252
+  "_v": 1780514285901
 }
