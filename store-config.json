@@ -1734,7 +1734,7 @@
       "name": "Camiseta Seleccion Argentina - Local 2026",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Clasicas franjas verticales albiceleste. Blanco como base y celeste con efecto degradado.\n •  Detalles: Cuello en V con doble linea celeste y negra. Puños en negro con detalle celeste. Franjas celeste con degradado. \nHombros: Tres lineas negras sobre blanco.",
-      "price": 24990,
+      "price": 17500,
       "origPrice": 0,
       "stock": 45,
       "weight": 0.35,
@@ -2442,5 +2442,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780512865420
+  "_v": 1780512882137
 }
