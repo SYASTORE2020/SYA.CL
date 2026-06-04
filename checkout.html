@@ -481,7 +481,34 @@ let lastOrder = null;
 //  BOOT
 // ══════════════════════════════════════
 
-function boot(){
+async function boot(){
+  // Asegurar que st_products esté cargado desde GitHub si localStorage está vacío
+  if(!getProducts().length){
+    try {
+      const BASE = 'https://syastore2020.github.io/SYA.CL';
+      const r = await fetch(BASE+'/store-config.json?_='+Date.now());
+      if(r.ok){
+        const cfg = await r.json();
+        if(cfg.products && cfg.products.length){
+          localStorage.setItem('st_products', JSON.stringify(cfg.products));
+          // Aplicar stock de Firebase encima
+          const fbUrl = FIREBASE_URL;
+          if(fbUrl){
+            const sr = await fetch(fbUrl+'/stock.json').catch(()=>null);
+            if(sr && sr.ok){
+              const stockData = await sr.json().catch(()=>null);
+              if(stockData){
+                const prods = getProducts();
+                prods.forEach(p=>{ if(stockData[p.id]!==undefined){ p.stock=stockData[p.id].stock; if(stockData[p.id].variantMatrix) p.variantMatrix=stockData[p.id].variantMatrix; } });
+                localStorage.setItem('st_products', JSON.stringify(prods));
+              }
+            }
+          }
+        }
+      }
+    } catch(e){}
+  }
+
   const S = getSettings();
   const cart = getCart();
   const logo = document.getElementById('navLogo');
