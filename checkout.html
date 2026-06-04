@@ -522,7 +522,7 @@ function boot(){
   const oid = p.get('order_id');
   if(st==='approved'){
     const o = getOrders().find(o=>o.id===oid);
-    if(o){ o.status='confirmed'; saveOrders(getOrders().map(x=>x.id===oid?o:x)); decrementStock(o.items); sendWA(o,S); notifyCustomer(o,'confirmed'); notifyAdminTelegram(o); lastOrder=o; }
+    if(o){ o.status='confirmed'; saveOrders(getOrders().map(x=>x.id===oid?o:x)); sendWA(o,S); notifyCustomer(o,'confirmed'); notifyAdminTelegram(o); lastOrder=o; }
     showSuccess(oid||uid(),'mercadopago');
   } else if(st==='pending'){
     const o = getOrders().find(o=>o.id===oid);
@@ -708,6 +708,7 @@ async function submitOrder(){
 async function handleMP(order,S){
   getOrders().concat([order]); saveOrders([...getOrders(),order]); lastOrder=order;
   pushOrderToFirebase(order);
+  decrementStock(order.items);       // ← descontar stock al crear el pedido
   if(!S.mpWebhookUrl){
     sendWA(order,S); showSuccess(order.id,'pending'); return;
   }
