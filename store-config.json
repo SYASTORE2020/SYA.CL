@@ -667,10 +667,10 @@
     },
     {
       "id": "mpln3xymzpvvh",
-      "name": "Camiseta Seleccion - Edicion Especial Froral 2026",
+      "name": "Camiseta Seleccion de Chile - Edicion Especial Froral 2026",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n  \n •  Base: Color crema con estampado de flores rosadas y patron agrietado.\n •  Detalles: Cuello en V con ribete negro y beige, detalles de las 3 rayas en los hombros.",
-      "price": 24990,
+      "price": 17500,
       "origPrice": 0,
       "stock": 40,
       "weight": 0.29,
@@ -2566,5 +2566,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780514471153
+  "_v": 1780534450183
 }
