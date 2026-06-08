@@ -757,7 +757,7 @@
       "name": "Camiseta Universidad de Chile- Local 2026",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n •  Base: Azul Rey Intenso, el color Histotico de la U.\n •  Detalles: Rojo en las 3 tiras sobre los hombros y en los bordes de las     mangas. Cuello redondo azul.\n •  Dorsal y nombre:  •  \"Aranguiz\" y el \"20\" en blanco.\n                                    •  \"Vargas\" y el \"11\" en blanco.",
-      "price": 19990,
+      "price": 20990,
       "origPrice": 24990,
       "stock": 68,
       "weight": 0.29,
@@ -2566,5 +2566,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780923835437
+  "_v": 1780923850210
 }
