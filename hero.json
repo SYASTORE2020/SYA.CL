@@ -2,7 +2,7 @@
   "bgType": "image",
   "bgColor": "#151414",
   "bgImg": "https://i.postimg.cc/fWKgPPMk/PORTADA-MUNDIAL-2026.png",
-  "bgOverlay": 20,
+  "bgOverlay": 40,
   "title": "¡Lo estabas buscando!",
   "titleAccent": "acá está, al mejor precio",
   "subtitle": "Futbol, rock, y más",
@@ -31,5 +31,5 @@
   "ctaPrimary": "Ver productos →",
   "ctaSecondary": "Ver categorías",
   "socialProof": "Cada día más clientes satisfechos",
-  "_saved": 1780888135080
+  "_saved": 1780888156344
 }
