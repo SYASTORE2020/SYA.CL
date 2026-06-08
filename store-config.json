@@ -2181,7 +2181,7 @@
       "name": "Camiseta Sandia Palestino- Conmemorativa 2025",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n\n•  Base: Roja con estampado de gotas negras y mangas en verde con textura camuflada.\n •  Detalles: Cuello redondo, escudo palestino bordado en el pecho.",
-      "price": 19990,
+      "price": 20990,
       "origPrice": 24990,
       "stock": 1,
       "weight": 0.32,
@@ -2191,8 +2191,7 @@
       "img": "https://i.postimg.cc/MHVXS2DS/Camiseta-30.jpg",
       "images": [
         "https://i.postimg.cc/MHVXS2DS/Camiseta-30.jpg",
-        "https://i.postimg.cc/x8Mq2DRV/Camiseta32.jpg",
-        "https://i.postimg.cc/pTrL62jg/Whats-App-Image-2026-02-25-at-13-10-04.jpg"
+        "https://i.postimg.cc/x8Mq2DRV/Camiseta32.jpg"
       ],
       "variants": [
         {
@@ -2566,5 +2565,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780924084267
+  "_v": 1780924102462
 }
