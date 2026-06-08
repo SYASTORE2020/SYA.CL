@@ -1393,8 +1393,8 @@
       "name": "Camiseta Seleccion Portugal- Local 2026",
       "cat": "Camisetas de Futbol",
       "desc": "¨Diseño identico al Original con todos sus detalles¨ Camiseta Alternativa. \n  \n•  Base: Rojo profundo, el color historico de la seleccion.\n •  Detalles: Patron de lineas onduladas tono sobre tono que la da movimiento y elegancia al diseño.\nCuello en V y puños con doble linea verde y roja, los colores de la bandera.",
-      "price": 24990,
-      "origPrice": 0,
+      "price": 20990,
+      "origPrice": 24990,
       "stock": 40,
       "weight": 0.29,
       "gcat": "5697",
@@ -2566,5 +2566,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780923920490
+  "_v": 1780923939061
 }
