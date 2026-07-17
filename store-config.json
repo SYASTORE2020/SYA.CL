@@ -446,7 +446,7 @@
         "Lamine Yamal|XL": 5
       },
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "mpnftzwkshmwu",
@@ -2565,5 +2565,5 @@
     "socialProof": "+500 clientes satisfechos en Chile",
     "_saved": 1779629939968
   },
-  "_v": 1780924140088
+  "_v": 1784302469806
 }
